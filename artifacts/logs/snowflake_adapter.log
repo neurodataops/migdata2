@@ -1,0 +1,19 @@
+{"timestamp": "2026-03-05T11:21:42.196445+00:00", "level": "INFO", "logger": "snowflake_adapter", "message": "[extract_catalog] started", "data": {"database": "SNOWFLAKE_SAMPLE_DATA"}}
+{"timestamp": "2026-03-05T11:22:32.647739+00:00", "level": "INFO", "logger": "snowflake_adapter", "message": "[extract_catalog] started", "data": {"database": "SNOWFLAKE_SAMPLE_DATA"}}
+{"timestamp": "2026-03-05T11:22:45.366023+00:00", "level": "INFO", "logger": "snowflake_adapter", "message": "[extract_catalog] completed", "data": {"tables": 80, "columns": 1094, "constraints": 256, "procs": 0, "udfs": 0, "views": 0}}
+{"timestamp": "2026-03-05T11:22:45.366023+00:00", "level": "INFO", "logger": "snowflake_adapter", "message": "[extract_query_logs] started"}
+{"timestamp": "2026-03-05T11:22:48.092425+00:00", "level": "INFO", "logger": "snowflake_adapter", "message": "[extract_query_logs] completed", "data": {"entries": 2211}}
+{"timestamp": "2026-03-05T11:22:48.093430+00:00", "level": "INFO", "logger": "snowflake_adapter", "message": "[save] started"}
+{"timestamp": "2026-03-05T11:22:48.154014+00:00", "level": "INFO", "logger": "snowflake_adapter", "message": "[save] completed", "data": {"catalog_path": "C:\\dev\\data-migration\\mock_data\\source_catalog.json", "logs_path": "C:\\dev\\data-migration\\mock_data\\query_logs.json"}}
+{"timestamp": "2026-03-05T11:29:29.129916+00:00", "level": "INFO", "logger": "snowflake_adapter", "message": "[extract_catalog] started", "data": {"database": "SNOWFLAKE_SAMPLE_DATA"}}
+{"timestamp": "2026-03-05T11:29:37.789466+00:00", "level": "INFO", "logger": "snowflake_adapter", "message": "[extract_catalog] completed", "data": {"tables": 80, "columns": 1094, "constraints": 256, "procs": 0, "udfs": 0, "views": 0}}
+{"timestamp": "2026-03-05T11:29:37.789466+00:00", "level": "INFO", "logger": "snowflake_adapter", "message": "[extract_query_logs] started"}
+{"timestamp": "2026-03-05T11:29:40.996380+00:00", "level": "INFO", "logger": "snowflake_adapter", "message": "[extract_query_logs] completed", "data": {"entries": 2223}}
+{"timestamp": "2026-03-05T11:29:40.996380+00:00", "level": "INFO", "logger": "snowflake_adapter", "message": "[save] started"}
+{"timestamp": "2026-03-05T11:29:41.049612+00:00", "level": "INFO", "logger": "snowflake_adapter", "message": "[save] completed", "data": {"catalog_path": "C:\\dev\\data-migration\\mock_data\\source_catalog.json", "logs_path": "C:\\dev\\data-migration\\mock_data\\query_logs.json"}}
+{"timestamp": "2026-03-05T11:33:48.813045+00:00", "level": "INFO", "logger": "snowflake_adapter", "message": "[extract_catalog] started", "data": {"database": "SNOWFLAKE_SAMPLE_DATA"}}
+{"timestamp": "2026-03-05T11:33:57.211067+00:00", "level": "INFO", "logger": "snowflake_adapter", "message": "[extract_catalog] completed", "data": {"tables": 80, "columns": 1094, "constraints": 256, "procs": 0, "udfs": 0, "views": 0}}
+{"timestamp": "2026-03-05T11:33:57.211067+00:00", "level": "INFO", "logger": "snowflake_adapter", "message": "[extract_query_logs] started"}
+{"timestamp": "2026-03-05T11:34:00.327095+00:00", "level": "INFO", "logger": "snowflake_adapter", "message": "[extract_query_logs] completed", "data": {"entries": 2233}}
+{"timestamp": "2026-03-05T11:34:00.328097+00:00", "level": "INFO", "logger": "snowflake_adapter", "message": "[save] started"}
+{"timestamp": "2026-03-05T11:34:00.379525+00:00", "level": "INFO", "logger": "snowflake_adapter", "message": "[save] completed", "data": {"catalog_path": "C:\\dev\\data-migration\\mock_data\\source_catalog.json", "logs_path": "C:\\dev\\data-migration\\mock_data\\query_logs.json"}}

@@ -1,0 +1,20 @@
+{"timestamp": "2026-03-04T09:56:55.747667+00:00", "level": "INFO", "logger": "mock_snowflake_converter", "message": "[conversion] started"}
+{"timestamp": "2026-03-04T09:56:55.859133+00:00", "level": "INFO", "logger": "mock_snowflake_converter", "message": "[conversion] completed", "data": {"total_objects": 33, "classifications": {"AUTO_CONVERT": 19, "CONVERT_WITH_WARNINGS": 11, "MANUAL_REWRITE_REQUIRED": 3}, "total_warnings": 12}}
+{"timestamp": "2026-03-04T09:56:55.859133+00:00", "level": "INFO", "logger": "mock_snowflake_converter", "message": "[save] started"}
+{"timestamp": "2026-03-04T09:56:55.863159+00:00", "level": "INFO", "logger": "mock_snowflake_converter", "message": "[save] completed", "data": {"report_path": "C:\\dev\\data-migration\\artifacts\\conversion_report.json"}}
+{"timestamp": "2026-03-04T11:01:48.037998+00:00", "level": "INFO", "logger": "mock_snowflake_converter", "message": "[conversion] started"}
+{"timestamp": "2026-03-04T11:01:48.158447+00:00", "level": "INFO", "logger": "mock_snowflake_converter", "message": "[conversion] completed", "data": {"total_objects": 33, "classifications": {"AUTO_CONVERT": 19, "CONVERT_WITH_WARNINGS": 11, "MANUAL_REWRITE_REQUIRED": 3}, "total_warnings": 12}}
+{"timestamp": "2026-03-04T11:01:48.158447+00:00", "level": "INFO", "logger": "mock_snowflake_converter", "message": "[save] started"}
+{"timestamp": "2026-03-04T11:01:48.162349+00:00", "level": "INFO", "logger": "mock_snowflake_converter", "message": "[save] completed", "data": {"report_path": "C:\\dev\\data-migration\\artifacts\\conversion_report.json"}}
+{"timestamp": "2026-03-05T11:22:48.291836+00:00", "level": "INFO", "logger": "mock_snowflake_converter", "message": "[conversion] started"}
+{"timestamp": "2026-03-05T11:22:48.468419+00:00", "level": "INFO", "logger": "mock_snowflake_converter", "message": "[conversion] completed", "data": {"total_objects": 80, "classifications": {"AUTO_CONVERT": 80}, "total_warnings": 0}}
+{"timestamp": "2026-03-05T11:22:48.468419+00:00", "level": "INFO", "logger": "mock_snowflake_converter", "message": "[save] started"}
+{"timestamp": "2026-03-05T11:22:48.471419+00:00", "level": "INFO", "logger": "mock_snowflake_converter", "message": "[save] completed", "data": {"report_path": "C:\\dev\\data-migration\\artifacts\\conversion_report.json"}}
+{"timestamp": "2026-03-05T11:29:41.192280+00:00", "level": "INFO", "logger": "mock_snowflake_converter", "message": "[conversion] started"}
+{"timestamp": "2026-03-05T11:29:41.373619+00:00", "level": "INFO", "logger": "mock_snowflake_converter", "message": "[conversion] completed", "data": {"total_objects": 80, "classifications": {"AUTO_CONVERT": 80}, "total_warnings": 0}}
+{"timestamp": "2026-03-05T11:29:41.373619+00:00", "level": "INFO", "logger": "mock_snowflake_converter", "message": "[save] started"}
+{"timestamp": "2026-03-05T11:29:41.377613+00:00", "level": "INFO", "logger": "mock_snowflake_converter", "message": "[save] completed", "data": {"report_path": "C:\\dev\\data-migration\\artifacts\\conversion_report.json"}}
+{"timestamp": "2026-03-05T11:34:00.554610+00:00", "level": "INFO", "logger": "mock_snowflake_converter", "message": "[conversion] started"}
+{"timestamp": "2026-03-05T11:34:00.727355+00:00", "level": "INFO", "logger": "mock_snowflake_converter", "message": "[conversion] completed", "data": {"total_objects": 80, "classifications": {"AUTO_CONVERT": 80}, "total_warnings": 0}}
+{"timestamp": "2026-03-05T11:34:00.727355+00:00", "level": "INFO", "logger": "mock_snowflake_converter", "message": "[save] started"}
+{"timestamp": "2026-03-05T11:34:00.731349+00:00", "level": "INFO", "logger": "mock_snowflake_converter", "message": "[save] completed", "data": {"report_path": "C:\\dev\\data-migration\\artifacts\\conversion_report.json"}}

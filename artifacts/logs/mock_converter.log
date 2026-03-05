@@ -1,0 +1,20 @@
+{"timestamp": "2026-02-25T08:35:31.687395+00:00", "level": "INFO", "logger": "mock_converter", "message": "[conversion] started"}
+{"timestamp": "2026-02-25T08:35:31.768691+00:00", "level": "INFO", "logger": "mock_converter", "message": "[conversion] completed", "data": {"total_objects": 33, "classifications": {"AUTO_CONVERT": 30, "MANUAL_REWRITE_REQUIRED": 3}, "total_warnings": 0}}
+{"timestamp": "2026-02-25T08:35:31.768691+00:00", "level": "INFO", "logger": "mock_converter", "message": "[save] started"}
+{"timestamp": "2026-02-25T08:35:31.770692+00:00", "level": "INFO", "logger": "mock_converter", "message": "[save] completed", "data": {"report_path": "C:\\dev\\data-migration\\artifacts\\conversion_report.json"}}
+{"timestamp": "2026-03-04T06:24:31.994107+00:00", "level": "INFO", "logger": "mock_converter", "message": "[conversion] started"}
+{"timestamp": "2026-03-04T06:24:32.098574+00:00", "level": "INFO", "logger": "mock_converter", "message": "[conversion] completed", "data": {"total_objects": 33, "classifications": {"AUTO_CONVERT": 30, "MANUAL_REWRITE_REQUIRED": 3}, "total_warnings": 0}}
+{"timestamp": "2026-03-04T06:24:32.098574+00:00", "level": "INFO", "logger": "mock_converter", "message": "[save] started"}
+{"timestamp": "2026-03-04T06:24:32.101567+00:00", "level": "INFO", "logger": "mock_converter", "message": "[save] completed", "data": {"report_path": "C:\\dev\\data-migration\\artifacts\\conversion_report.json"}}
+{"timestamp": "2026-03-04T09:56:18.012247+00:00", "level": "INFO", "logger": "mock_converter", "message": "[conversion] started"}
+{"timestamp": "2026-03-04T09:56:18.119972+00:00", "level": "INFO", "logger": "mock_converter", "message": "[conversion] completed", "data": {"total_objects": 33, "classifications": {"AUTO_CONVERT": 30, "MANUAL_REWRITE_REQUIRED": 3}, "total_warnings": 0}}
+{"timestamp": "2026-03-04T09:56:18.119972+00:00", "level": "INFO", "logger": "mock_converter", "message": "[save] started"}
+{"timestamp": "2026-03-04T09:56:18.123978+00:00", "level": "INFO", "logger": "mock_converter", "message": "[save] completed", "data": {"report_path": "C:\\dev\\data-migration\\artifacts\\conversion_report.json"}}
+{"timestamp": "2026-03-04T09:58:32.737734+00:00", "level": "INFO", "logger": "mock_converter", "message": "[conversion] started"}
+{"timestamp": "2026-03-04T09:58:32.865647+00:00", "level": "INFO", "logger": "mock_converter", "message": "[conversion] completed", "data": {"total_objects": 33, "classifications": {"AUTO_CONVERT": 30, "MANUAL_REWRITE_REQUIRED": 3}, "total_warnings": 0}}
+{"timestamp": "2026-03-04T09:58:32.865647+00:00", "level": "INFO", "logger": "mock_converter", "message": "[save] started"}
+{"timestamp": "2026-03-04T09:58:32.868658+00:00", "level": "INFO", "logger": "mock_converter", "message": "[save] completed", "data": {"report_path": "C:\\dev\\data-migration\\artifacts\\conversion_report.json"}}
+{"timestamp": "2026-03-04T10:14:18.102056+00:00", "level": "INFO", "logger": "mock_converter", "message": "[conversion] started"}
+{"timestamp": "2026-03-04T10:14:18.205480+00:00", "level": "INFO", "logger": "mock_converter", "message": "[conversion] completed", "data": {"total_objects": 33, "classifications": {"AUTO_CONVERT": 30, "MANUAL_REWRITE_REQUIRED": 3}, "total_warnings": 0}}
+{"timestamp": "2026-03-04T10:14:18.205480+00:00", "level": "INFO", "logger": "mock_converter", "message": "[save] started"}
+{"timestamp": "2026-03-04T10:14:18.208486+00:00", "level": "INFO", "logger": "mock_converter", "message": "[save] completed", "data": {"report_path": "C:\\dev\\data-migration\\artifacts\\conversion_report.json"}}

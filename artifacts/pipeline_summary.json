@@ -1,0 +1,50 @@
+{
+  "completed_at": "2026-03-05T17:04:37.434185",
+  "elapsed_seconds": 51.16,
+  "seed": 42,
+  "steps": {
+    "source": {
+      "tables": 80,
+      "columns": 1094,
+      "queries": 2233
+    },
+    "conversion": {
+      "total_objects": 80,
+      "classifications": {
+        "AUTO_CONVERT": 80
+      },
+      "total_warnings": 0,
+      "manual_rewrite_count": 0
+    },
+    "load": {
+      "tables_loaded": 80,
+      "total_rows": 86044,
+      "total_parquet_files": 80,
+      "tables_with_mismatches": 7
+    },
+    "validation": {
+      "tables_validated": 80,
+      "tables_skipped": 0,
+      "total_checks": 320,
+      "passed": 308,
+      "failed": 12,
+      "pass_rate": 96.25,
+      "avg_confidence": 0.9325
+    },
+    "tests": {
+      "total": 738,
+      "passed": 738,
+      "failed": 0
+    }
+  },
+  "output_paths": {
+    "catalog": "C:\\dev\\data-migration\\mock_data\\source_catalog.json",
+    "query_logs": "C:\\dev\\data-migration\\mock_data\\query_logs.json",
+    "conversion_report": "C:\\dev\\data-migration\\artifacts\\conversion_report.json",
+    "transpiled_dir": "C:\\dev\\data-migration\\artifacts\\transpiled_sql",
+    "load_summary": "C:\\dev\\data-migration\\artifacts\\load_summary.json",
+    "target_dir": "C:\\dev\\data-migration\\artifacts\\target_tables",
+    "validation_results": "C:\\dev\\data-migration\\test_results\\validation_results.json",
+    "confidence_scores": "C:\\dev\\data-migration\\test_results\\confidence_scores.csv"
+  }
+}

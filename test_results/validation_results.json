@@ -1,0 +1,3023 @@
+{
+  "generated_at": "2026-03-05T17:04:34.438335",
+  "summary": {
+    "tables_validated": 80,
+    "tables_skipped": 0,
+    "total_checks": 320,
+    "passed": 308,
+    "failed": 12,
+    "pass_rate": 96.25,
+    "avg_confidence": 0.9325
+  },
+  "tables": [
+    {
+      "table": "tpcds_sf100tcl.call_center",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "69db2d3b70554994f2362e808bb4c5dd",
+          "source_hash": "69db2d3b70554994f2362e808bb4c5dd",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf100tcl.catalog_page",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "7a390e3dbb91e0f26db41b83b647edcf",
+          "source_hash": "7a390e3dbb91e0f26db41b83b647edcf",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf100tcl.catalog_returns",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "c753d4aaf4698df6559b9dca88b81bd4",
+          "source_hash": "c753d4aaf4698df6559b9dca88b81bd4",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf100tcl.catalog_sales",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": false,
+          "target_hash": "3178f30c317ea834a6f03dd850cafd73",
+          "source_hash": "37dfac058dd30f6a438ae713c03f8713",
+          "detail": "Hash mismatch detected (simulated)"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.72,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf100tcl.customer",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "5d8b8319dd7bb6296fbd091bb437885e",
+          "source_hash": "5d8b8319dd7bb6296fbd091bb437885e",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf100tcl.customer_address",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "eb6b959fca70e13e224e79203e8903e9",
+          "source_hash": "eb6b959fca70e13e224e79203e8903e9",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf100tcl.customer_demographics",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "a063f06784993c839f04d22e6a6af12e",
+          "source_hash": "a063f06784993c839f04d22e6a6af12e",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf100tcl.date_dim",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 146,
+          "target_count": 146,
+          "delta_pct": 0.0,
+          "detail": "Source=146, Target=146, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "f4ca141912906931071f17551121aad4",
+          "source_hash": "f4ca141912906931071f17551121aad4",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf100tcl.household_demographics",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "973af73a16ec1d03c9882a11b023aeaf",
+          "source_hash": "973af73a16ec1d03c9882a11b023aeaf",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf100tcl.income_band",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "6caa23d9cfedf478f346fe794e9d98fe",
+          "source_hash": "6caa23d9cfedf478f346fe794e9d98fe",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf100tcl.inventory",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "e5ec0664c0a0f1883132bb7cde7ca7f1",
+          "source_hash": "e5ec0664c0a0f1883132bb7cde7ca7f1",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf100tcl.item",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 1004,
+          "target_count": 1004,
+          "delta_pct": 0.0,
+          "detail": "Source=1004, Target=1004, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "8b6837d6beb6386f185732e0ec90b982",
+          "source_hash": "8b6837d6beb6386f185732e0ec90b982",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf100tcl.promotion",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "616adf1b50b92d7441572b7f69bc6114",
+          "source_hash": "616adf1b50b92d7441572b7f69bc6114",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": false,
+          "drift_count": 1,
+          "drift_items": [
+            {
+              "column": "p_item_sk",
+              "issue": "type_mismatch",
+              "expected": "NUMBER",
+              "actual": "STRING"
+            }
+          ],
+          "detail": "1 drift(s) detected"
+        }
+      ],
+      "confidence": 0.72,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf100tcl.reason",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "183e31f002fb879dec1b645371fa15b3",
+          "source_hash": "183e31f002fb879dec1b645371fa15b3",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf100tcl.ship_mode",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "fa7d4ff8c09ee3af9875fd1f7bbf8f4e",
+          "source_hash": "fa7d4ff8c09ee3af9875fd1f7bbf8f4e",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf100tcl.store",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "fbfc5f352a9de6ff40ca538b5ba0ee0a",
+          "source_hash": "fbfc5f352a9de6ff40ca538b5ba0ee0a",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf100tcl.store_returns",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "4baf4a41e6b952b62a9643a6a7682899",
+          "source_hash": "4baf4a41e6b952b62a9643a6a7682899",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf100tcl.store_sales",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "bf9c10f3592f693d72366a85a66559b9",
+          "source_hash": "bf9c10f3592f693d72366a85a66559b9",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf100tcl.time_dim",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 172,
+          "target_count": 172,
+          "delta_pct": 0.0,
+          "detail": "Source=172, Target=172, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "a6266805b96d77c0228b440d8da6c31f",
+          "source_hash": "a6266805b96d77c0228b440d8da6c31f",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf100tcl.warehouse",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "111c0a75f1a8a82ad37302ed0208048f",
+          "source_hash": "111c0a75f1a8a82ad37302ed0208048f",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf100tcl.web_page",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "cf5975e47cbc9c54a80def060e9bad31",
+          "source_hash": "cf5975e47cbc9c54a80def060e9bad31",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf100tcl.web_returns",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "72988ece9de88072e109e3a524005827",
+          "source_hash": "72988ece9de88072e109e3a524005827",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf100tcl.web_sales",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "fa7b97e9b47e2a3373a540c4b293a77d",
+          "source_hash": "fa7b97e9b47e2a3373a540c4b293a77d",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf100tcl.web_site",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "351526dac2066f21600290971b7c3bc4",
+          "source_hash": "351526dac2066f21600290971b7c3bc4",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf10tcl.call_center",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "69db2d3b70554994f2362e808bb4c5dd",
+          "source_hash": "69db2d3b70554994f2362e808bb4c5dd",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf10tcl.catalog_page",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "7a390e3dbb91e0f26db41b83b647edcf",
+          "source_hash": "7a390e3dbb91e0f26db41b83b647edcf",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf10tcl.catalog_returns",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "c753d4aaf4698df6559b9dca88b81bd4",
+          "source_hash": "c753d4aaf4698df6559b9dca88b81bd4",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf10tcl.catalog_sales",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "3178f30c317ea834a6f03dd850cafd73",
+          "source_hash": "3178f30c317ea834a6f03dd850cafd73",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf10tcl.customer",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "5d8b8319dd7bb6296fbd091bb437885e",
+          "source_hash": "5d8b8319dd7bb6296fbd091bb437885e",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf10tcl.customer_address",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "eb6b959fca70e13e224e79203e8903e9",
+          "source_hash": "eb6b959fca70e13e224e79203e8903e9",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf10tcl.customer_demographics",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "a063f06784993c839f04d22e6a6af12e",
+          "source_hash": "a063f06784993c839f04d22e6a6af12e",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf10tcl.date_dim",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 146,
+          "target_count": 146,
+          "delta_pct": 0.0,
+          "detail": "Source=146, Target=146, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "f4ca141912906931071f17551121aad4",
+          "source_hash": "f4ca141912906931071f17551121aad4",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf10tcl.household_demographics",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": false,
+          "target_hash": "973af73a16ec1d03c9882a11b023aeaf",
+          "source_hash": "faea320b11a2889c30d1ce61a37fa379",
+          "detail": "Hash mismatch detected (simulated)"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.72,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf10tcl.income_band",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "6caa23d9cfedf478f346fe794e9d98fe",
+          "source_hash": "6caa23d9cfedf478f346fe794e9d98fe",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": false,
+          "drift_count": 1,
+          "drift_items": [
+            {
+              "column": "ib_upper_bound",
+              "issue": "type_mismatch",
+              "expected": "NUMBER",
+              "actual": "STRING"
+            }
+          ],
+          "detail": "1 drift(s) detected"
+        }
+      ],
+      "confidence": 0.72,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf10tcl.inventory",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "e5ec0664c0a0f1883132bb7cde7ca7f1",
+          "source_hash": "e5ec0664c0a0f1883132bb7cde7ca7f1",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": false,
+          "drift_count": 1,
+          "drift_items": [
+            {
+              "column": "inv_item_sk",
+              "issue": "type_mismatch",
+              "expected": "NUMBER",
+              "actual": "STRING"
+            }
+          ],
+          "detail": "1 drift(s) detected"
+        }
+      ],
+      "confidence": 0.72,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf10tcl.item",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 804,
+          "target_count": 804,
+          "delta_pct": 0.0,
+          "detail": "Source=804, Target=804, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "8b6837d6beb6386f185732e0ec90b982",
+          "source_hash": "8b6837d6beb6386f185732e0ec90b982",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf10tcl.promotion",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "616adf1b50b92d7441572b7f69bc6114",
+          "source_hash": "616adf1b50b92d7441572b7f69bc6114",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf10tcl.reason",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "183e31f002fb879dec1b645371fa15b3",
+          "source_hash": "183e31f002fb879dec1b645371fa15b3",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": false,
+          "drift_count": 1,
+          "drift_items": [
+            {
+              "column": "r_reason_sk",
+              "issue": "type_mismatch",
+              "expected": "NUMBER",
+              "actual": "STRING"
+            }
+          ],
+          "detail": "1 drift(s) detected"
+        }
+      ],
+      "confidence": 0.72,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf10tcl.ship_mode",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "fa7d4ff8c09ee3af9875fd1f7bbf8f4e",
+          "source_hash": "fa7d4ff8c09ee3af9875fd1f7bbf8f4e",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf10tcl.store",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "fbfc5f352a9de6ff40ca538b5ba0ee0a",
+          "source_hash": "fbfc5f352a9de6ff40ca538b5ba0ee0a",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf10tcl.store_returns",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "4baf4a41e6b952b62a9643a6a7682899",
+          "source_hash": "4baf4a41e6b952b62a9643a6a7682899",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf10tcl.store_sales",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "bf9c10f3592f693d72366a85a66559b9",
+          "source_hash": "bf9c10f3592f693d72366a85a66559b9",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf10tcl.time_dim",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 172,
+          "target_count": 172,
+          "delta_pct": 0.0,
+          "detail": "Source=172, Target=172, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "a6266805b96d77c0228b440d8da6c31f",
+          "source_hash": "a6266805b96d77c0228b440d8da6c31f",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf10tcl.warehouse",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "111c0a75f1a8a82ad37302ed0208048f",
+          "source_hash": "111c0a75f1a8a82ad37302ed0208048f",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf10tcl.web_page",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "cf5975e47cbc9c54a80def060e9bad31",
+          "source_hash": "cf5975e47cbc9c54a80def060e9bad31",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf10tcl.web_returns",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": false,
+          "target_hash": "72988ece9de88072e109e3a524005827",
+          "source_hash": "728500425a3e901e27088ed9ece88927",
+          "detail": "Hash mismatch detected (simulated)"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.72,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf10tcl.web_sales",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "fa7b97e9b47e2a3373a540c4b293a77d",
+          "source_hash": "fa7b97e9b47e2a3373a540c4b293a77d",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": false,
+          "drift_count": 1,
+          "drift_items": [
+            {
+              "column": "ws_sold_date_sk",
+              "issue": "type_mismatch",
+              "expected": "NUMBER",
+              "actual": "STRING"
+            }
+          ],
+          "detail": "1 drift(s) detected"
+        }
+      ],
+      "confidence": 0.72,
+      "difficulty": 2
+    },
+    {
+      "table": "tpcds_sf10tcl.web_site",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "351526dac2066f21600290971b7c3bc4",
+          "source_hash": "351526dac2066f21600290971b7c3bc4",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf1.customer",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 300,
+          "target_count": 300,
+          "delta_pct": 0.0,
+          "detail": "Source=300, Target=300, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "d99f4641453e8adefe5360fac106747d",
+          "source_hash": "d99f4641453e8adefe5360fac106747d",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf1.lineitem",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "36790015f4738dd6fb7965ff50316f03",
+          "source_hash": "36790015f4738dd6fb7965ff50316f03",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf1.nation",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "061f5681e88e9e4570dd54cbaeb3e493",
+          "source_hash": "061f5681e88e9e4570dd54cbaeb3e493",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf1.orders",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "87e7ad2bc6c3beb668aacb7fcf33e0da",
+          "source_hash": "87e7ad2bc6c3beb668aacb7fcf33e0da",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf1.part",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 400,
+          "target_count": 400,
+          "delta_pct": 0.0,
+          "detail": "Source=400, Target=400, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "ded75257ab24469d1b7bd83dd766bda0",
+          "source_hash": "ded75257ab24469d1b7bd83dd766bda0",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf1.partsupp",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 1600,
+          "target_count": 1600,
+          "delta_pct": 0.0,
+          "detail": "Source=1600, Target=1600, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "48c11d783ce9a4a27da03cd7d13055c8",
+          "source_hash": "48c11d783ce9a4a27da03cd7d13055c8",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf1.region",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "ddcbad00dfdfb55941bfd6a9df159f34",
+          "source_hash": "ddcbad00dfdfb55941bfd6a9df159f34",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf1.supplier",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "670691050aa2254bf99051d3c04ba19c",
+          "source_hash": "670691050aa2254bf99051d3c04ba19c",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf10.customer",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": false,
+          "target_hash": "d99f4641453e8adefe5360fac106747d",
+          "source_hash": "d747601caf0635efeda8e3541464f99d",
+          "detail": "Hash mismatch detected (simulated)"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.72,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf10.lineitem",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "36790015f4738dd6fb7965ff50316f03",
+          "source_hash": "36790015f4738dd6fb7965ff50316f03",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf10.nation",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "061f5681e88e9e4570dd54cbaeb3e493",
+          "source_hash": "061f5681e88e9e4570dd54cbaeb3e493",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf10.orders",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": false,
+          "target_hash": "87e7ad2bc6c3beb668aacb7fcf33e0da",
+          "source_hash": "ad0e33fcf7bcaa866beb3c6cb2da7e78",
+          "detail": "Hash mismatch detected (simulated)"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.72,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf10.part",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "ded75257ab24469d1b7bd83dd766bda0",
+          "source_hash": "ded75257ab24469d1b7bd83dd766bda0",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf10.partsupp",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "48c11d783ce9a4a27da03cd7d13055c8",
+          "source_hash": "48c11d783ce9a4a27da03cd7d13055c8",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf10.region",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "ddcbad00dfdfb55941bfd6a9df159f34",
+          "source_hash": "ddcbad00dfdfb55941bfd6a9df159f34",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf10.supplier",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 200,
+          "target_count": 200,
+          "delta_pct": 0.0,
+          "detail": "Source=200, Target=200, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "670691050aa2254bf99051d3c04ba19c",
+          "source_hash": "670691050aa2254bf99051d3c04ba19c",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf100.customer",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "d99f4641453e8adefe5360fac106747d",
+          "source_hash": "d99f4641453e8adefe5360fac106747d",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf100.lineitem",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "36790015f4738dd6fb7965ff50316f03",
+          "source_hash": "36790015f4738dd6fb7965ff50316f03",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf100.nation",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "061f5681e88e9e4570dd54cbaeb3e493",
+          "source_hash": "061f5681e88e9e4570dd54cbaeb3e493",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": false,
+          "drift_count": 1,
+          "drift_items": [
+            {
+              "column": "n_comment",
+              "issue": "type_mismatch",
+              "expected": "TEXT",
+              "actual": "STRING"
+            }
+          ],
+          "detail": "1 drift(s) detected"
+        }
+      ],
+      "confidence": 0.72,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf100.orders",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "87e7ad2bc6c3beb668aacb7fcf33e0da",
+          "source_hash": "87e7ad2bc6c3beb668aacb7fcf33e0da",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": false,
+          "drift_count": 1,
+          "drift_items": [
+            {
+              "column": "o_orderstatus",
+              "issue": "type_mismatch",
+              "expected": "TEXT",
+              "actual": "STRING"
+            }
+          ],
+          "detail": "1 drift(s) detected"
+        }
+      ],
+      "confidence": 0.72,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf100.part",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "ded75257ab24469d1b7bd83dd766bda0",
+          "source_hash": "ded75257ab24469d1b7bd83dd766bda0",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf100.partsupp",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "48c11d783ce9a4a27da03cd7d13055c8",
+          "source_hash": "48c11d783ce9a4a27da03cd7d13055c8",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf100.region",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "ddcbad00dfdfb55941bfd6a9df159f34",
+          "source_hash": "ddcbad00dfdfb55941bfd6a9df159f34",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf100.supplier",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "670691050aa2254bf99051d3c04ba19c",
+          "source_hash": "670691050aa2254bf99051d3c04ba19c",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf1000.customer",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "d99f4641453e8adefe5360fac106747d",
+          "source_hash": "d99f4641453e8adefe5360fac106747d",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf1000.lineitem",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "36790015f4738dd6fb7965ff50316f03",
+          "source_hash": "36790015f4738dd6fb7965ff50316f03",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf1000.nation",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "061f5681e88e9e4570dd54cbaeb3e493",
+          "source_hash": "061f5681e88e9e4570dd54cbaeb3e493",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf1000.orders",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "87e7ad2bc6c3beb668aacb7fcf33e0da",
+          "source_hash": "87e7ad2bc6c3beb668aacb7fcf33e0da",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf1000.part",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "ded75257ab24469d1b7bd83dd766bda0",
+          "source_hash": "ded75257ab24469d1b7bd83dd766bda0",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf1000.partsupp",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "48c11d783ce9a4a27da03cd7d13055c8",
+          "source_hash": "48c11d783ce9a4a27da03cd7d13055c8",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf1000.region",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 100,
+          "target_count": 100,
+          "delta_pct": 0.0,
+          "detail": "Source=100, Target=100, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "ddcbad00dfdfb55941bfd6a9df159f34",
+          "source_hash": "ddcbad00dfdfb55941bfd6a9df159f34",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    },
+    {
+      "table": "tpch_sf1000.supplier",
+      "status": "validated",
+      "checks": [
+        {
+          "check": "row_count_match",
+          "passed": true,
+          "source_count": 2000,
+          "target_count": 2000,
+          "delta_pct": 0.0,
+          "detail": "Source=2000, Target=2000, Delta=0.00%"
+        },
+        {
+          "check": "checksum_match",
+          "passed": true,
+          "target_hash": "670691050aa2254bf99051d3c04ba19c",
+          "source_hash": "670691050aa2254bf99051d3c04ba19c",
+          "detail": "Hashes match"
+        },
+        {
+          "check": "null_variance",
+          "passed": true,
+          "violation_count": 0,
+          "violations": [],
+          "detail": "No null violations"
+        },
+        {
+          "check": "schema_drift",
+          "passed": true,
+          "drift_count": 0,
+          "drift_items": [],
+          "detail": "Schema matches"
+        }
+      ],
+      "confidence": 0.97,
+      "difficulty": 2
+    }
+  ]
+}

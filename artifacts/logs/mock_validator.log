@@ -1,0 +1,40 @@
+{"timestamp": "2026-02-25T08:35:51.280259+00:00", "level": "INFO", "logger": "mock_validator", "message": "[validation] started"}
+{"timestamp": "2026-02-25T08:35:52.704130+00:00", "level": "INFO", "logger": "mock_validator", "message": "[validation] completed", "data": {"tables": 25, "pass_rate": 93.0}}
+{"timestamp": "2026-02-25T08:35:52.704130+00:00", "level": "INFO", "logger": "mock_validator", "message": "[save] started"}
+{"timestamp": "2026-02-25T08:35:52.718145+00:00", "level": "INFO", "logger": "mock_validator", "message": "[save] completed", "data": {"validation_results": "C:\\dev\\data-migration\\test_results\\validation_results.json", "confidence_csv": "C:\\dev\\data-migration\\test_results\\confidence_scores.csv"}}
+{"timestamp": "2026-03-04T06:24:57.640343+00:00", "level": "INFO", "logger": "mock_validator", "message": "[validation] started"}
+{"timestamp": "2026-03-04T06:25:00.352875+00:00", "level": "INFO", "logger": "mock_validator", "message": "[validation] completed", "data": {"tables": 25, "pass_rate": 96.0}}
+{"timestamp": "2026-03-04T06:25:00.352875+00:00", "level": "INFO", "logger": "mock_validator", "message": "[save] started"}
+{"timestamp": "2026-03-04T06:25:00.378939+00:00", "level": "INFO", "logger": "mock_validator", "message": "[save] completed", "data": {"validation_results": "C:\\dev\\data-migration\\test_results\\validation_results.json", "confidence_csv": "C:\\dev\\data-migration\\test_results\\confidence_scores.csv"}}
+{"timestamp": "2026-03-04T09:56:34.653275+00:00", "level": "INFO", "logger": "mock_validator", "message": "[validation] started"}
+{"timestamp": "2026-03-04T09:56:35.498380+00:00", "level": "INFO", "logger": "mock_validator", "message": "[validation] completed", "data": {"tables": 25, "pass_rate": 95.0}}
+{"timestamp": "2026-03-04T09:56:35.498380+00:00", "level": "INFO", "logger": "mock_validator", "message": "[save] started"}
+{"timestamp": "2026-03-04T09:56:35.523375+00:00", "level": "INFO", "logger": "mock_validator", "message": "[save] completed", "data": {"validation_results": "C:\\dev\\data-migration\\test_results\\validation_results.json", "confidence_csv": "C:\\dev\\data-migration\\test_results\\confidence_scores.csv"}}
+{"timestamp": "2026-03-04T09:57:13.103881+00:00", "level": "INFO", "logger": "mock_validator", "message": "[validation] started"}
+{"timestamp": "2026-03-04T09:57:13.964171+00:00", "level": "INFO", "logger": "mock_validator", "message": "[validation] completed", "data": {"tables": 25, "pass_rate": 97.0}}
+{"timestamp": "2026-03-04T09:57:13.964171+00:00", "level": "INFO", "logger": "mock_validator", "message": "[save] started"}
+{"timestamp": "2026-03-04T09:57:13.979442+00:00", "level": "INFO", "logger": "mock_validator", "message": "[save] completed", "data": {"validation_results": "C:\\dev\\data-migration\\test_results\\validation_results.json", "confidence_csv": "C:\\dev\\data-migration\\test_results\\confidence_scores.csv"}}
+{"timestamp": "2026-03-04T09:58:50.087352+00:00", "level": "INFO", "logger": "mock_validator", "message": "[validation] started"}
+{"timestamp": "2026-03-04T09:58:50.827547+00:00", "level": "INFO", "logger": "mock_validator", "message": "[validation] completed", "data": {"tables": 25, "pass_rate": 96.0}}
+{"timestamp": "2026-03-04T09:58:50.827547+00:00", "level": "INFO", "logger": "mock_validator", "message": "[save] started"}
+{"timestamp": "2026-03-04T09:58:50.845065+00:00", "level": "INFO", "logger": "mock_validator", "message": "[save] completed", "data": {"validation_results": "C:\\dev\\data-migration\\test_results\\validation_results.json", "confidence_csv": "C:\\dev\\data-migration\\test_results\\confidence_scores.csv"}}
+{"timestamp": "2026-03-04T10:14:34.598607+00:00", "level": "INFO", "logger": "mock_validator", "message": "[validation] started"}
+{"timestamp": "2026-03-04T10:14:35.460082+00:00", "level": "INFO", "logger": "mock_validator", "message": "[validation] completed", "data": {"tables": 25, "pass_rate": 93.0}}
+{"timestamp": "2026-03-04T10:14:35.460082+00:00", "level": "INFO", "logger": "mock_validator", "message": "[save] started"}
+{"timestamp": "2026-03-04T10:14:35.472462+00:00", "level": "INFO", "logger": "mock_validator", "message": "[save] completed", "data": {"validation_results": "C:\\dev\\data-migration\\test_results\\validation_results.json", "confidence_csv": "C:\\dev\\data-migration\\test_results\\confidence_scores.csv"}}
+{"timestamp": "2026-03-04T11:02:05.279189+00:00", "level": "INFO", "logger": "mock_validator", "message": "[validation] started"}
+{"timestamp": "2026-03-04T11:02:06.965097+00:00", "level": "INFO", "logger": "mock_validator", "message": "[validation] completed", "data": {"tables": 25, "pass_rate": 97.0}}
+{"timestamp": "2026-03-04T11:02:06.965097+00:00", "level": "INFO", "logger": "mock_validator", "message": "[save] started"}
+{"timestamp": "2026-03-04T11:02:06.982254+00:00", "level": "INFO", "logger": "mock_validator", "message": "[save] completed", "data": {"validation_results": "C:\\dev\\data-migration\\test_results\\validation_results.json", "confidence_csv": "C:\\dev\\data-migration\\test_results\\confidence_scores.csv"}}
+{"timestamp": "2026-03-05T11:23:23.151743+00:00", "level": "INFO", "logger": "mock_validator", "message": "[validation] started"}
+{"timestamp": "2026-03-05T11:23:25.956056+00:00", "level": "INFO", "logger": "mock_validator", "message": "[validation] completed", "data": {"tables": 80, "pass_rate": 95.0}}
+{"timestamp": "2026-03-05T11:23:25.956056+00:00", "level": "INFO", "logger": "mock_validator", "message": "[save] started"}
+{"timestamp": "2026-03-05T11:23:25.971068+00:00", "level": "INFO", "logger": "mock_validator", "message": "[save] completed", "data": {"validation_results": "C:\\dev\\data-migration\\test_results\\validation_results.json", "confidence_csv": "C:\\dev\\data-migration\\test_results\\confidence_scores.csv"}}
+{"timestamp": "2026-03-05T11:30:13.237841+00:00", "level": "INFO", "logger": "mock_validator", "message": "[validation] started"}
+{"timestamp": "2026-03-05T11:30:15.158921+00:00", "level": "INFO", "logger": "mock_validator", "message": "[validation] completed", "data": {"tables": 80, "pass_rate": 96.25}}
+{"timestamp": "2026-03-05T11:30:15.158921+00:00", "level": "INFO", "logger": "mock_validator", "message": "[save] started"}
+{"timestamp": "2026-03-05T11:30:15.175932+00:00", "level": "INFO", "logger": "mock_validator", "message": "[save] completed", "data": {"validation_results": "C:\\dev\\data-migration\\test_results\\validation_results.json", "confidence_csv": "C:\\dev\\data-migration\\test_results\\confidence_scores.csv"}}
+{"timestamp": "2026-03-05T11:34:32.499162+00:00", "level": "INFO", "logger": "mock_validator", "message": "[validation] started"}
+{"timestamp": "2026-03-05T11:34:34.438335+00:00", "level": "INFO", "logger": "mock_validator", "message": "[validation] completed", "data": {"tables": 80, "pass_rate": 96.25}}
+{"timestamp": "2026-03-05T11:34:34.439333+00:00", "level": "INFO", "logger": "mock_validator", "message": "[save] started"}
+{"timestamp": "2026-03-05T11:34:34.455946+00:00", "level": "INFO", "logger": "mock_validator", "message": "[save] completed", "data": {"validation_results": "C:\\dev\\data-migration\\test_results\\validation_results.json", "confidence_csv": "C:\\dev\\data-migration\\test_results\\confidence_scores.csv"}}

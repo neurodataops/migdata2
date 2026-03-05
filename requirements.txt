@@ -1,0 +1,9 @@
+psycopg2-binary>=2.9
+tqdm>=4.60
+plotly>=5.18
+databricks-sql-connector>=2.9
+streamlit>=1.30
+pandas>=2.0
+pyyaml>=6.0
+reportlab>=4.0
+snowflake-connector-python>=3.6

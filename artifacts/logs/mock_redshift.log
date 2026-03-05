@@ -1,0 +1,30 @@
+{"timestamp": "2026-02-25T08:35:31.402890+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[extract_catalog] started", "data": {"seed": 42}}
+{"timestamp": "2026-02-25T08:35:31.607390+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[extract_catalog] completed", "data": {"tables": 25, "columns": 213, "constraints": 32, "procs": 3, "udfs": 2, "views": 3}}
+{"timestamp": "2026-02-25T08:35:31.607390+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[extract_query_logs] started", "data": {"seed": 42}}
+{"timestamp": "2026-02-25T08:35:31.628392+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[extract_query_logs] completed", "data": {"entries": 682}}
+{"timestamp": "2026-02-25T08:35:31.628392+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[save] started"}
+{"timestamp": "2026-02-25T08:35:31.661403+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[save] completed", "data": {"catalog_path": "C:\\dev\\data-migration\\mock_data\\source_catalog.json", "logs_path": "C:\\dev\\data-migration\\mock_data\\query_logs.json"}}
+{"timestamp": "2026-03-04T06:24:31.662697+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[extract_catalog] started", "data": {"seed": 42}}
+{"timestamp": "2026-03-04T06:24:31.917682+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[extract_catalog] completed", "data": {"tables": 25, "columns": 213, "constraints": 32, "procs": 3, "udfs": 2, "views": 3}}
+{"timestamp": "2026-03-04T06:24:31.918685+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[extract_query_logs] started", "data": {"seed": 42}}
+{"timestamp": "2026-03-04T06:24:31.944674+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[extract_query_logs] completed", "data": {"entries": 682}}
+{"timestamp": "2026-03-04T06:24:31.944674+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[save] started"}
+{"timestamp": "2026-03-04T06:24:31.979121+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[save] completed", "data": {"catalog_path": "C:\\dev\\data-migration\\mock_data\\source_catalog.json", "logs_path": "C:\\dev\\data-migration\\mock_data\\query_logs.json"}}
+{"timestamp": "2026-03-04T09:56:17.693346+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[extract_catalog] started", "data": {"seed": 42}}
+{"timestamp": "2026-03-04T09:56:17.948767+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[extract_catalog] completed", "data": {"tables": 25, "columns": 213, "constraints": 32, "procs": 3, "udfs": 2, "views": 3}}
+{"timestamp": "2026-03-04T09:56:17.949765+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[extract_query_logs] started", "data": {"seed": 42}}
+{"timestamp": "2026-03-04T09:56:17.971757+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[extract_query_logs] completed", "data": {"entries": 682}}
+{"timestamp": "2026-03-04T09:56:17.971757+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[save] started"}
+{"timestamp": "2026-03-04T09:56:17.998766+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[save] completed", "data": {"catalog_path": "C:\\dev\\data-migration\\mock_data\\source_catalog.json", "logs_path": "C:\\dev\\data-migration\\mock_data\\query_logs.json"}}
+{"timestamp": "2026-03-04T09:58:32.391416+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[extract_catalog] started", "data": {"seed": 42}}
+{"timestamp": "2026-03-04T09:58:32.648713+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[extract_catalog] completed", "data": {"tables": 25, "columns": 213, "constraints": 32, "procs": 3, "udfs": 2, "views": 3}}
+{"timestamp": "2026-03-04T09:58:32.648713+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[extract_query_logs] started", "data": {"seed": 42}}
+{"timestamp": "2026-03-04T09:58:32.677720+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[extract_query_logs] completed", "data": {"entries": 682}}
+{"timestamp": "2026-03-04T09:58:32.677720+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[save] started"}
+{"timestamp": "2026-03-04T09:58:32.719064+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[save] completed", "data": {"catalog_path": "C:\\dev\\data-migration\\mock_data\\source_catalog.json", "logs_path": "C:\\dev\\data-migration\\mock_data\\query_logs.json"}}
+{"timestamp": "2026-03-04T10:14:17.780545+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[extract_catalog] started", "data": {"seed": 42}}
+{"timestamp": "2026-03-04T10:14:18.043061+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[extract_catalog] completed", "data": {"tables": 25, "columns": 213, "constraints": 32, "procs": 3, "udfs": 2, "views": 3}}
+{"timestamp": "2026-03-04T10:14:18.043061+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[extract_query_logs] started", "data": {"seed": 42}}
+{"timestamp": "2026-03-04T10:14:18.064055+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[extract_query_logs] completed", "data": {"entries": 682}}
+{"timestamp": "2026-03-04T10:14:18.064055+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[save] started"}
+{"timestamp": "2026-03-04T10:14:18.090083+00:00", "level": "INFO", "logger": "mock_redshift", "message": "[save] completed", "data": {"catalog_path": "C:\\dev\\data-migration\\mock_data\\source_catalog.json", "logs_path": "C:\\dev\\data-migration\\mock_data\\query_logs.json"}}
