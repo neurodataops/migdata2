@@ -1,1 +1,16 @@
 nul
+# Python
+.venv/
+__pycache__/
+
+# Logs
+*.log
+
+# Build artifacts
+artifacts/
+
+# Images / debugging
+screenshots/debug*
+
+# Node
+node_modules/
