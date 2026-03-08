@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-03-05T17:04:32.489740",
+  "generated_at": "2026-03-08T16:36:51.103618",
   "summary": {
     "tables_loaded": 80,
     "total_rows": 86044,
     "total_parquet_files": 80,
-    "tables_with_mismatches": 7
+    "tables_with_mismatches": 8
   },
   "tables": [
     {
@@ -17,7 +17,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf100tcl_call_center.parquet",
       "partition_column": "cc_rec_start_date",
       "schema_mismatches": [],
-      "runtime_seconds": 0.172,
+      "runtime_seconds": 0.876,
       "status": "success",
       "error": null
     },
@@ -31,7 +31,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf100tcl_catalog_page.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.116,
+      "runtime_seconds": 0.206,
       "status": "success",
       "error": null
     },
@@ -45,7 +45,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf100tcl_catalog_returns.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.886,
+      "runtime_seconds": 2.612,
       "status": "success",
       "error": null
     },
@@ -55,11 +55,11 @@
       "fqn": "tpcds_sf100tcl.catalog_sales",
       "rows_loaded": 2000,
       "file_count": 1,
-      "file_size_kb": 2291.5,
+      "file_size_kb": 2293.1,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf100tcl_catalog_sales.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 1.095,
+      "runtime_seconds": 2.387,
       "status": "success",
       "error": null
     },
@@ -69,11 +69,11 @@
       "fqn": "tpcds_sf100tcl.customer",
       "rows_loaded": 2000,
       "file_count": 1,
-      "file_size_kb": 942.7,
+      "file_size_kb": 940.7,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf100tcl_customer.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 1.253,
+      "runtime_seconds": 2.156,
       "status": "success",
       "error": null
     },
@@ -83,11 +83,11 @@
       "fqn": "tpcds_sf100tcl.customer_address",
       "rows_loaded": 2000,
       "file_count": 1,
-      "file_size_kb": 685.4,
+      "file_size_kb": 685.6,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf100tcl_customer_address.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.432,
+      "runtime_seconds": 1.147,
       "status": "success",
       "error": null
     },
@@ -101,7 +101,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf100tcl_customer_demographics.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.45,
+      "runtime_seconds": 0.616,
       "status": "success",
       "error": null
     },
@@ -111,11 +111,11 @@
       "fqn": "tpcds_sf100tcl.date_dim",
       "rows_loaded": 146,
       "file_count": 1,
-      "file_size_kb": 150.4,
+      "file_size_kb": 150.3,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf100tcl_date_dim.parquet",
       "partition_column": "d_date",
       "schema_mismatches": [],
-      "runtime_seconds": 0.284,
+      "runtime_seconds": 0.359,
       "status": "success",
       "error": null
     },
@@ -129,7 +129,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf100tcl_household_demographics.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.263,
+      "runtime_seconds": 0.29,
       "status": "success",
       "error": null
     },
@@ -143,7 +143,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf100tcl_income_band.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.2,
+      "runtime_seconds": 0.204,
       "status": "success",
       "error": null
     },
@@ -153,11 +153,11 @@
       "fqn": "tpcds_sf100tcl.inventory",
       "rows_loaded": 2000,
       "file_count": 1,
-      "file_size_kb": 279.2,
+      "file_size_kb": 279.3,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf100tcl_inventory.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.343,
+      "runtime_seconds": 0.43,
       "status": "success",
       "error": null
     },
@@ -167,11 +167,11 @@
       "fqn": "tpcds_sf100tcl.item",
       "rows_loaded": 1004,
       "file_count": 1,
-      "file_size_kb": 697.8,
+      "file_size_kb": 697.5,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf100tcl_item.parquet",
       "partition_column": "i_rec_start_date",
       "schema_mismatches": [],
-      "runtime_seconds": 0.499,
+      "runtime_seconds": 0.554,
       "status": "success",
       "error": null
     },
@@ -181,7 +181,7 @@
       "fqn": "tpcds_sf100tcl.promotion",
       "rows_loaded": 100,
       "file_count": 1,
-      "file_size_kb": 48.5,
+      "file_size_kb": 48.4,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf100tcl_promotion.parquet",
       "partition_column": null,
       "schema_mismatches": [
@@ -192,7 +192,7 @@
           "note": "Type widened during Parquet conversion"
         }
       ],
-      "runtime_seconds": 0.14,
+      "runtime_seconds": 0.197,
       "status": "success",
       "error": null
     },
@@ -206,7 +206,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf100tcl_reason.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.21,
+      "runtime_seconds": 0.204,
       "status": "success",
       "error": null
     },
@@ -216,11 +216,11 @@
       "fqn": "tpcds_sf100tcl.ship_mode",
       "rows_loaded": 100,
       "file_count": 1,
-      "file_size_kb": 18.7,
+      "file_size_kb": 18.8,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf100tcl_ship_mode.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.202,
+      "runtime_seconds": 0.229,
       "status": "success",
       "error": null
     },
@@ -230,11 +230,11 @@
       "fqn": "tpcds_sf100tcl.store",
       "rows_loaded": 100,
       "file_count": 1,
-      "file_size_kb": 105.3,
+      "file_size_kb": 105.2,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf100tcl_store.parquet",
       "partition_column": "s_rec_start_date",
       "schema_mismatches": [],
-      "runtime_seconds": 0.293,
+      "runtime_seconds": 0.324,
       "status": "success",
       "error": null
     },
@@ -244,11 +244,11 @@
       "fqn": "tpcds_sf100tcl.store_returns",
       "rows_loaded": 2000,
       "file_count": 1,
-      "file_size_kb": 1302.2,
+      "file_size_kb": 1302.3,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf100tcl_store_returns.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.699,
+      "runtime_seconds": 1.503,
       "status": "success",
       "error": null
     },
@@ -258,11 +258,11 @@
       "fqn": "tpcds_sf100tcl.store_sales",
       "rows_loaded": 2000,
       "file_count": 1,
-      "file_size_kb": 1553.5,
+      "file_size_kb": 1553.4,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf100tcl_store_sales.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.741,
+      "runtime_seconds": 1.585,
       "status": "success",
       "error": null
     },
@@ -276,7 +276,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf100tcl_time_dim.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.12,
+      "runtime_seconds": 0.187,
       "status": "success",
       "error": null
     },
@@ -286,11 +286,11 @@
       "fqn": "tpcds_sf100tcl.warehouse",
       "rows_loaded": 100,
       "file_count": 1,
-      "file_size_kb": 50.2,
+      "file_size_kb": 50.1,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf100tcl_warehouse.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.219,
+      "runtime_seconds": 0.266,
       "status": "success",
       "error": null
     },
@@ -300,11 +300,11 @@
       "fqn": "tpcds_sf100tcl.web_page",
       "rows_loaded": 100,
       "file_count": 1,
-      "file_size_kb": 45.6,
+      "file_size_kb": 45.5,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf100tcl_web_page.parquet",
       "partition_column": "wp_rec_start_date",
       "schema_mismatches": [],
-      "runtime_seconds": 0.232,
+      "runtime_seconds": 0.282,
       "status": "success",
       "error": null
     },
@@ -314,11 +314,11 @@
       "fqn": "tpcds_sf100tcl.web_returns",
       "rows_loaded": 2000,
       "file_count": 1,
-      "file_size_kb": 1377.2,
+      "file_size_kb": 1377.1,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf100tcl_web_returns.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.935,
+      "runtime_seconds": 1.868,
       "status": "success",
       "error": null
     },
@@ -328,11 +328,11 @@
       "fqn": "tpcds_sf100tcl.web_sales",
       "rows_loaded": 2000,
       "file_count": 1,
-      "file_size_kb": 2292.8,
+      "file_size_kb": 2292.5,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf100tcl_web_sales.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 1.157,
+      "runtime_seconds": 2.404,
       "status": "success",
       "error": null
     },
@@ -346,7 +346,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf100tcl_web_site.parquet",
       "partition_column": "web_rec_start_date",
       "schema_mismatches": [],
-      "runtime_seconds": 0.141,
+      "runtime_seconds": 0.159,
       "status": "success",
       "error": null
     },
@@ -356,11 +356,11 @@
       "fqn": "tpcds_sf10tcl.call_center",
       "rows_loaded": 100,
       "file_count": 1,
-      "file_size_kb": 111.4,
+      "file_size_kb": 111.5,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf10tcl_call_center.parquet",
       "partition_column": "cc_rec_start_date",
       "schema_mismatches": [],
-      "runtime_seconds": 0.307,
+      "runtime_seconds": 0.359,
       "status": "success",
       "error": null
     },
@@ -370,11 +370,11 @@
       "fqn": "tpcds_sf10tcl.catalog_page",
       "rows_loaded": 100,
       "file_count": 1,
-      "file_size_kb": 34.4,
+      "file_size_kb": 34.2,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf10tcl_catalog_page.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.173,
+      "runtime_seconds": 0.231,
       "status": "success",
       "error": null
     },
@@ -388,7 +388,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf10tcl_catalog_returns.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.906,
+      "runtime_seconds": 2.154,
       "status": "success",
       "error": null
     },
@@ -398,11 +398,18 @@
       "fqn": "tpcds_sf10tcl.catalog_sales",
       "rows_loaded": 2000,
       "file_count": 1,
-      "file_size_kb": 2289.5,
+      "file_size_kb": 2290.9,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf10tcl_catalog_sales.parquet",
       "partition_column": null,
-      "schema_mismatches": [],
-      "runtime_seconds": 1.055,
+      "schema_mismatches": [
+        {
+          "column": "cs_ship_date_sk",
+          "expected": "NUMBER",
+          "actual": "STRING",
+          "note": "Type widened during Parquet conversion"
+        }
+      ],
+      "runtime_seconds": 2.404,
       "status": "success",
       "error": null
     },
@@ -416,7 +423,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf10tcl_customer.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 1.398,
+      "runtime_seconds": 3.086,
       "status": "success",
       "error": null
     },
@@ -426,11 +433,11 @@
       "fqn": "tpcds_sf10tcl.customer_address",
       "rows_loaded": 2000,
       "file_count": 1,
-      "file_size_kb": 688.0,
+      "file_size_kb": 687.9,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf10tcl_customer_address.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.415,
+      "runtime_seconds": 0.787,
       "status": "success",
       "error": null
     },
@@ -440,11 +447,11 @@
       "fqn": "tpcds_sf10tcl.customer_demographics",
       "rows_loaded": 2000,
       "file_count": 1,
-      "file_size_kb": 476.7,
+      "file_size_kb": 476.5,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf10tcl_customer_demographics.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.329,
+      "runtime_seconds": 0.568,
       "status": "success",
       "error": null
     },
@@ -454,11 +461,11 @@
       "fqn": "tpcds_sf10tcl.date_dim",
       "rows_loaded": 146,
       "file_count": 1,
-      "file_size_kb": 150.9,
+      "file_size_kb": 150.7,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf10tcl_date_dim.parquet",
       "partition_column": "d_date",
       "schema_mismatches": [],
-      "runtime_seconds": 0.241,
+      "runtime_seconds": 0.358,
       "status": "success",
       "error": null
     },
@@ -472,7 +479,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf10tcl_household_demographics.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.087,
+      "runtime_seconds": 0.113,
       "status": "success",
       "error": null
     },
@@ -493,7 +500,7 @@
           "note": "Type widened during Parquet conversion"
         }
       ],
-      "runtime_seconds": 0.149,
+      "runtime_seconds": 0.158,
       "status": "success",
       "error": null
     },
@@ -503,7 +510,7 @@
       "fqn": "tpcds_sf10tcl.inventory",
       "rows_loaded": 2000,
       "file_count": 1,
-      "file_size_kb": 279.0,
+      "file_size_kb": 279.1,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf10tcl_inventory.parquet",
       "partition_column": null,
       "schema_mismatches": [
@@ -514,7 +521,7 @@
           "note": "Type widened during Parquet conversion"
         }
       ],
-      "runtime_seconds": 0.409,
+      "runtime_seconds": 0.592,
       "status": "success",
       "error": null
     },
@@ -524,11 +531,11 @@
       "fqn": "tpcds_sf10tcl.item",
       "rows_loaded": 804,
       "file_count": 1,
-      "file_size_kb": 562.4,
+      "file_size_kb": 563.1,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf10tcl_item.parquet",
       "partition_column": "i_rec_start_date",
       "schema_mismatches": [],
-      "runtime_seconds": 0.295,
+      "runtime_seconds": 0.523,
       "status": "success",
       "error": null
     },
@@ -538,11 +545,11 @@
       "fqn": "tpcds_sf10tcl.promotion",
       "rows_loaded": 100,
       "file_count": 1,
-      "file_size_kb": 47.7,
+      "file_size_kb": 47.6,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf10tcl_promotion.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.208,
+      "runtime_seconds": 0.272,
       "status": "success",
       "error": null
     },
@@ -552,7 +559,7 @@
       "fqn": "tpcds_sf10tcl.reason",
       "rows_loaded": 100,
       "file_count": 1,
-      "file_size_kb": 13.1,
+      "file_size_kb": 13.0,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf10tcl_reason.parquet",
       "partition_column": null,
       "schema_mismatches": [
@@ -563,7 +570,7 @@
           "note": "Type widened during Parquet conversion"
         }
       ],
-      "runtime_seconds": 0.163,
+      "runtime_seconds": 0.169,
       "status": "success",
       "error": null
     },
@@ -573,11 +580,11 @@
       "fqn": "tpcds_sf10tcl.ship_mode",
       "rows_loaded": 100,
       "file_count": 1,
-      "file_size_kb": 18.7,
+      "file_size_kb": 18.6,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf10tcl_ship_mode.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.277,
+      "runtime_seconds": 0.302,
       "status": "success",
       "error": null
     },
@@ -591,7 +598,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf10tcl_store.parquet",
       "partition_column": "s_rec_start_date",
       "schema_mismatches": [],
-      "runtime_seconds": 0.304,
+      "runtime_seconds": 0.35,
       "status": "success",
       "error": null
     },
@@ -601,11 +608,11 @@
       "fqn": "tpcds_sf10tcl.store_returns",
       "rows_loaded": 2000,
       "file_count": 1,
-      "file_size_kb": 1302.6,
+      "file_size_kb": 1302.7,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf10tcl_store_returns.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.665,
+      "runtime_seconds": 1.455,
       "status": "success",
       "error": null
     },
@@ -615,11 +622,11 @@
       "fqn": "tpcds_sf10tcl.store_sales",
       "rows_loaded": 2000,
       "file_count": 1,
-      "file_size_kb": 1548.6,
+      "file_size_kb": 1548.5,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf10tcl_store_sales.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.836,
+      "runtime_seconds": 1.734,
       "status": "success",
       "error": null
     },
@@ -629,11 +636,11 @@
       "fqn": "tpcds_sf10tcl.time_dim",
       "rows_loaded": 172,
       "file_count": 1,
-      "file_size_kb": 64.6,
+      "file_size_kb": 64.7,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf10tcl_time_dim.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.099,
+      "runtime_seconds": 0.178,
       "status": "success",
       "error": null
     },
@@ -647,7 +654,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf10tcl_warehouse.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.275,
+      "runtime_seconds": 0.32,
       "status": "success",
       "error": null
     },
@@ -657,11 +664,11 @@
       "fqn": "tpcds_sf10tcl.web_page",
       "rows_loaded": 100,
       "file_count": 1,
-      "file_size_kb": 45.4,
+      "file_size_kb": 45.5,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf10tcl_web_page.parquet",
       "partition_column": "wp_rec_start_date",
       "schema_mismatches": [],
-      "runtime_seconds": 0.155,
+      "runtime_seconds": 0.252,
       "status": "success",
       "error": null
     },
@@ -675,7 +682,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf10tcl_web_returns.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.859,
+      "runtime_seconds": 1.896,
       "status": "success",
       "error": null
     },
@@ -685,7 +692,7 @@
       "fqn": "tpcds_sf10tcl.web_sales",
       "rows_loaded": 2000,
       "file_count": 1,
-      "file_size_kb": 2290.6,
+      "file_size_kb": 2290.4,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf10tcl_web_sales.parquet",
       "partition_column": null,
       "schema_mismatches": [
@@ -696,7 +703,7 @@
           "note": "Type widened during Parquet conversion"
         }
       ],
-      "runtime_seconds": 0.999,
+      "runtime_seconds": 3.017,
       "status": "success",
       "error": null
     },
@@ -706,11 +713,11 @@
       "fqn": "tpcds_sf10tcl.web_site",
       "rows_loaded": 100,
       "file_count": 1,
-      "file_size_kb": 92.4,
+      "file_size_kb": 92.3,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpcds_sf10tcl_web_site.parquet",
       "partition_column": "web_rec_start_date",
       "schema_mismatches": [],
-      "runtime_seconds": 0.11,
+      "runtime_seconds": 0.271,
       "status": "success",
       "error": null
     },
@@ -724,7 +731,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf1_customer.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.29,
+      "runtime_seconds": 0.362,
       "status": "success",
       "error": null
     },
@@ -738,7 +745,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf1_lineitem.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.55,
+      "runtime_seconds": 1.52,
       "status": "success",
       "error": null
     },
@@ -748,11 +755,11 @@
       "fqn": "tpch_sf1.nation",
       "rows_loaded": 100,
       "file_count": 1,
-      "file_size_kb": 16.8,
+      "file_size_kb": 16.9,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf1_nation.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.151,
+      "runtime_seconds": 0.227,
       "status": "success",
       "error": null
     },
@@ -766,7 +773,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf1_orders.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.453,
+      "runtime_seconds": 0.717,
       "status": "success",
       "error": null
     },
@@ -780,7 +787,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf1_part.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.158,
+      "runtime_seconds": 0.204,
       "status": "success",
       "error": null
     },
@@ -794,7 +801,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf1_partsupp.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.287,
+      "runtime_seconds": 0.497,
       "status": "success",
       "error": null
     },
@@ -808,7 +815,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf1_region.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.264,
+      "runtime_seconds": 0.363,
       "status": "success",
       "error": null
     },
@@ -818,11 +825,11 @@
       "fqn": "tpch_sf1.supplier",
       "rows_loaded": 100,
       "file_count": 1,
-      "file_size_kb": 27.3,
+      "file_size_kb": 27.4,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf1_supplier.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.141,
+      "runtime_seconds": 0.273,
       "status": "success",
       "error": null
     },
@@ -832,11 +839,11 @@
       "fqn": "tpch_sf10.customer",
       "rows_loaded": 2000,
       "file_count": 1,
-      "file_size_kb": 520.8,
+      "file_size_kb": 520.9,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf10_customer.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.342,
+      "runtime_seconds": 1.018,
       "status": "success",
       "error": null
     },
@@ -846,11 +853,11 @@
       "fqn": "tpch_sf10.lineitem",
       "rows_loaded": 2000,
       "file_count": 1,
-      "file_size_kb": 858.7,
+      "file_size_kb": 858.8,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf10_lineitem.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.581,
+      "runtime_seconds": 0.891,
       "status": "success",
       "error": null
     },
@@ -864,7 +871,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf10_nation.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.067,
+      "runtime_seconds": 0.082,
       "status": "success",
       "error": null
     },
@@ -874,11 +881,11 @@
       "fqn": "tpch_sf10.orders",
       "rows_loaded": 2000,
       "file_count": 1,
-      "file_size_kb": 498.5,
+      "file_size_kb": 498.6,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf10_orders.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.283,
+      "runtime_seconds": 0.479,
       "status": "success",
       "error": null
     },
@@ -892,7 +899,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf10_part.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.297,
+      "runtime_seconds": 0.513,
       "status": "success",
       "error": null
     },
@@ -906,7 +913,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf10_partsupp.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.319,
+      "runtime_seconds": 0.542,
       "status": "success",
       "error": null
     },
@@ -920,7 +927,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf10_region.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.085,
+      "runtime_seconds": 0.084,
       "status": "success",
       "error": null
     },
@@ -934,7 +941,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf10_supplier.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.111,
+      "runtime_seconds": 0.144,
       "status": "success",
       "error": null
     },
@@ -948,7 +955,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf100_customer.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.416,
+      "runtime_seconds": 0.918,
       "status": "success",
       "error": null
     },
@@ -962,7 +969,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf100_lineitem.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.386,
+      "runtime_seconds": 0.719,
       "status": "success",
       "error": null
     },
@@ -983,7 +990,7 @@
           "note": "Type widened during Parquet conversion"
         }
       ],
-      "runtime_seconds": 0.247,
+      "runtime_seconds": 0.244,
       "status": "success",
       "error": null
     },
@@ -993,7 +1000,7 @@
       "fqn": "tpch_sf100.orders",
       "rows_loaded": 2000,
       "file_count": 1,
-      "file_size_kb": 498.6,
+      "file_size_kb": 498.5,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf100_orders.parquet",
       "partition_column": null,
       "schema_mismatches": [
@@ -1004,7 +1011,7 @@
           "note": "Type widened during Parquet conversion"
         }
       ],
-      "runtime_seconds": 0.282,
+      "runtime_seconds": 0.46,
       "status": "success",
       "error": null
     },
@@ -1018,7 +1025,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf100_part.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.341,
+      "runtime_seconds": 1.017,
       "status": "success",
       "error": null
     },
@@ -1032,7 +1039,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf100_partsupp.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.2,
+      "runtime_seconds": 0.325,
       "status": "success",
       "error": null
     },
@@ -1046,7 +1053,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf100_region.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.16,
+      "runtime_seconds": 0.161,
       "status": "success",
       "error": null
     },
@@ -1056,11 +1063,11 @@
       "fqn": "tpch_sf100.supplier",
       "rows_loaded": 2000,
       "file_count": 1,
-      "file_size_kb": 452.8,
+      "file_size_kb": 452.7,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf100_supplier.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.372,
+      "runtime_seconds": 0.507,
       "status": "success",
       "error": null
     },
@@ -1070,11 +1077,11 @@
       "fqn": "tpch_sf1000.customer",
       "rows_loaded": 2000,
       "file_count": 1,
-      "file_size_kb": 519.5,
+      "file_size_kb": 519.6,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf1000_customer.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.363,
+      "runtime_seconds": 0.666,
       "status": "success",
       "error": null
     },
@@ -1084,11 +1091,11 @@
       "fqn": "tpch_sf1000.lineitem",
       "rows_loaded": 2000,
       "file_count": 1,
-      "file_size_kb": 858.8,
+      "file_size_kb": 858.7,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf1000_lineitem.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.526,
+      "runtime_seconds": 0.941,
       "status": "success",
       "error": null
     },
@@ -1102,7 +1109,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf1000_nation.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.225,
+      "runtime_seconds": 0.234,
       "status": "success",
       "error": null
     },
@@ -1116,7 +1123,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf1000_orders.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.301,
+      "runtime_seconds": 0.533,
       "status": "success",
       "error": null
     },
@@ -1126,11 +1133,11 @@
       "fqn": "tpch_sf1000.part",
       "rows_loaded": 2000,
       "file_count": 1,
-      "file_size_kb": 561.5,
+      "file_size_kb": 561.4,
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf1000_part.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.31,
+      "runtime_seconds": 0.531,
       "status": "success",
       "error": null
     },
@@ -1144,7 +1151,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf1000_partsupp.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.31,
+      "runtime_seconds": 0.545,
       "status": "success",
       "error": null
     },
@@ -1158,7 +1165,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf1000_region.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.144,
+      "runtime_seconds": 0.15,
       "status": "success",
       "error": null
     },
@@ -1172,7 +1179,7 @@
       "parquet_path": "C:\\dev\\data-migration\\artifacts\\target_tables\\tpch_sf1000_supplier.parquet",
       "partition_column": null,
       "schema_mismatches": [],
-      "runtime_seconds": 0.525,
+      "runtime_seconds": 0.929,
       "status": "success",
       "error": null
     }

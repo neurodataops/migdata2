@@ -2,7 +2,7 @@
 -- Type       : VIEW
 -- Class      : AUTO_CONVERT
 -- Difficulty : 3/10
--- Generated  : 2026-03-04T16:31:48.143771
+-- Generated  : 2026-03-08T12:18:43.251551
 -- ---
 
 CREATE OR REPLACE VIEW public.v_order_summary AS

@@ -5,7 +5,7 @@
 -- Rules      : remove_data_retention, number_to_bigint, variant_to_string, timestamp_ntz, varchar_to_string, autoincrement, append_using_delta
 -- Warnings   : 1
 -- SHA-256    : 0662d1d5b0b65dfdcfd33a9ff4ae217b9d4ede002fba3572dbb8eb8826384a72
--- Generated  : 2026-03-04T16:31:48.127441
+-- Generated  : 2026-03-08T12:18:43.237244
 -- ---
 
 CREATE TABLE marketing.email_sends (

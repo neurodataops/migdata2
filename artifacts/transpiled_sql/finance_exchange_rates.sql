@@ -5,7 +5,7 @@
 -- Rules      : remove_data_retention, number_to_bigint, varchar_to_string, append_using_delta
 -- Warnings   : 0
 -- SHA-256    : 01ac16855592e779c80e1b1e5dbc9e5911e6ac33fde3a86b1820ceee557141a5
--- Generated  : 2026-03-04T16:31:48.120451
+-- Generated  : 2026-03-08T12:18:43.232720
 -- ---
 
 CREATE TABLE finance.exchange_rates (

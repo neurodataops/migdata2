@@ -5,7 +5,7 @@
 -- Rules      : remove_cluster_by, remove_data_retention, number_to_bigint, number_to_decimal, timestamp_ntz, varchar_to_string, append_using_delta
 -- Warnings   : 0
 -- SHA-256    : 982f2ee1475bde2598f51ef6dc22378b0dd3d39bce96dc367c37787ca36c2382
--- Generated  : 2026-03-04T16:31:48.106498
+-- Generated  : 2026-03-08T12:18:43.217711
 -- ---
 
 CREATE TABLE finance.invoices (

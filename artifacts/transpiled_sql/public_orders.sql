@@ -5,7 +5,7 @@
 -- Rules      : remove_cluster_by, remove_data_retention, number_to_bigint, number_to_decimal, timestamp_ntz, varchar_to_string, append_using_delta
 -- Warnings   : 0
 -- SHA-256    : 1cdf298e7dbebb9ca19f17dde1b58530d5330292a810e4b17a40182132440d8d
--- Generated  : 2026-03-04T16:31:48.055072
+-- Generated  : 2026-03-08T12:18:43.170164
 -- ---
 
 CREATE TABLE public.orders (

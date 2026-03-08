@@ -5,7 +5,7 @@
 -- Rules      : remove_data_retention, append_using_delta
 -- Warnings   : 0
 -- SHA-256    : 0cc5323ce0a6a2bd474c63b6ce5d520f2f09d2a0661521b7d043b333949862b2
--- Generated  : 2026-03-05T17:04:00.575072
+-- Generated  : 2026-03-08T16:35:46.942513
 -- ---
 
 CREATE TABLE tpcds_sf100tcl.customer_address (

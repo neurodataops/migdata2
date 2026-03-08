@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-03-05T17:04:34.438335",
+  "generated_at": "2026-03-08T16:36:56.283140",
   "summary": {
     "tables_validated": 80,
     "tables_skipped": 0,
     "total_checks": 320,
-    "passed": 308,
-    "failed": 12,
-    "pass_rate": 96.25,
-    "avg_confidence": 0.9325
+    "passed": 311,
+    "failed": 9,
+    "pass_rate": 97.19,
+    "avg_confidence": 0.9419
   },
   "tables": [
     {
@@ -135,10 +135,10 @@
         },
         {
           "check": "checksum_match",
-          "passed": false,
+          "passed": true,
           "target_hash": "3178f30c317ea834a6f03dd850cafd73",
-          "source_hash": "37dfac058dd30f6a438ae713c03f8713",
-          "detail": "Hash mismatch detected (simulated)"
+          "source_hash": "3178f30c317ea834a6f03dd850cafd73",
+          "detail": "Hashes match"
         },
         {
           "check": "null_variance",
@@ -155,7 +155,7 @@
           "detail": "Schema matches"
         }
       ],
-      "confidence": 0.72,
+      "confidence": 0.97,
       "difficulty": 2
     },
     {
@@ -771,10 +771,10 @@
         },
         {
           "check": "checksum_match",
-          "passed": true,
+          "passed": false,
           "target_hash": "cf5975e47cbc9c54a80def060e9bad31",
-          "source_hash": "cf5975e47cbc9c54a80def060e9bad31",
-          "detail": "Hashes match"
+          "source_hash": "13dab9e060fed08a45c9cbc74e5795fc",
+          "detail": "Hash mismatch detected (simulated)"
         },
         {
           "check": "null_variance",
@@ -791,7 +791,7 @@
           "detail": "Schema matches"
         }
       ],
-      "confidence": 0.97,
+      "confidence": 0.72,
       "difficulty": 2
     },
     {
@@ -1044,13 +1044,20 @@
         },
         {
           "check": "schema_drift",
-          "passed": true,
-          "drift_count": 0,
-          "drift_items": [],
-          "detail": "Schema matches"
+          "passed": false,
+          "drift_count": 1,
+          "drift_items": [
+            {
+              "column": "cs_ship_date_sk",
+              "issue": "type_mismatch",
+              "expected": "NUMBER",
+              "actual": "STRING"
+            }
+          ],
+          "detail": "1 drift(s) detected"
         }
       ],
-      "confidence": 0.97,
+      "confidence": 0.72,
       "difficulty": 2
     },
     {
@@ -1215,10 +1222,10 @@
         },
         {
           "check": "checksum_match",
-          "passed": false,
+          "passed": true,
           "target_hash": "973af73a16ec1d03c9882a11b023aeaf",
-          "source_hash": "faea320b11a2889c30d1ce61a37fa379",
-          "detail": "Hash mismatch detected (simulated)"
+          "source_hash": "973af73a16ec1d03c9882a11b023aeaf",
+          "detail": "Hashes match"
         },
         {
           "check": "null_variance",
@@ -1235,7 +1242,7 @@
           "detail": "Schema matches"
         }
       ],
-      "confidence": 0.72,
+      "confidence": 0.97,
       "difficulty": 2
     },
     {
@@ -1717,10 +1724,10 @@
         },
         {
           "check": "checksum_match",
-          "passed": false,
+          "passed": true,
           "target_hash": "72988ece9de88072e109e3a524005827",
-          "source_hash": "728500425a3e901e27088ed9ece88927",
-          "detail": "Hash mismatch detected (simulated)"
+          "source_hash": "72988ece9de88072e109e3a524005827",
+          "detail": "Hashes match"
         },
         {
           "check": "null_variance",
@@ -1737,7 +1744,7 @@
           "detail": "Schema matches"
         }
       ],
-      "confidence": 0.72,
+      "confidence": 0.97,
       "difficulty": 2
     },
     {
@@ -2131,10 +2138,10 @@
         },
         {
           "check": "checksum_match",
-          "passed": false,
+          "passed": true,
           "target_hash": "d99f4641453e8adefe5360fac106747d",
-          "source_hash": "d747601caf0635efeda8e3541464f99d",
-          "detail": "Hash mismatch detected (simulated)"
+          "source_hash": "d99f4641453e8adefe5360fac106747d",
+          "detail": "Hashes match"
         },
         {
           "check": "null_variance",
@@ -2151,7 +2158,7 @@
           "detail": "Schema matches"
         }
       ],
-      "confidence": 0.72,
+      "confidence": 0.97,
       "difficulty": 2
     },
     {
@@ -2242,10 +2249,10 @@
         },
         {
           "check": "checksum_match",
-          "passed": false,
+          "passed": true,
           "target_hash": "87e7ad2bc6c3beb668aacb7fcf33e0da",
-          "source_hash": "ad0e33fcf7bcaa866beb3c6cb2da7e78",
-          "detail": "Hash mismatch detected (simulated)"
+          "source_hash": "87e7ad2bc6c3beb668aacb7fcf33e0da",
+          "detail": "Hashes match"
         },
         {
           "check": "null_variance",
@@ -2262,7 +2269,7 @@
           "detail": "Schema matches"
         }
       ],
-      "confidence": 0.72,
+      "confidence": 0.97,
       "difficulty": 2
     },
     {

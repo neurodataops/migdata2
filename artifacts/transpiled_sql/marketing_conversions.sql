@@ -5,7 +5,7 @@
 -- Rules      : remove_data_retention, number_to_bigint, number_to_decimal, timestamp_ntz, varchar_to_string, autoincrement, append_using_delta
 -- Warnings   : 0
 -- SHA-256    : d11fa6962a8caf059c396a7ccbdbfad3189b127e8dbd0eaf46fc986b02e74c68
--- Generated  : 2026-03-04T16:31:48.133783
+-- Generated  : 2026-03-08T12:18:43.243259
 -- ---
 
 CREATE TABLE marketing.conversions (

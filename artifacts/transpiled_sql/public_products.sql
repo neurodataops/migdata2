@@ -5,7 +5,7 @@
 -- Rules      : remove_data_retention, number_to_bigint, number_to_decimal, timestamp_ntz, varchar_to_string, autoincrement, append_using_delta
 -- Warnings   : 0
 -- SHA-256    : 235423b59a39f7df498c1e582776fb67b2d89bef088ca33483702a11501163c4
--- Generated  : 2026-03-04T16:31:48.063061
+-- Generated  : 2026-03-08T12:18:43.181183
 -- ---
 
 CREATE TABLE public.products (

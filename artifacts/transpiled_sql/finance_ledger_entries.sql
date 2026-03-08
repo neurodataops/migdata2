@@ -5,7 +5,7 @@
 -- Rules      : remove_cluster_by, remove_data_retention, number_to_bigint, number_to_decimal, timestamp_ntz, varchar_to_string, autoincrement, append_using_delta
 -- Warnings   : 0
 -- SHA-256    : df18cf82a66c97a3b40c8b6bed5311bcf3c39bcf5c4a630b081fdbb6924c0a88
--- Generated  : 2026-03-04T16:31:48.117482
+-- Generated  : 2026-03-08T12:18:43.228724
 -- ---
 
 CREATE TABLE finance.ledger_entries (

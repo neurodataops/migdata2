@@ -2,7 +2,7 @@
 -- Type       : VIEW
 -- Class      : AUTO_CONVERT
 -- Difficulty : 1/10
--- Generated  : 2026-03-04T16:31:48.139772
+-- Generated  : 2026-03-08T12:18:43.248554
 -- ---
 
 CREATE OR REPLACE VIEW public.v_active_customers AS

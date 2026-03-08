@@ -5,7 +5,7 @@
 -- Rules      : remove_cluster_by, remove_data_retention, number_to_bigint, variant_to_string, timestamp_ntz, varchar_to_string, autoincrement, append_using_delta
 -- Warnings   : 1
 -- SHA-256    : 8fced7b4898d92f8bce3c976a77e1353b55099df4cdc9673f9d2d9c69a0b8cd6
--- Generated  : 2026-03-04T16:31:48.070063
+-- Generated  : 2026-03-08T12:18:43.186716
 -- ---
 
 CREATE TABLE analytics.page_views (

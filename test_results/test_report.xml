@@ -1,92 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="738" failures="0" time="1.978">
-  <testsuite name="schema_conversion" tests="373" failures="0" time="0.017">
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf100tcl.call_center" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf100tcl.catalog_page" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf100tcl.catalog_returns" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf100tcl.catalog_sales" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf100tcl.customer" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf100tcl.customer_address" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf100tcl.customer_demographics" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf100tcl.date_dim" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf100tcl.household_demographics" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf100tcl.income_band" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf100tcl.inventory" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf100tcl.item" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf100tcl.promotion" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf100tcl.reason" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf100tcl.ship_mode" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf100tcl.store" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf100tcl.store_returns" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf100tcl.store_sales" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf100tcl.time_dim" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf100tcl.warehouse" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf100tcl.web_page" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf100tcl.web_returns" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf100tcl.web_sales" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf100tcl.web_site" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf10tcl.call_center" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf10tcl.catalog_page" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf10tcl.catalog_returns" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf10tcl.catalog_sales" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf10tcl.customer" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf10tcl.customer_address" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf10tcl.customer_demographics" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf10tcl.date_dim" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf10tcl.household_demographics" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf10tcl.income_band" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf10tcl.inventory" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf10tcl.item" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf10tcl.promotion" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf10tcl.reason" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf10tcl.ship_mode" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf10tcl.store" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf10tcl.store_returns" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf10tcl.store_sales" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf10tcl.time_dim" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf10tcl.warehouse" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf10tcl.web_page" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf10tcl.web_returns" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf10tcl.web_sales" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpcds_sf10tcl.web_site" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf1.customer" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf1.lineitem" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf1.nation" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf1.orders" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf1.part" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf1.partsupp" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf1.region" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf1.supplier" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf10.customer" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf10.lineitem" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf10.nation" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf10.orders" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf10.part" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf10.partsupp" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf10.region" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf10.supplier" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf100.customer" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf100.lineitem" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf100.nation" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf100.orders" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf100.part" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf100.partsupp" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf100.region" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf100.supplier" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf1000.customer" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf1000.lineitem" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf1000.nation" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf1000.orders" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf1000.part" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf1000.partsupp" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf1000.region" time="0.0" />
-    <testcase classname="schema_conversion" name="table_in_report_tpch_sf1000.supplier" time="0.0" />
+<testsuites tests="681" failures="25" time="5.522">
+  <testsuite name="schema_conversion" tests="318" failures="25" time="0.037">
+    <testcase classname="schema_conversion" name="table_in_report_public.customers" time="0.0">
+      <failure message="public.customers missing from conversion report">public.customers missing from conversion report</failure>
+    </testcase>
+    <testcase classname="schema_conversion" name="table_in_report_public.orders" time="0.0">
+      <failure message="public.orders missing from conversion report">public.orders missing from conversion report</failure>
+    </testcase>
+    <testcase classname="schema_conversion" name="table_in_report_public.order_items" time="0.0">
+      <failure message="public.order_items missing from conversion report">public.order_items missing from conversion report</failure>
+    </testcase>
+    <testcase classname="schema_conversion" name="table_in_report_public.products" time="0.0">
+      <failure message="public.products missing from conversion report">public.products missing from conversion report</failure>
+    </testcase>
+    <testcase classname="schema_conversion" name="table_in_report_public.categories" time="0.0">
+      <failure message="public.categories missing from conversion report">public.categories missing from conversion report</failure>
+    </testcase>
+    <testcase classname="schema_conversion" name="table_in_report_analytics.page_views" time="0.0">
+      <failure message="analytics.page_views missing from conversion report">analytics.page_views missing from conversion report</failure>
+    </testcase>
+    <testcase classname="schema_conversion" name="table_in_report_analytics.sessions" time="0.0">
+      <failure message="analytics.sessions missing from conversion report">analytics.sessions missing from conversion report</failure>
+    </testcase>
+    <testcase classname="schema_conversion" name="table_in_report_analytics.user_segments" time="0.0">
+      <failure message="analytics.user_segments missing from conversion report">analytics.user_segments missing from conversion report</failure>
+    </testcase>
+    <testcase classname="schema_conversion" name="table_in_report_analytics.ab_test_results" time="0.0">
+      <failure message="analytics.ab_test_results missing from conversion report">analytics.ab_test_results missing from conversion report</failure>
+    </testcase>
+    <testcase classname="schema_conversion" name="table_in_report_analytics.funnel_events" time="0.0">
+      <failure message="analytics.funnel_events missing from conversion report">analytics.funnel_events missing from conversion report</failure>
+    </testcase>
+    <testcase classname="schema_conversion" name="table_in_report_staging.stg_customers_raw" time="0.0">
+      <failure message="staging.stg_customers_raw missing from conversion report">staging.stg_customers_raw missing from conversion report</failure>
+    </testcase>
+    <testcase classname="schema_conversion" name="table_in_report_staging.stg_orders_raw" time="0.0">
+      <failure message="staging.stg_orders_raw missing from conversion report">staging.stg_orders_raw missing from conversion report</failure>
+    </testcase>
+    <testcase classname="schema_conversion" name="table_in_report_staging.stg_products_raw" time="0.0">
+      <failure message="staging.stg_products_raw missing from conversion report">staging.stg_products_raw missing from conversion report</failure>
+    </testcase>
+    <testcase classname="schema_conversion" name="table_in_report_staging.stg_transactions_raw" time="0.0">
+      <failure message="staging.stg_transactions_raw missing from conversion report">staging.stg_transactions_raw missing from conversion report</failure>
+    </testcase>
+    <testcase classname="schema_conversion" name="table_in_report_staging.stg_clickstream" time="0.0">
+      <failure message="staging.stg_clickstream missing from conversion report">staging.stg_clickstream missing from conversion report</failure>
+    </testcase>
+    <testcase classname="schema_conversion" name="table_in_report_finance.invoices" time="0.0">
+      <failure message="finance.invoices missing from conversion report">finance.invoices missing from conversion report</failure>
+    </testcase>
+    <testcase classname="schema_conversion" name="table_in_report_finance.payments" time="0.0">
+      <failure message="finance.payments missing from conversion report">finance.payments missing from conversion report</failure>
+    </testcase>
+    <testcase classname="schema_conversion" name="table_in_report_finance.refunds" time="0.0">
+      <failure message="finance.refunds missing from conversion report">finance.refunds missing from conversion report</failure>
+    </testcase>
+    <testcase classname="schema_conversion" name="table_in_report_finance.ledger_entries" time="0.0">
+      <failure message="finance.ledger_entries missing from conversion report">finance.ledger_entries missing from conversion report</failure>
+    </testcase>
+    <testcase classname="schema_conversion" name="table_in_report_finance.exchange_rates" time="0.0">
+      <failure message="finance.exchange_rates missing from conversion report">finance.exchange_rates missing from conversion report</failure>
+    </testcase>
+    <testcase classname="schema_conversion" name="table_in_report_marketing.campaigns" time="0.0">
+      <failure message="marketing.campaigns missing from conversion report">marketing.campaigns missing from conversion report</failure>
+    </testcase>
+    <testcase classname="schema_conversion" name="table_in_report_marketing.email_sends" time="0.0">
+      <failure message="marketing.email_sends missing from conversion report">marketing.email_sends missing from conversion report</failure>
+    </testcase>
+    <testcase classname="schema_conversion" name="table_in_report_marketing.ad_impressions" time="0.0">
+      <failure message="marketing.ad_impressions missing from conversion report">marketing.ad_impressions missing from conversion report</failure>
+    </testcase>
+    <testcase classname="schema_conversion" name="table_in_report_marketing.conversions" time="0.0">
+      <failure message="marketing.conversions missing from conversion report">marketing.conversions missing from conversion report</failure>
+    </testcase>
+    <testcase classname="schema_conversion" name="table_in_report_marketing.attribution_touches" time="0.0">
+      <failure message="marketing.attribution_touches missing from conversion report">marketing.attribution_touches missing from conversion report</failure>
+    </testcase>
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf100tcl.call_center" time="0.001" />
-    <testcase classname="schema_conversion" name="file_exists_tpcds_sf100tcl.catalog_page" time="0.0" />
+    <testcase classname="schema_conversion" name="file_exists_tpcds_sf100tcl.catalog_page" time="0.001" />
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf100tcl.catalog_returns" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf100tcl.catalog_sales" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf100tcl.customer" time="0.0" />
-    <testcase classname="schema_conversion" name="file_exists_tpcds_sf100tcl.customer_address" time="0.0" />
+    <testcase classname="schema_conversion" name="file_exists_tpcds_sf100tcl.customer_address" time="0.001" />
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf100tcl.customer_demographics" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf100tcl.date_dim" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf100tcl.household_demographics" time="0.0" />
@@ -95,7 +90,7 @@
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf100tcl.item" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf100tcl.promotion" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf100tcl.reason" time="0.0" />
-    <testcase classname="schema_conversion" name="file_exists_tpcds_sf100tcl.ship_mode" time="0.0" />
+    <testcase classname="schema_conversion" name="file_exists_tpcds_sf100tcl.ship_mode" time="0.001" />
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf100tcl.store" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf100tcl.store_returns" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf100tcl.store_sales" time="0.0" />
@@ -111,45 +106,45 @@
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf10tcl.catalog_sales" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf10tcl.customer" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf10tcl.customer_address" time="0.0" />
-    <testcase classname="schema_conversion" name="file_exists_tpcds_sf10tcl.customer_demographics" time="0.0" />
+    <testcase classname="schema_conversion" name="file_exists_tpcds_sf10tcl.customer_demographics" time="0.001" />
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf10tcl.date_dim" time="0.001" />
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf10tcl.household_demographics" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf10tcl.income_band" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf10tcl.inventory" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf10tcl.item" time="0.0" />
-    <testcase classname="schema_conversion" name="file_exists_tpcds_sf10tcl.promotion" time="0.0" />
+    <testcase classname="schema_conversion" name="file_exists_tpcds_sf10tcl.promotion" time="0.001" />
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf10tcl.reason" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf10tcl.ship_mode" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf10tcl.store" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf10tcl.store_returns" time="0.0" />
-    <testcase classname="schema_conversion" name="file_exists_tpcds_sf10tcl.store_sales" time="0.0" />
-    <testcase classname="schema_conversion" name="file_exists_tpcds_sf10tcl.time_dim" time="0.001" />
-    <testcase classname="schema_conversion" name="file_exists_tpcds_sf10tcl.warehouse" time="0.0" />
+    <testcase classname="schema_conversion" name="file_exists_tpcds_sf10tcl.store_sales" time="0.0013" />
+    <testcase classname="schema_conversion" name="file_exists_tpcds_sf10tcl.time_dim" time="0.0" />
+    <testcase classname="schema_conversion" name="file_exists_tpcds_sf10tcl.warehouse" time="0.001" />
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf10tcl.web_page" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf10tcl.web_returns" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf10tcl.web_sales" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpcds_sf10tcl.web_site" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpch_sf1.customer" time="0.0" />
-    <testcase classname="schema_conversion" name="file_exists_tpch_sf1.lineitem" time="0.0" />
+    <testcase classname="schema_conversion" name="file_exists_tpch_sf1.lineitem" time="0.001" />
     <testcase classname="schema_conversion" name="file_exists_tpch_sf1.nation" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpch_sf1.orders" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpch_sf1.part" time="0.0" />
-    <testcase classname="schema_conversion" name="file_exists_tpch_sf1.partsupp" time="0.001" />
+    <testcase classname="schema_conversion" name="file_exists_tpch_sf1.partsupp" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpch_sf1.region" time="0.0" />
-    <testcase classname="schema_conversion" name="file_exists_tpch_sf1.supplier" time="0.0" />
+    <testcase classname="schema_conversion" name="file_exists_tpch_sf1.supplier" time="0.001" />
     <testcase classname="schema_conversion" name="file_exists_tpch_sf10.customer" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpch_sf10.lineitem" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpch_sf10.nation" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpch_sf10.orders" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpch_sf10.part" time="0.0" />
-    <testcase classname="schema_conversion" name="file_exists_tpch_sf10.partsupp" time="0.0" />
+    <testcase classname="schema_conversion" name="file_exists_tpch_sf10.partsupp" time="0.001" />
     <testcase classname="schema_conversion" name="file_exists_tpch_sf10.region" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpch_sf10.supplier" time="0.0" />
-    <testcase classname="schema_conversion" name="file_exists_tpch_sf100.customer" time="0.001" />
+    <testcase classname="schema_conversion" name="file_exists_tpch_sf100.customer" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpch_sf100.lineitem" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpch_sf100.nation" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpch_sf100.orders" time="0.0" />
-    <testcase classname="schema_conversion" name="file_exists_tpch_sf100.part" time="0.0" />
+    <testcase classname="schema_conversion" name="file_exists_tpch_sf100.part" time="0.001" />
     <testcase classname="schema_conversion" name="file_exists_tpch_sf100.partsupp" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpch_sf100.region" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpch_sf100.supplier" time="0.0" />
@@ -161,114 +156,114 @@
     <testcase classname="schema_conversion" name="file_exists_tpch_sf1000.partsupp" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpch_sf1000.region" time="0.0" />
     <testcase classname="schema_conversion" name="file_exists_tpch_sf1000.supplier" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_analytics_ab_test_results.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_analytics_funnel_events.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_analytics_page_views.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_analytics_sessions.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_analytics_user_segments.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_finance_exchange_rates.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_finance_invoices.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_finance_ledger_entries.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_finance_payments.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_finance_refunds.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_marketing_ad_impressions.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_marketing_attribution_touches.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_marketing_campaigns.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_marketing_conversions.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_marketing_email_sends.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_marketing_v_campaign_performance.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_public_categories.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_public_customers.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_public_orders.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_public_order_items.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_public_products.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_public_v_active_customers.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_public_v_order_summary.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_staging_stg_clickstream.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_staging_stg_customers_raw.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_staging_stg_orders_raw.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_staging_stg_products_raw.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_staging_stg_transactions_raw.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf100tcl_call_center.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf100tcl_catalog_page.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf100tcl_catalog_returns.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf100tcl_catalog_sales.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf100tcl_customer.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf100tcl_customer_address.sql" time="0.001" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf100tcl_customer_demographics.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf100tcl_date_dim.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf100tcl_household_demographics.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf100tcl_income_band.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf100tcl_inventory.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf100tcl_item.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf100tcl_promotion.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf100tcl_reason.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf100tcl_ship_mode.sql" time="0.001" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf100tcl_store.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf100tcl_store_returns.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf100tcl_store_sales.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf100tcl_time_dim.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf100tcl_warehouse.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf100tcl_web_page.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf100tcl_web_returns.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf100tcl_web_sales.sql" time="0.001" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf100tcl_web_site.sql" time="0.001" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf10tcl_call_center.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf10tcl_catalog_page.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf10tcl_catalog_returns.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf10tcl_catalog_sales.sql" time="0.0004" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf10tcl_customer.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf10tcl_customer_address.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf10tcl_customer_demographics.sql" time="0.001" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf10tcl_date_dim.sql" time="0.001" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf10tcl_household_demographics.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf10tcl_income_band.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf10tcl_inventory.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf10tcl_item.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf10tcl_promotion.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf10tcl_reason.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf10tcl_ship_mode.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf10tcl_store.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf10tcl_store_returns.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf10tcl_store_sales.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf10tcl_time_dim.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf10tcl_warehouse.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf10tcl_web_page.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf10tcl_web_returns.sql" time="0.001" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf10tcl_web_sales.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpcds_sf10tcl_web_site.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf1000_customer.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf1000_lineitem.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf1000_nation.sql" time="0.001" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf1000_orders.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf1000_part.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf1000_partsupp.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf1000_region.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf1000_supplier.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf100_customer.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf100_lineitem.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf100_nation.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf100_orders.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf100_part.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf100_partsupp.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf100_region.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf100_supplier.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf10_customer.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf10_lineitem.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf10_nation.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf10_orders.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf10_part.sql" time="0.001" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf10_partsupp.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf10_region.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf10_supplier.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf1_customer.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf1_lineitem.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf1_nation.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf1_orders.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf1_part.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf1_partsupp.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf1_region.sql" time="0.0" />
-    <testcase classname="schema_conversion" name="no_redshift_keywords_tpch_sf1_supplier.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_analytics_ab_test_results.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_analytics_funnel_events.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_analytics_page_views.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_analytics_sessions.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_analytics_user_segments.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_finance_exchange_rates.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_finance_invoices.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_finance_ledger_entries.sql" time="0.001" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_finance_payments.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_finance_refunds.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_marketing_ad_impressions.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_marketing_attribution_touches.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_marketing_campaigns.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_marketing_conversions.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_marketing_email_sends.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_marketing_v_campaign_performance.sql" time="0.001" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_public_categories.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_public_customers.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_public_orders.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_public_order_items.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_public_products.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_public_v_active_customers.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_public_v_order_summary.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_staging_stg_clickstream.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_staging_stg_customers_raw.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_staging_stg_orders_raw.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_staging_stg_products_raw.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_staging_stg_transactions_raw.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf100tcl_call_center.sql" time="0.001" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf100tcl_catalog_page.sql" time="0.001" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf100tcl_catalog_returns.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf100tcl_catalog_sales.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf100tcl_customer.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf100tcl_customer_address.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf100tcl_customer_demographics.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf100tcl_date_dim.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf100tcl_household_demographics.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf100tcl_income_band.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf100tcl_inventory.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf100tcl_item.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf100tcl_promotion.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf100tcl_reason.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf100tcl_ship_mode.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf100tcl_store.sql" time="0.001" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf100tcl_store_returns.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf100tcl_store_sales.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf100tcl_time_dim.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf100tcl_warehouse.sql" time="0.001" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf100tcl_web_page.sql" time="0.001" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf100tcl_web_returns.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf100tcl_web_sales.sql" time="0.001" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf100tcl_web_site.sql" time="0.0006" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf10tcl_call_center.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf10tcl_catalog_page.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf10tcl_catalog_returns.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf10tcl_catalog_sales.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf10tcl_customer.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf10tcl_customer_address.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf10tcl_customer_demographics.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf10tcl_date_dim.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf10tcl_household_demographics.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf10tcl_income_band.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf10tcl_inventory.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf10tcl_item.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf10tcl_promotion.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf10tcl_reason.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf10tcl_ship_mode.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf10tcl_store.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf10tcl_store_returns.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf10tcl_store_sales.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf10tcl_time_dim.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf10tcl_warehouse.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf10tcl_web_page.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf10tcl_web_returns.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf10tcl_web_sales.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpcds_sf10tcl_web_site.sql" time="0.001" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf1000_customer.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf1000_lineitem.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf1000_nation.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf1000_orders.sql" time="0.001" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf1000_part.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf1000_partsupp.sql" time="0.001" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf1000_region.sql" time="0.001" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf1000_supplier.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf100_customer.sql" time="0.001" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf100_lineitem.sql" time="0.001" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf100_nation.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf100_orders.sql" time="0.001" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf100_part.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf100_partsupp.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf100_region.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf100_supplier.sql" time="0.001" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf10_customer.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf10_lineitem.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf10_nation.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf10_orders.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf10_part.sql" time="0.001" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf10_partsupp.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf10_region.sql" time="0.001" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf10_supplier.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf1_customer.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf1_lineitem.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf1_nation.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf1_orders.sql" time="0.001" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf1_part.sql" time="0.0015" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf1_partsupp.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf1_region.sql" time="0.0" />
+    <testcase classname="schema_conversion" name="no_snowflake_keywords_tpch_sf1_supplier.sql" time="0.0" />
     <testcase classname="schema_conversion" name="using_delta_analytics_ab_test_results.sql" time="0.0" />
     <testcase classname="schema_conversion" name="using_delta_analytics_funnel_events.sql" time="0.0" />
     <testcase classname="schema_conversion" name="using_delta_analytics_page_views.sql" time="0.0" />
@@ -375,376 +370,374 @@
     <testcase classname="schema_conversion" name="using_delta_tpch_sf1_region.sql" time="0.0" />
     <testcase classname="schema_conversion" name="using_delta_tpch_sf1_supplier.sql" time="0.0" />
   </testsuite>
-  <testsuite name="sql_translation" tests="17" failures="0" time="0.007">
-    <testcase classname="sql_translation" name="rule_nvl_to_coalesce" time="0.005" />
-    <testcase classname="sql_translation" name="rule_getdate_to_current_timestamp" time="0.0" />
-    <testcase classname="sql_translation" name="rule_len_to_length" time="0.0" />
-    <testcase classname="sql_translation" name="rule_charindex_to_locate" time="0.0" />
-    <testcase classname="sql_translation" name="rule_varchar_removal" time="0.001" />
-    <testcase classname="sql_translation" name="rule_identity_rewrite" time="0.0" />
-    <testcase classname="sql_translation" name="rule_dateadd_rewrite" time="0.0" />
-    <testcase classname="sql_translation" name="rule_date_part_to_extract" time="0.0" />
-    <testcase classname="sql_translation" name="rule_random_to_rand" time="0.0" />
-    <testcase classname="sql_translation" name="rule_numeric_to_decimal" time="0.0" />
-    <testcase classname="sql_translation" name="rule_sysdate_rewrite" time="0.0" />
+  <testsuite name="sql_translation" tests="17" failures="0" time="0.006">
+    <testcase classname="sql_translation" name="rule_nvl_to_coalesce" time="0.0" />
+    <testcase classname="sql_translation" name="rule_iff_to_if" time="0.002" />
+    <testcase classname="sql_translation" name="rule_varchar_removal" time="0.0" />
+    <testcase classname="sql_translation" name="rule_dateadd_rewrite" time="0.001" />
     <testcase classname="sql_translation" name="rule_double_colon_cast" time="0.0" />
-    <testcase classname="sql_translation" name="rule_hashtext_to_hash" time="0.0" />
+    <testcase classname="sql_translation" name="rule_number_to_bigint" time="0.0" />
+    <testcase classname="sql_translation" name="rule_number_to_decimal" time="0.0" />
+    <testcase classname="sql_translation" name="rule_timestamp_ntz" time="0.001" />
+    <testcase classname="sql_translation" name="rule_autoincrement" time="0.0" />
+    <testcase classname="sql_translation" name="rule_position_to_locate" time="0.0" />
+    <testcase classname="sql_translation" name="rule_parse_json" time="0.0" />
+    <testcase classname="sql_translation" name="rule_len_to_length" time="0.001" />
+    <testcase classname="sql_translation" name="rule_regexp_substr" time="0.0" />
     <testcase classname="sql_translation" name="auto_convert_simple" time="0.0" />
     <testcase classname="sql_translation" name="warnings_on_listagg" time="0.0" />
     <testcase classname="sql_translation" name="diff_generated" time="0.001" />
     <testcase classname="sql_translation" name="idempotent_output" time="0.0" />
   </testsuite>
-  <testsuite name="data_parity" tests="320" failures="0" time="1.943">
-    <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.call_center" time="0.001" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.call_center" time="0.006" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.call_center" time="0.007" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.call_center" time="0.009" />
+  <testsuite name="data_parity" tests="320" failures="0" time="5.439">
+    <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.call_center" time="0.0" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.call_center" time="0.026" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.call_center" time="0.012" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.call_center" time="0.015" />
     <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.catalog_page" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.catalog_page" time="0.004" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.catalog_page" time="0.004" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.catalog_page" time="0.004" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.catalog_page" time="0.012" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.catalog_page" time="0.0136" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.catalog_page" time="0.014" />
     <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.catalog_returns" time="0.001" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.catalog_returns" time="0.018" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.catalog_returns" time="0.018" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.catalog_returns" time="0.0193" />
-    <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.catalog_sales" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.catalog_sales" time="0.024" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.catalog_sales" time="0.023" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.catalog_sales" time="0.025" />
-    <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.customer" time="0.001" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.customer" time="0.014" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.customer" time="0.0142" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.customer" time="0.014" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.catalog_returns" time="0.07" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.catalog_returns" time="0.0575" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.catalog_returns" time="0.0486" />
+    <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.catalog_sales" time="0.003" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.catalog_sales" time="0.07" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.catalog_sales" time="0.0596" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.catalog_sales" time="0.0624" />
+    <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.customer" time="0.0009" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.customer" time="0.0376" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.customer" time="0.034" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.customer" time="0.0336" />
     <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.customer_address" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.customer_address" time="0.01" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.customer_address" time="0.01" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.customer_address" time="0.012" />
-    <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.customer_demographics" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.customer_demographics" time="0.007" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.customer_demographics" time="0.008" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.customer_demographics" time="0.007" />
-    <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.date_dim" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.date_dim" time="0.006" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.date_dim" time="0.006" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.date_dim" time="0.006" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.customer_address" time="0.0401" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.customer_address" time="0.0345" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.customer_address" time="0.029" />
+    <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.customer_demographics" time="0.002" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.customer_demographics" time="0.017" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.customer_demographics" time="0.0169" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.customer_demographics" time="0.012" />
+    <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.date_dim" time="0.002" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.date_dim" time="0.012" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.date_dim" time="0.0216" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.date_dim" time="0.013" />
     <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.household_demographics" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.household_demographics" time="0.0065" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.household_demographics" time="0.003" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.household_demographics" time="0.0033" />
-    <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.income_band" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.income_band" time="0.003" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.income_band" time="0.003" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.income_band" time="0.003" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.household_demographics" time="0.009" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.household_demographics" time="0.005" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.household_demographics" time="0.0086" />
+    <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.income_band" time="0.0005" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.income_band" time="0.006" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.income_band" time="0.0079" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.income_band" time="0.006" />
     <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.inventory" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.inventory" time="0.004" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.inventory" time="0.005" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.inventory" time="0.005" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.inventory" time="0.012" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.inventory" time="0.009" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.inventory" time="0.0124" />
     <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.item" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.item" time="0.01" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.item" time="0.01" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.item" time="0.009" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.item" time="0.021" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.item" time="0.022" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.item" time="0.0223" />
     <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.promotion" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.promotion" time="0.005" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.promotion" time="0.005" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.promotion" time="0.005" />
-    <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.reason" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.reason" time="0.003" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.reason" time="0.003" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.reason" time="0.002" />
-    <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.ship_mode" time="0.001" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.ship_mode" time="0.003" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.ship_mode" time="0.003" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.ship_mode" time="0.004" />
-    <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.store" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.store" time="0.006" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.store" time="0.0063" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.store" time="0.007" />
-    <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.store_returns" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.store_returns" time="0.015" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.store_returns" time="0.016" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.store_returns" time="0.016" />
-    <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.store_sales" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.store_sales" time="0.016" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.store_sales" time="0.017" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.store_sales" time="0.0172" />
-    <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.time_dim" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.time_dim" time="0.005" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.time_dim" time="0.004" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.time_dim" time="0.004" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.promotion" time="0.012" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.promotion" time="0.009" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.promotion" time="0.011" />
+    <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.reason" time="0.0011" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.reason" time="0.005" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.reason" time="0.011" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.reason" time="0.016" />
+    <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.ship_mode" time="0.0" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.ship_mode" time="0.0176" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.ship_mode" time="0.0144" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.ship_mode" time="0.007" />
+    <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.store" time="0.002" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.store" time="0.015" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.store" time="0.0235" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.store" time="0.026" />
+    <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.store_returns" time="0.001" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.store_returns" time="0.0422" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.store_returns" time="0.0426" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.store_returns" time="0.0471" />
+    <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.store_sales" time="0.001" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.store_sales" time="0.0466" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.store_sales" time="0.0502" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.store_sales" time="0.0476" />
+    <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.time_dim" time="0.002" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.time_dim" time="0.019" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.time_dim" time="0.015" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.time_dim" time="0.0164" />
     <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.warehouse" time="0.001" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.warehouse" time="0.004" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.warehouse" time="0.005" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.warehouse" time="0.004" />
-    <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.web_page" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.web_page" time="0.004" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.web_page" time="0.005" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.web_page" time="0.005" />
-    <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.web_returns" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.web_returns" time="0.016" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.web_returns" time="0.017" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.web_returns" time="0.016" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.warehouse" time="0.016" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.warehouse" time="0.017" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.warehouse" time="0.0165" />
+    <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.web_page" time="0.001" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.web_page" time="0.008" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.web_page" time="0.012" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.web_page" time="0.0485" />
+    <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.web_returns" time="0.001" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.web_returns" time="0.0556" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.web_returns" time="0.035" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.web_returns" time="0.0435" />
     <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.web_sales" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.web_sales" time="0.0233" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.web_sales" time="0.025" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.web_sales" time="0.024" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.web_sales" time="0.0521" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.web_sales" time="0.0506" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.web_sales" time="0.0475" />
     <testcase classname="data_parity" name="parquet_exists_tpcds_sf100tcl.web_site" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.web_site" time="0.007" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.web_site" time="0.006" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.web_site" time="0.006" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf100tcl.web_site" time="0.014" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf100tcl.web_site" time="0.0125" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf100tcl.web_site" time="0.01" />
     <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.call_center" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.call_center" time="0.007" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.call_center" time="0.0063" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.call_center" time="0.008" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.call_center" time="0.015" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.call_center" time="0.014" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.call_center" time="0.0149" />
     <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.catalog_page" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.catalog_page" time="0.004" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.catalog_page" time="0.004" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.catalog_page" time="0.004" />
-    <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.catalog_returns" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.catalog_returns" time="0.019" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.catalog_returns" time="0.018" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.catalog_returns" time="0.019" />
-    <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.catalog_sales" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.catalog_sales" time="0.0236" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.catalog_sales" time="0.024" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.catalog_sales" time="0.024" />
-    <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.customer" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.customer" time="0.014" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.customer" time="0.013" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.customer" time="0.013" />
-    <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.customer_address" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.customer_address" time="0.0093" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.customer_address" time="0.01" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.customer_address" time="0.009" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.catalog_page" time="0.006" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.catalog_page" time="0.01" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.catalog_page" time="0.006" />
+    <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.catalog_returns" time="0.001" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.catalog_returns" time="0.0356" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.catalog_returns" time="0.0601" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.catalog_returns" time="0.0587" />
+    <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.catalog_sales" time="0.003" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.catalog_sales" time="0.0666" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.catalog_sales" time="0.0588" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.catalog_sales" time="0.0606" />
+    <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.customer" time="0.001" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.customer" time="0.042" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.customer" time="0.0382" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.customer" time="0.0361" />
+    <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.customer_address" time="0.001" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.customer_address" time="0.0322" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.customer_address" time="0.021" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.customer_address" time="0.0254" />
     <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.customer_demographics" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.customer_demographics" time="0.008" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.customer_demographics" time="0.007" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.customer_demographics" time="0.007" />
-    <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.date_dim" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.date_dim" time="0.006" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.date_dim" time="0.006" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.date_dim" time="0.009" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.customer_demographics" time="0.017" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.customer_demographics" time="0.0194" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.customer_demographics" time="0.0175" />
+    <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.date_dim" time="0.001" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.date_dim" time="0.016" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.date_dim" time="0.016" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.date_dim" time="0.0156" />
     <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.household_demographics" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.household_demographics" time="0.003" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.household_demographics" time="0.003" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.household_demographics" time="0.003" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.household_demographics" time="0.0055" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.household_demographics" time="0.0103" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.household_demographics" time="0.0056" />
     <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.income_band" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.income_band" time="0.003" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.income_band" time="0.004" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.income_band" time="0.003" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.income_band" time="0.0149" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.income_band" time="0.0176" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.income_band" time="0.017" />
     <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.inventory" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.inventory" time="0.005" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.inventory" time="0.005" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.inventory" time="0.005" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.inventory" time="0.015" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.inventory" time="0.0145" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.inventory" time="0.012" />
     <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.item" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.item" time="0.0092" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.item" time="0.009" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.item" time="0.011" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.item" time="0.0195" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.item" time="0.018" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.item" time="0.02" />
     <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.promotion" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.promotion" time="0.006" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.promotion" time="0.005" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.promotion" time="0.005" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.promotion" time="0.011" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.promotion" time="0.011" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.promotion" time="0.009" />
     <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.reason" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.reason" time="0.003" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.reason" time="0.003" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.reason" time="0.004" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.reason" time="0.007" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.reason" time="0.006" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.reason" time="0.005" />
     <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.ship_mode" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.ship_mode" time="0.004" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.ship_mode" time="0.003" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.ship_mode" time="0.003" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.ship_mode" time="0.0101" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.ship_mode" time="0.006" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.ship_mode" time="0.009" />
     <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.store" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.store" time="0.006" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.store" time="0.006" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.store" time="0.006" />
-    <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.store_returns" time="0.001" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.store_returns" time="0.013" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.store_returns" time="0.0144" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.store_returns" time="0.014" />
-    <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.store_sales" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.store_sales" time="0.016" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.store_sales" time="0.016" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.store_sales" time="0.018" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.store" time="0.012" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.store" time="0.013" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.store" time="0.014" />
+    <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.store_returns" time="0.0" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.store_returns" time="0.03" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.store_returns" time="0.0385" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.store_returns" time="0.0519" />
+    <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.store_sales" time="0.003" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.store_sales" time="0.065" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.store_sales" time="0.0516" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.store_sales" time="0.0437" />
     <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.time_dim" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.time_dim" time="0.005" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.time_dim" time="0.004" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.time_dim" time="0.004" />
-    <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.warehouse" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.warehouse" time="0.005" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.warehouse" time="0.004" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.warehouse" time="0.0052" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.time_dim" time="0.014" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.time_dim" time="0.015" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.time_dim" time="0.0113" />
+    <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.warehouse" time="0.0034" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.warehouse" time="0.0184" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.warehouse" time="0.015" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.warehouse" time="0.0176" />
     <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.web_page" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.web_page" time="0.005" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.web_page" time="0.004" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.web_page" time="0.005" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.web_page" time="0.018" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.web_page" time="0.017" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.web_page" time="0.0156" />
     <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.web_returns" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.web_returns" time="0.017" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.web_returns" time="0.019" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.web_returns" time="0.018" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.web_returns" time="0.0451" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.web_returns" time="0.037" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.web_returns" time="0.0373" />
     <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.web_sales" time="0.001" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.web_sales" time="0.0247" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.web_sales" time="0.0244" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.web_sales" time="0.024" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.web_sales" time="0.0536" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.web_sales" time="0.0468" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.web_sales" time="0.0466" />
     <testcase classname="data_parity" name="parquet_exists_tpcds_sf10tcl.web_site" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.web_site" time="0.006" />
-    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.web_site" time="0.007" />
-    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.web_site" time="0.006" />
+    <testcase classname="data_parity" name="row_count_tpcds_sf10tcl.web_site" time="0.014" />
+    <testcase classname="data_parity" name="columns_present_tpcds_sf10tcl.web_site" time="0.0143" />
+    <testcase classname="data_parity" name="not_empty_tpcds_sf10tcl.web_site" time="0.0095" />
     <testcase classname="data_parity" name="parquet_exists_tpch_sf1.customer" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpch_sf1.customer" time="0.004" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf1.customer" time="0.004" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf1.customer" time="0.004" />
-    <testcase classname="data_parity" name="parquet_exists_tpch_sf1.lineitem" time="0.001" />
-    <testcase classname="data_parity" name="row_count_tpch_sf1.lineitem" time="0.01" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf1.lineitem" time="0.0123" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf1.lineitem" time="0.011" />
+    <testcase classname="data_parity" name="row_count_tpch_sf1.customer" time="0.0109" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf1.customer" time="0.01" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf1.customer" time="0.0094" />
+    <testcase classname="data_parity" name="parquet_exists_tpch_sf1.lineitem" time="0.0" />
+    <testcase classname="data_parity" name="row_count_tpch_sf1.lineitem" time="0.0256" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf1.lineitem" time="0.021" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf1.lineitem" time="0.0196" />
     <testcase classname="data_parity" name="parquet_exists_tpch_sf1.nation" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpch_sf1.nation" time="0.004" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf1.nation" time="0.002" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf1.nation" time="0.004" />
+    <testcase classname="data_parity" name="row_count_tpch_sf1.nation" time="0.0098" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf1.nation" time="0.005" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf1.nation" time="0.008" />
     <testcase classname="data_parity" name="parquet_exists_tpch_sf1.orders" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpch_sf1.orders" time="0.007" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf1.orders" time="0.008" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf1.orders" time="0.008" />
+    <testcase classname="data_parity" name="row_count_tpch_sf1.orders" time="0.011" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf1.orders" time="0.0155" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf1.orders" time="0.015" />
     <testcase classname="data_parity" name="parquet_exists_tpch_sf1.part" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpch_sf1.part" time="0.006" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf1.part" time="0.004" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf1.part" time="0.004" />
+    <testcase classname="data_parity" name="row_count_tpch_sf1.part" time="0.01" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf1.part" time="0.008" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf1.part" time="0.011" />
     <testcase classname="data_parity" name="parquet_exists_tpch_sf1.partsupp" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpch_sf1.partsupp" time="0.006" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf1.partsupp" time="0.006" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf1.partsupp" time="0.005" />
+    <testcase classname="data_parity" name="row_count_tpch_sf1.partsupp" time="0.0135" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf1.partsupp" time="0.014" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf1.partsupp" time="0.02" />
     <testcase classname="data_parity" name="parquet_exists_tpch_sf1.region" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpch_sf1.region" time="0.003" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf1.region" time="0.003" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf1.region" time="0.003" />
+    <testcase classname="data_parity" name="row_count_tpch_sf1.region" time="0.0056" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf1.region" time="0.013" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf1.region" time="0.017" />
     <testcase classname="data_parity" name="parquet_exists_tpch_sf1.supplier" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpch_sf1.supplier" time="0.004" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf1.supplier" time="0.003" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf1.supplier" time="0.004" />
-    <testcase classname="data_parity" name="parquet_exists_tpch_sf10.customer" time="0.001" />
-    <testcase classname="data_parity" name="row_count_tpch_sf10.customer" time="0.0063" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf10.customer" time="0.008" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf10.customer" time="0.007" />
+    <testcase classname="data_parity" name="row_count_tpch_sf1.supplier" time="0.014" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf1.supplier" time="0.0162" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf1.supplier" time="0.012" />
+    <testcase classname="data_parity" name="parquet_exists_tpch_sf10.customer" time="0.0" />
+    <testcase classname="data_parity" name="row_count_tpch_sf10.customer" time="0.022" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf10.customer" time="0.0235" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf10.customer" time="0.028" />
     <testcase classname="data_parity" name="parquet_exists_tpch_sf10.lineitem" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpch_sf10.lineitem" time="0.012" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf10.lineitem" time="0.011" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf10.lineitem" time="0.011" />
-    <testcase classname="data_parity" name="parquet_exists_tpch_sf10.nation" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpch_sf10.nation" time="0.003" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf10.nation" time="0.004" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf10.nation" time="0.003" />
-    <testcase classname="data_parity" name="parquet_exists_tpch_sf10.orders" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpch_sf10.orders" time="0.008" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf10.orders" time="0.007" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf10.orders" time="0.007" />
-    <testcase classname="data_parity" name="parquet_exists_tpch_sf10.part" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpch_sf10.part" time="0.007" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf10.part" time="0.007" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf10.part" time="0.0073" />
+    <testcase classname="data_parity" name="row_count_tpch_sf10.lineitem" time="0.0424" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf10.lineitem" time="0.0346" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf10.lineitem" time="0.0361" />
+    <testcase classname="data_parity" name="parquet_exists_tpch_sf10.nation" time="0.002" />
+    <testcase classname="data_parity" name="row_count_tpch_sf10.nation" time="0.011" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf10.nation" time="0.014" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf10.nation" time="0.009" />
+    <testcase classname="data_parity" name="parquet_exists_tpch_sf10.orders" time="0.001" />
+    <testcase classname="data_parity" name="row_count_tpch_sf10.orders" time="0.0216" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf10.orders" time="0.0223" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf10.orders" time="0.0254" />
+    <testcase classname="data_parity" name="parquet_exists_tpch_sf10.part" time="0.001" />
+    <testcase classname="data_parity" name="row_count_tpch_sf10.part" time="0.024" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf10.part" time="0.0185" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf10.part" time="0.02" />
     <testcase classname="data_parity" name="parquet_exists_tpch_sf10.partsupp" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpch_sf10.partsupp" time="0.006" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf10.partsupp" time="0.005" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf10.partsupp" time="0.006" />
-    <testcase classname="data_parity" name="parquet_exists_tpch_sf10.region" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpch_sf10.region" time="0.003" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf10.region" time="0.004" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf10.region" time="0.003" />
-    <testcase classname="data_parity" name="parquet_exists_tpch_sf10.supplier" time="0.001" />
-    <testcase classname="data_parity" name="row_count_tpch_sf10.supplier" time="0.003" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf10.supplier" time="0.004" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf10.supplier" time="0.004" />
+    <testcase classname="data_parity" name="row_count_tpch_sf10.partsupp" time="0.016" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf10.partsupp" time="0.0229" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf10.partsupp" time="0.012" />
+    <testcase classname="data_parity" name="parquet_exists_tpch_sf10.region" time="0.003" />
+    <testcase classname="data_parity" name="row_count_tpch_sf10.region" time="0.007" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf10.region" time="0.005" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf10.region" time="0.011" />
+    <testcase classname="data_parity" name="parquet_exists_tpch_sf10.supplier" time="0.0005" />
+    <testcase classname="data_parity" name="row_count_tpch_sf10.supplier" time="0.008" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf10.supplier" time="0.011" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf10.supplier" time="0.01" />
     <testcase classname="data_parity" name="parquet_exists_tpch_sf100.customer" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpch_sf100.customer" time="0.008" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf100.customer" time="0.007" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf100.customer" time="0.007" />
-    <testcase classname="data_parity" name="parquet_exists_tpch_sf100.lineitem" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpch_sf100.lineitem" time="0.012" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf100.lineitem" time="0.012" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf100.lineitem" time="0.0114" />
-    <testcase classname="data_parity" name="parquet_exists_tpch_sf100.nation" time="0.001" />
-    <testcase classname="data_parity" name="row_count_tpch_sf100.nation" time="0.003" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf100.nation" time="0.003" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf100.nation" time="0.003" />
-    <testcase classname="data_parity" name="parquet_exists_tpch_sf100.orders" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpch_sf100.orders" time="0.008" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf100.orders" time="0.008" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf100.orders" time="0.007" />
-    <testcase classname="data_parity" name="parquet_exists_tpch_sf100.part" time="0.001" />
-    <testcase classname="data_parity" name="row_count_tpch_sf100.part" time="0.007" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf100.part" time="0.007" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf100.part" time="0.008" />
+    <testcase classname="data_parity" name="row_count_tpch_sf100.customer" time="0.016" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf100.customer" time="0.0171" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf100.customer" time="0.016" />
+    <testcase classname="data_parity" name="parquet_exists_tpch_sf100.lineitem" time="0.001" />
+    <testcase classname="data_parity" name="row_count_tpch_sf100.lineitem" time="0.02" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf100.lineitem" time="0.0236" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf100.lineitem" time="0.022" />
+    <testcase classname="data_parity" name="parquet_exists_tpch_sf100.nation" time="0.0" />
+    <testcase classname="data_parity" name="row_count_tpch_sf100.nation" time="0.0051" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf100.nation" time="0.005" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf100.nation" time="0.008" />
+    <testcase classname="data_parity" name="parquet_exists_tpch_sf100.orders" time="0.001" />
+    <testcase classname="data_parity" name="row_count_tpch_sf100.orders" time="0.013" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf100.orders" time="0.023" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf100.orders" time="0.0206" />
+    <testcase classname="data_parity" name="parquet_exists_tpch_sf100.part" time="0.0" />
+    <testcase classname="data_parity" name="row_count_tpch_sf100.part" time="0.0174" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf100.part" time="0.0175" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf100.part" time="0.016" />
     <testcase classname="data_parity" name="parquet_exists_tpch_sf100.partsupp" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpch_sf100.partsupp" time="0.005" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf100.partsupp" time="0.006" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf100.partsupp" time="0.006" />
+    <testcase classname="data_parity" name="row_count_tpch_sf100.partsupp" time="0.017" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf100.partsupp" time="0.0416" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf100.partsupp" time="0.0194" />
     <testcase classname="data_parity" name="parquet_exists_tpch_sf100.region" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpch_sf100.region" time="0.003" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf100.region" time="0.003" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf100.region" time="0.003" />
-    <testcase classname="data_parity" name="parquet_exists_tpch_sf100.supplier" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpch_sf100.supplier" time="0.007" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf100.supplier" time="0.007" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf100.supplier" time="0.0063" />
-    <testcase classname="data_parity" name="parquet_exists_tpch_sf1000.customer" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpch_sf1000.customer" time="0.007" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf1000.customer" time="0.007" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf1000.customer" time="0.01" />
+    <testcase classname="data_parity" name="row_count_tpch_sf100.region" time="0.0346" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf100.region" time="0.0276" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf100.region" time="0.0337" />
+    <testcase classname="data_parity" name="parquet_exists_tpch_sf100.supplier" time="0.001" />
+    <testcase classname="data_parity" name="row_count_tpch_sf100.supplier" time="0.0486" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf100.supplier" time="0.0752" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf100.supplier" time="0.1181" />
+    <testcase classname="data_parity" name="parquet_exists_tpch_sf1000.customer" time="0.002" />
+    <testcase classname="data_parity" name="row_count_tpch_sf1000.customer" time="0.0455" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf1000.customer" time="0.0298" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf1000.customer" time="0.023" />
     <testcase classname="data_parity" name="parquet_exists_tpch_sf1000.lineitem" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpch_sf1000.lineitem" time="0.011" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf1000.lineitem" time="0.011" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf1000.lineitem" time="0.012" />
-    <testcase classname="data_parity" name="parquet_exists_tpch_sf1000.nation" time="0.001" />
-    <testcase classname="data_parity" name="row_count_tpch_sf1000.nation" time="0.003" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf1000.nation" time="0.003" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf1000.nation" time="0.003" />
+    <testcase classname="data_parity" name="row_count_tpch_sf1000.lineitem" time="0.0316" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf1000.lineitem" time="0.0353" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf1000.lineitem" time="0.0285" />
+    <testcase classname="data_parity" name="parquet_exists_tpch_sf1000.nation" time="0.0" />
+    <testcase classname="data_parity" name="row_count_tpch_sf1000.nation" time="0.007" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf1000.nation" time="0.01" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf1000.nation" time="0.006" />
     <testcase classname="data_parity" name="parquet_exists_tpch_sf1000.orders" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpch_sf1000.orders" time="0.008" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf1000.orders" time="0.007" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf1000.orders" time="0.007" />
+    <testcase classname="data_parity" name="row_count_tpch_sf1000.orders" time="0.0155" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf1000.orders" time="0.015" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf1000.orders" time="0.0144" />
     <testcase classname="data_parity" name="parquet_exists_tpch_sf1000.part" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpch_sf1000.part" time="0.0072" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf1000.part" time="0.008" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf1000.part" time="0.007" />
-    <testcase classname="data_parity" name="parquet_exists_tpch_sf1000.partsupp" time="0.001" />
-    <testcase classname="data_parity" name="row_count_tpch_sf1000.partsupp" time="0.005" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf1000.partsupp" time="0.006" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf1000.partsupp" time="0.006" />
-    <testcase classname="data_parity" name="parquet_exists_tpch_sf1000.region" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpch_sf1000.region" time="0.003" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf1000.region" time="0.003" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf1000.region" time="0.003" />
+    <testcase classname="data_parity" name="row_count_tpch_sf1000.part" time="0.0165" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf1000.part" time="0.019" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf1000.part" time="0.02" />
+    <testcase classname="data_parity" name="parquet_exists_tpch_sf1000.partsupp" time="0.0" />
+    <testcase classname="data_parity" name="row_count_tpch_sf1000.partsupp" time="0.0145" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf1000.partsupp" time="0.014" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf1000.partsupp" time="0.0125" />
+    <testcase classname="data_parity" name="parquet_exists_tpch_sf1000.region" time="0.001" />
+    <testcase classname="data_parity" name="row_count_tpch_sf1000.region" time="0.005" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf1000.region" time="0.007" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf1000.region" time="0.005" />
     <testcase classname="data_parity" name="parquet_exists_tpch_sf1000.supplier" time="0.0" />
-    <testcase classname="data_parity" name="row_count_tpch_sf1000.supplier" time="0.007" />
-    <testcase classname="data_parity" name="columns_present_tpch_sf1000.supplier" time="0.006" />
-    <testcase classname="data_parity" name="not_empty_tpch_sf1000.supplier" time="0.007" />
+    <testcase classname="data_parity" name="row_count_tpch_sf1000.supplier" time="0.0145" />
+    <testcase classname="data_parity" name="columns_present_tpch_sf1000.supplier" time="0.014" />
+    <testcase classname="data_parity" name="not_empty_tpch_sf1000.supplier" time="0.012" />
   </testsuite>
-  <testsuite name="edge_cases" tests="13" failures="0" time="0.007">
-    <testcase classname="edge_cases" name="empty_sql" time="0.0" />
+  <testsuite name="edge_cases" tests="11" failures="0" time="0.032">
+    <testcase classname="edge_cases" name="empty_sql" time="0.001" />
     <testcase classname="edge_cases" name="comments_only" time="0.001" />
-    <testcase classname="edge_cases" name="type_alias_FLOAT4" time="0.0" />
-    <testcase classname="edge_cases" name="type_alias_FLOAT8" time="0.0" />
-    <testcase classname="edge_cases" name="type_alias_INT2" time="0.0" />
-    <testcase classname="edge_cases" name="type_alias_INT4" time="0.001" />
-    <testcase classname="edge_cases" name="type_alias_INT8" time="0.0" />
-    <testcase classname="edge_cases" name="type_alias_BPCHAR" time="0.0" />
-    <testcase classname="edge_cases" name="type_alias_TIMESTAMPTZ" time="0.0" />
+    <testcase classname="edge_cases" name="type_alias_TIMESTAMP_NTZ" time="0.0" />
+    <testcase classname="edge_cases" name="type_alias_TIMESTAMP_LTZ" time="0.0" />
+    <testcase classname="edge_cases" name="type_alias_TIMESTAMP_TZ" time="0.001" />
+    <testcase classname="edge_cases" name="type_alias_VARIANT" time="0.0" />
     <testcase classname="edge_cases" name="varchar_variant_to_string" time="0.0" />
     <testcase classname="edge_cases" name="multiple_rules_combined" time="0.001" />
-    <testcase classname="edge_cases" name="long_sql_200_columns" time="0.004" />
-    <testcase classname="edge_cases" name="difficulty_bounded" time="0.0" />
+    <testcase classname="edge_cases" name="nullable_columns_parquet" time="0.0207" />
+    <testcase classname="edge_cases" name="long_sql_200_columns" time="0.0064" />
+    <testcase classname="edge_cases" name="difficulty_bounded" time="0.001" />
   </testsuite>
-  <testsuite name="manual_flags" tests="15" failures="0" time="0.004">
+  <testsuite name="manual_flags" tests="15" failures="0" time="0.007">
     <testcase classname="manual_flags" name="detects_stored_procedure" time="0.001" />
-    <testcase classname="manual_flags" name="detects_plpgsql_function" time="0.0" />
-    <testcase classname="manual_flags" name="detects_cursor_usage" time="0.0" />
-    <testcase classname="manual_flags" name="detects_raise_statement" time="0.0" />
-    <testcase classname="manual_flags" name="detects_for_loop" time="0.001" />
-    <testcase classname="manual_flags" name="detects_loop_construct" time="0.0" />
-    <testcase classname="manual_flags" name="detects_if_then" time="0.0" />
-    <testcase classname="manual_flags" name="detects_dynamic_sql" time="0.0" />
-    <testcase classname="manual_flags" name="detects_copy_command" time="0.001" />
-    <testcase classname="manual_flags" name="detects_unload_command" time="0.0" />
-    <testcase classname="manual_flags" name="detects_external_schema" time="0.0" />
-    <testcase classname="manual_flags" name="detects_create_library" time="0.001" />
-    <testcase classname="manual_flags" name="no_false_positive_clean_sql" time="0.0" />
+    <testcase classname="manual_flags" name="detects_javascript_procedure" time="0.001" />
+    <testcase classname="manual_flags" name="detects_python_procedure" time="0.0" />
+    <testcase classname="manual_flags" name="detects_resultset_usage" time="0.0" />
+    <testcase classname="manual_flags" name="detects_execute_immediate" time="0.001" />
+    <testcase classname="manual_flags" name="detects_javascript_api" time="0.0" />
+    <testcase classname="manual_flags" name="detects_stream_object" time="0.0" />
+    <testcase classname="manual_flags" name="detects_task_object" time="0.001" />
+    <testcase classname="manual_flags" name="detects_stage_object" time="0.001" />
+    <testcase classname="manual_flags" name="detects_file_format" time="0.0" />
+    <testcase classname="manual_flags" name="detects_copy_into" time="0.0" />
+    <testcase classname="manual_flags" name="detects_qualify_clause" time="0.001" />
+    <testcase classname="manual_flags" name="no_false_positive_clean_sql" time="0.001" />
     <testcase classname="manual_flags" name="all_procs_manual_in_report" time="0.0" />
     <testcase classname="manual_flags" name="guidance_in_manual_items" time="0.0" />
   </testsuite>

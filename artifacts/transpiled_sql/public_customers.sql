@@ -5,7 +5,7 @@
 -- Rules      : remove_data_retention, number_to_bigint, number_to_decimal, timestamp_ntz, varchar_to_string, append_using_delta
 -- Warnings   : 0
 -- SHA-256    : 86201813cbb87247d23c4407362954168f5881cc5d396b9cfb747a0178d2c4a5
--- Generated  : 2026-03-04T16:31:48.049982
+-- Generated  : 2026-03-08T12:18:43.166174
 -- ---
 
 CREATE TABLE public.customers (

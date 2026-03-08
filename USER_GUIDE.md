@@ -5,30 +5,36 @@
 1. [Prerequisites](#1-prerequisites)
 2. [Installation](#2-installation)
 3. [Quick Start](#3-quick-start)
-4. [Logging In & Connecting](#4-logging-in--connecting)
-5. [Choosing Source and Target Platform](#5-choosing-source-and-target-platform)
-6. [Running the Full Pipeline](#6-running-the-full-pipeline)
-7. [Running Individual Steps](#7-running-individual-steps)
-8. [Launching the Dashboard](#8-launching-the-dashboard)
-9. [Dashboard Tabs Reference](#9-dashboard-tabs-reference)
-10. [Standalone Tools](#10-standalone-tools)
-11. [Configuration](#11-configuration)
-12. [Output Artifacts](#12-output-artifacts)
-13. [Connecting Real Systems](#13-connecting-real-systems)
-14. [Troubleshooting](#14-troubleshooting)
+4. [Running with Mock Data](#4-running-with-mock-data)
+5. [Logging In & Connecting](#5-logging-in--connecting)
+6. [Choosing Source and Target Platform](#6-choosing-source-and-target-platform)
+7. [Running the Full Pipeline](#7-running-the-full-pipeline)
+8. [Dashboard Tabs Reference](#8-dashboard-tabs-reference)
+9. [Configuration](#9-configuration)
+10. [Connecting Real Systems](#10-connecting-real-systems)
+11. [Troubleshooting](#11-troubleshooting)
 
 ---
 
 ## 1. Prerequisites
 
+### Python Backend
 - **Python 3.10+** (required for type hint syntax used in the codebase)
 - **pip** (Python package manager)
-- **Git** (optional, for version control)
 
-Verify your Python version:
+### React Frontend
+- **Node.js 18+** (LTS version recommended)
+- **npm 9+** (comes with Node.js)
+
+### Optional
+- **Git** (for version control)
+
+Verify your installations:
 
 ```bash
 python --version
+node --version
+npm --version
 ```
 
 ---
@@ -41,157 +47,102 @@ python --version
 cd C:\dev\data-migration
 ```
 
-### Step 2: (Recommended) Create a virtual environment
+### Step 2: (Recommended) Create a Python virtual environment
 
 ```bash
 python -m venv .venv
 .venv\Scripts\activate
 ```
 
-### Step 3: Install dependencies
+### Step 3: Install Python dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-If `requirements.txt` is missing packages, install the full set manually:
+### Step 4: Install Node.js dependencies
 
 ```bash
-pip install faker pyarrow pandas streamlit plotly pyyaml networkx psycopg2-binary tqdm
+cd web
+npm install
+cd ..
 ```
 
-### Step 4: Verify installation
+### Step 5: Verify installation
 
+**Python:**
 ```bash
-python -c "import streamlit, plotly, pandas, faker, pyarrow, networkx; print('All dependencies OK')"
+python -c "import fastapi, pandas, pyarrow; print('Python dependencies OK')"
+```
+
+**Node.js:**
+```bash
+cd web && npm list react vite
 ```
 
 ---
 
 ## 3. Quick Start
 
-Run the entire pipeline and launch the dashboard with a single command:
+The fastest way to see the application running:
 
-```bash
-python -m src.run_demo
-```
-
-This will:
-1. Generate a synthetic source catalog (5 schemas, 25 tables, ~213 columns)
-2. Transpile all SQL from source dialect to Spark SQL (33 objects)
-3. Generate Parquet files with realistic synthetic data (~47K rows)
-4. Run 100 validation checks across 25 tables
-5. Execute automated tests (schema, SQL translation, data parity, edge cases, manual flags)
-6. Launch the Streamlit dashboard at **http://localhost:8501**
-
-To run without launching the UI:
-
-```bash
-python -m src.run_demo --no-ui
-```
-
----
-
-## 4. Logging In & Connecting
-
-MigData includes a login page and a connection page that appear before the dashboard.
-
-### Step 1: Launch
-
-```bash
-streamlit run app.py
-```
-
-### Step 2: Login
-
-- Default credentials: **admin** / **admin@123**
-- Enter your username and password, then click **Log In**
-
-### Step 3: Self-registration
-
-- Click **"Don't have an account? Register"** on the login page
-- Fill in username, password (min 6 characters), and confirm password
-- Click **Register**, then log in with your new credentials
-- User accounts are stored in `config/users.json` and persist across sessions
-
-### Step 4: Connection page
-
-After logging in you are taken to the connection page:
-
-1. **Mock mode** — Check "Use Mock Data" to skip real connections. Click "Test Source Connection" to simulate a 2-second connection, then "Proceed to Dashboard"
-2. **Real connections** — Select your source platform (Redshift / Snowflake), fill in connection fields, and click "Test Source Connection". A green success message confirms the connection. Optionally test the target (Databricks) or skip it
-3. Click **"Proceed to Dashboard →"** to enter the main dashboard. The pipeline runs automatically on first entry
-
-### Logout
-
-In the dashboard sidebar, scroll to the bottom and click **Logout** to return to the login page.
-
----
-
-## 5. Choosing Source and Target Platform
-
-The simulator supports multiple source and target platforms. You can switch platforms in two ways:
-
-### Option A — Dashboard sidebar (recommended)
-
-The sidebar has **Source platform** and **Target platform** radio buttons. Selecting a different value automatically updates `config.yaml` and re-runs the pipeline — no restart needed.
-
-### Option B — Edit `config.yaml`
-
-#### Source platforms
-
-**Redshift (default):**
-
-```yaml
-source:
-  adapter: "mock_redshift"    # or "mock" (legacy alias)
-```
-
-Uses `mock_redshift.py` (Redshift-style catalog with DISTKEY, SORTKEY, ENCODE, PL/pgSQL stored procs) and `mock_converter.py` (30 Redshift-to-Spark rewrite rules).
-
-**Snowflake:**
-
-```yaml
-source:
-  adapter: "mock_snowflake"
-```
-
-Uses `mock_snowflake.py` (Snowflake-style catalog with CLUSTER BY, VARIANT, TIMESTAMP_NTZ, JavaScript stored procs) and `mock_snowflake_converter.py` (30 Snowflake-to-Spark rewrite rules).
-
-#### Target platforms
-
-**Databricks (default):**
-
-```yaml
-target:
-  platform: "databricks"     # "databricks" (more targets coming)
-```
-
-After changing the source or target, re-run the pipeline to regenerate all artifacts:
-
-```bash
-python -m src.run_demo --no-ui
-```
-
-The dashboard, test runner, and pipeline all adapt automatically to the configured platforms. All UI labels update dynamically (e.g. "Redshift → Databricks Demo" or "Snowflake → Databricks Demo").
-
-### Source ≠ target validation
-
-The dashboard enforces that source and target cannot be the same platform. If a future platform appears in both lists, selecting the same for source and target shows an error and blocks the app.
-
----
-
-## 6. Running the Full Pipeline
-
-### From the command line
-
+### Terminal 1: Generate Mock Data
 ```bash
 cd C:\dev\data-migration
 python -m src.run_demo
 ```
 
-Expected output (Redshift example):
+This generates:
+- 5 schemas, 25 tables, ~213 columns
+- Transpiled SQL (33 objects)
+- Parquet files with synthetic data (~47K rows)
+- 100 validation checks
+- Automated test results
 
+### Terminal 2: Start the Backend API
+```bash
+cd C:\dev\data-migration
+python -m uvicorn api.main:app --reload --port 8000
+```
+
+The FastAPI backend will be available at **http://localhost:8000**
+
+### Terminal 3: Start the Frontend
+```bash
+cd C:\dev\data-migration\web
+npm run dev
+```
+
+The React frontend will be available at **http://localhost:5173**
+
+### Step 4: Open Your Browser
+
+Navigate to **http://localhost:5173** and you'll see the login page.
+
+Default credentials: **admin** / **admin@123**
+
+---
+
+## 4. Running with Mock Data
+
+### Step-by-Step Process
+
+#### 4.1 Generate Mock Data
+
+The first step is to generate synthetic data for the demo:
+
+```bash
+python -m src.run_demo
+```
+
+**What this does:**
+1. Generates a synthetic source catalog (Redshift or Snowflake-style)
+2. Transpiles all SQL from source dialect to Spark SQL
+3. Generates Parquet files with realistic synthetic data
+4. Runs validation checks
+5. Executes automated tests
+
+**Expected output:**
 ```
 ============================================================
   Redshift -> Databricks MigData
@@ -220,218 +171,286 @@ STEP 5 -- Execute Test Suite
 ============================================================
   Pipeline complete in 23.07s
 ============================================================
+
+To view results:
+  1. Start the FastAPI backend: python -m uvicorn api.main:app --reload
+  2. Start the React frontend: cd web && npm run dev
+  3. Open http://localhost:5173 in your browser
 ```
 
-### From the dashboard
+#### 4.2 Start the Backend
 
-Click the **Run Full Demo Pipeline** button in the sidebar. The dashboard runs all 5 steps inline and reloads automatically.
-
----
-
-## 7. Running Individual Steps
-
-Each pipeline step can run independently. Run them in order if starting from scratch.
-
-**Redshift path:**
-
-| Step | Command | What It Does |
-|------|---------|-------------|
-| 1 | `python -m src.mock_redshift` | Generate synthetic Redshift catalog and query logs |
-| 2 | `python -m src.mock_converter` | Transpile Redshift SQL to Spark SQL |
-
-**Snowflake path:**
-
-| Step | Command | What It Does |
-|------|---------|-------------|
-| 1 | `python -m src.mock_snowflake` | Generate synthetic Snowflake catalog and query logs |
-| 2 | `python -m src.mock_snowflake_converter` | Transpile Snowflake SQL to Spark SQL |
-
-**Shared steps (after Step 1 and 2):**
-
-| Step | Command | What It Does |
-|------|---------|-------------|
-| 3 | `python -m src.mock_loader` | Generate Parquet files with synthetic data |
-| 4 | `python -m src.mock_validator` | Run validation checks (row count, checksum, etc.) |
-| 5 | `python -m src.test_runner` | Execute the full test suite |
-
-**Step 1** must run first. Steps 2-5 depend on the artifacts from Step 1. Steps 3-5 depend on Step 2's output.
-
-### Optional: Run with a custom seed
+**In a new terminal (Terminal 2):**
 
 ```bash
-python -m src.mock_redshift --seed 123
-python -m src.mock_snowflake --seed 123
+cd C:\dev\data-migration
+python -m uvicorn api.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
----
+**Options:**
+- `--reload`: Auto-reload on code changes (for development)
+- `--host 0.0.0.0`: Listen on all network interfaces
+- `--port 8000`: Specify port (default: 8000)
 
-## 8. Launching the Dashboard
+**Expected output:**
+```
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [12345] using WatchFiles
+INFO:     Started server process [12346]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+```
 
-After running the pipeline (or at least Step 1), launch the Streamlit dashboard:
+**API Documentation:**
+- Swagger UI: http://localhost:8000/docs
+- ReDoc: http://localhost:8000/redoc
+
+#### 4.3 Start the Frontend
+
+**In a new terminal (Terminal 3):**
 
 ```bash
-streamlit run app.py
+cd C:\dev\data-migration\web
+npm run dev
 ```
 
-The dashboard opens at **http://localhost:8501** in your default browser.
+**Expected output:**
+```
+  VITE v7.3.1  ready in 432 ms
 
-### Sidebar Controls
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://192.168.1.100:5173/
+  ➜  press h + enter to show help
+```
 
-- **Source platform** — Radio button to select the source warehouse (Redshift / Snowflake). Switching rewrites `config.yaml` and re-runs the pipeline
-- **Target platform** — Radio button to select the target warehouse (Databricks). Switching rewrites `config.yaml` and re-runs the pipeline. Source and target cannot be the same
-- **Schema filter** — Filter all tabs by one or more source schemas (public, analytics, staging, finance, marketing)
-- **Confidence threshold** — Adjust the threshold slider (default 0.6) to flag objects for manual review
-- **Run Full Demo Pipeline** — One-click button to regenerate all data
-- **Pipeline Status** — Checklist showing which artifacts have been generated
+#### 4.4 Access the Application
+
+Open your browser and navigate to **http://localhost:5173**
+
+**Login Flow:**
+1. You'll see the login page
+2. Enter credentials: **admin** / **admin@123**
+3. Click "Log In"
+4. You'll be taken to the Connection page
+5. Check "Use Mock Data" and click "Test Source Connection"
+6. Click "Proceed to Dashboard →"
 
 ---
 
-## 9. Dashboard Tabs Reference
+## 5. Logging In & Connecting
 
-The dashboard has **9 tabs** organized by workflow:
+### 5.1 Login Page
 
-### Tab 1: Overview
+The application requires authentication. Default credentials are stored in `config/users.json`.
 
-Top-level migration summary with:
+**Default users:**
+- Username: `admin`, Password: `admin@123`
+
+### 5.2 Self-Registration
+
+To create a new account:
+
+1. On the login page, click **"Don't have an account? Register"**
+2. Fill in:
+   - Username (unique)
+   - Password (minimum 6 characters)
+   - Confirm Password
+3. Click **Register**
+4. You'll be automatically logged in
+
+User accounts are persisted in `config/users.json`.
+
+### 5.3 Connection Page
+
+After logging in, you'll see the connection page with two modes:
+
+#### Mode 1: Mock Data (No Real Connections)
+
+1. Check **"Use Mock Data"**
+2. Click **"Test Source Connection"**
+3. Wait for the success message
+4. Click **"Proceed to Dashboard →"**
+
+#### Mode 2: Real Database Connections
+
+See [Section 10: Connecting Real Systems](#10-connecting-real-systems) for detailed instructions.
+
+### 5.4 Logout
+
+In the dashboard sidebar, scroll to the bottom and click **Logout** to return to the login page.
+
+---
+
+## 6. Choosing Source and Target Platform
+
+The application supports multiple source and target platforms. You can switch platforms in two ways:
+
+### Option A — Dashboard Sidebar (Recommended)
+
+The sidebar has **Source platform** and **Target platform** radio buttons. Selecting a different value automatically:
+1. Updates `config.yaml`
+2. Re-runs the pipeline
+3. Reloads the dashboard with new data
+
+### Option B — Edit `config.yaml`
+
+#### Source Platforms
+
+**Redshift (default):**
+```yaml
+source:
+  adapter: "mock_redshift"
+```
+
+**Snowflake:**
+```yaml
+source:
+  adapter: "mock_snowflake"
+```
+
+#### Target Platforms
+
+**Databricks (default):**
+```yaml
+target:
+  platform: "databricks"
+```
+
+After changing the configuration, run:
+
+```bash
+python -m src.run_demo
+```
+
+The dashboard will automatically adapt to the configured platforms. All UI labels update dynamically.
+
+---
+
+## 7. Running the Full Pipeline
+
+### From the Command Line
+
+```bash
+cd C:\dev\data-migration
+python -m src.run_demo
+```
+
+### From the Dashboard
+
+Click the **Run Full Demo Pipeline** button in the sidebar. The backend will:
+1. Execute all 5 pipeline steps
+2. Send real-time progress via WebSocket
+3. Automatically reload the dashboard when complete
+
+### Individual Steps
+
+You can run each pipeline step independently:
+
+**Redshift Path:**
+```bash
+python -m src.mock_redshift          # Step 1: Generate Redshift catalog
+python -m src.mock_converter         # Step 2: Transpile SQL
+```
+
+**Snowflake Path:**
+```bash
+python -m src.mock_snowflake         # Step 1: Generate Snowflake catalog
+python -m src.mock_snowflake_converter  # Step 2: Transpile SQL
+```
+
+**Shared Steps:**
+```bash
+python -m src.mock_loader            # Step 3: Generate Parquet files
+python -m src.mock_validator         # Step 4: Run validation checks
+python -m src.test_runner            # Step 5: Execute test suite
+```
+
+---
+
+## 8. Dashboard Tabs Reference
+
+The dashboard has **10 tabs** organized by workflow:
+
+### Tab 1: Executive Summary
+High-level migration overview with key metrics and charts.
+
+### Tab 2: Overview
+Detailed migration summary with:
 - KPI cards: total tables, auto-converted %, manual rewrite count, avg confidence, validation pass rate
 - Query volume timeline (90-day bar chart with 7-day rolling average)
 - Object classification pie chart (AUTO / WARNINGS / MANUAL)
 - Confidence score distribution histogram
 - Table size distribution (top 15 by MB)
 
-### Tab 2: Objects
-
+### Tab 3: Objects
 Searchable, filterable table of all migration objects:
 - Filter by name, classification, or object type
 - Columns: object name, schema, type, classification, difficulty score, rules applied, warnings, manual flags
 - CSV export button
 
-### Tab 3: Schema Explorer
-
+### Tab 4: Schema Explorer
 Detailed schema and column browser:
 - **Schema summary** — Table count, total rows, total size per schema
 - **Table selector** — Pick any table to inspect
-- **Table properties** — Row count, size, and platform-specific properties (Redshift: dist style, encoding, % used; Snowflake: cluster by, auto clustering, retention time)
+- **Table properties** — Row count, size, and platform-specific properties
 - **Column details** — Every column with its source type and auto-mapped target equivalent
 - **Constraints** — Primary keys, foreign keys, unique constraints per table
 - **Target DDL preview** — Auto-generated `CREATE TABLE ... USING DELTA` statement
 - CSV export for column mappings
 
-### Tab 4: Relationships
-
-Declared and inferred foreign key relationships:
-- **Summary metrics** — Declared FKs, inferred candidates, highly likely, likely counts
-- **Three views** (toggle with radio buttons):
-  - **Graph** — Interactive network graph. Solid lines = declared FKs, dashed orange = inferred FKs. Node color = schema, node size = connection count
-  - **Declared FKs** — Table of all FK constraints from the catalog
-  - **Inferred Candidates** — Table of FK candidates from the relationship profiler, filterable by classification (highly_likely, likely, possible, unlikely). Shows overlap ratio and parent uniqueness
-
-> To populate inferred candidates, run `relationship_profiler.py` (requires Redshift connection) or provide an `artifacts/fk_candidates.json` file.
-
 ### Tab 5: Metadata
-
 Browse stored procedures, UDFs, views, and materialized views:
 - **Summary metrics** — Counts per object type
-- **Four sub-views** (toggle with radio buttons):
-  - **Stored Procedures** — Expandable cards showing source code, language, args, return type, and referenced tables. Flagged as requiring manual rewrite
-  - **UDFs** — Source code with automation assessment (SQL UDFs = auto-convertible to target SQL UDF, Python UDFs = manual)
-  - **Views** — View definitions with dependency analysis (which tables each view reads from) and conversion status
+- **Four sub-views**:
+  - **Stored Procedures** — Source code, language, args, return type, referenced tables
+  - **UDFs** — Source code with automation assessment
+  - **Views** — View definitions with dependency analysis
   - **Materialized Views** — Definitions if available
-- **Automation Assessment** — Summary table showing which metadata objects can be auto-migrated vs. need manual work, with a progress bar
+- **Automation Assessment** — Summary of which metadata objects can be auto-migrated
 
 ### Tab 6: Lineage
+End-to-end data lineage with:
+- **Full Lineage Graph** — Network graph with different node shapes and edge styles
+- **Query Access Heatmap** — Most-accessed tables from query logs
+- **Table Dependencies** — Searchable dependency matrix
 
-End-to-end data lineage built from FK relationships, view definitions, proc source code, and query logs:
-- **Three views** (toggle with radio buttons):
-  - **Full Lineage Graph** — Network graph with different node shapes (circle=table, diamond=view, square=proc) and edge styles (solid=FK, dashed=view dependency, dotted=proc dependency)
-  - **Query Access Heatmap** — Bar chart of most-accessed tables from query logs, plus a co-occurrence matrix showing which tables are frequently queried together
-  - **Table Dependencies** — Searchable dependency matrix listing every object and what it depends on (views read from tables, procs read/write tables, FKs reference tables). CSV export
+### Tab 7: Relationships
+Declared and inferred foreign key relationships:
+- **Graph** — Interactive network graph
+- **Declared FKs** — Table of all FK constraints
+- **Inferred Candidates** — FK candidates from relationship profiler
 
-### Tab 7: SQL Comparison
-
-Side-by-side source vs. target SQL (labels adapt to the configured platforms):
+### Tab 8: SQL Comparison
+Side-by-side source vs. target SQL:
 - Object selector dropdown
 - Info bar: classification, difficulty, rules applied, warnings
 - Source and target SQL panels with syntax highlighting
 - Unified diff viewer
-- Applied rules list, warnings, and manual rewrite flags
+- Applied rules list
 
-### Tab 8: Validation
-
+### Tab 9: Validation
 Per-table validation scorecards:
 - Summary: tables validated, total checks, passed, failed, pass rate
-- Table selector with per-table drill-down:
-  - Confidence score, checks passed count, difficulty
-  - Expandable check details (row_count_match, checksum, null_variance, schema_drift)
-- Confidence heatmap — Horizontal bar chart of all tables colored by confidence score
+- Table selector with per-table drill-down
+- Confidence heatmap
 - JSON export
 
-### Tab 9: Manual Work
-
+### Tab 10: Manual Work
 Categorized list of items requiring human attention:
-- Stored procedures (need rewrite as target-platform notebooks/workflows)
-- Manual rewrite objects (flagged by transpiler)
+- Stored procedures (need rewrite)
+- Manual rewrite objects
 - Flagged items from conversion
-- Low-confidence tables (below threshold)
-- **Export Review Pack (ZIP)** — Bundles all artifacts for offline review
+- Low-confidence tables
+- **Export Review Pack (ZIP)** — Bundles all artifacts
 - Test report (embedded HTML)
 
 ---
 
-## 10. Standalone Tools
-
-These scripts complement the pipeline and can be run independently. Scripts marked **(Redshift only)** currently target Redshift and would need adaptation for Snowflake sources.
-
-| Script | Purpose | Platform | Command |
-|--------|---------|----------|---------|
-| `metadata_extractor.py` | Extract metadata from a real Redshift cluster | Redshift only | `python metadata_extractor.py` |
-| `relationship_profiler.py` | Profile columns to infer FK relationships | Redshift only | `python relationship_profiler.py` |
-| `workload_analyzer.py` | Analyze query workload patterns | Redshift only | `python workload_analyzer.py` |
-| `sql_transpiler_service.py` | Advanced SQL transpilation service | Redshift only | `python sql_transpiler_service.py` |
-| `transpile.py` | CLI wrapper for SQL transpilation | Redshift only | `python transpile.py` |
-| `validation_generator.py` | Generate validation rules (Great Expectations, PyDeequ) | Generic | `python validation_generator.py` |
-| `confidence_calculator.py` | Compute per-object confidence scores | Generic | `python confidence_calculator.py` |
-| `export_to_s3.py` | Export Parquet to S3 (UNLOAD simulation) | Redshift only | `python export_to_s3.py` |
-| `databricks_ingest.py` | Ingest data into Databricks Delta tables | Generic | `python databricks_ingest.py` |
-| `ddl_deployer.py` | Generate deployment-ready DDL for Databricks | Generic | `python ddl_deployer.py` |
-| `deploy.sh` | Execute DDL against a Databricks SQL warehouse | Generic | `bash deploy.sh --dry-run` |
-| `capture_demo.py` | Capture dashboard screenshots (requires Playwright) | Generic | `python capture_demo.py` |
-
-### Relationship Profiler
-
-Generates `artifacts/fk_candidates.json` which the dashboard Relationships tab reads:
-
-```bash
-# Requires Redshift connection (env vars: REDSHIFT_HOST, REDSHIFT_PORT, REDSHIFT_DB, REDSHIFT_USER, REDSHIFT_PASSWORD)
-python relationship_profiler.py
-
-# Or use --live to fetch metadata directly instead of reading source_catalog.json
-python relationship_profiler.py --live
-```
-
-### Workload Analyzer
-
-Generates `artifacts/workload_summary.json`:
-
-```bash
-python workload_analyzer.py --lookback-days 90 --top-n 50
-```
-
-### Confidence Calculator
-
-Generates `artifacts/confidence_summary.csv` and `artifacts/confidence_report.json`:
-
-```bash
-python confidence_calculator.py --threshold 0.6
-```
-
----
-
-## 11. Configuration
+## 9. Configuration
 
 All settings live in `config.yaml` at the project root.
 
-### Key sections
+### Key Sections
 
 ```yaml
 project:
@@ -447,7 +466,7 @@ paths:
   logs: "artifacts/logs"
 
 source:
-  adapter: "mock_redshift"          # "mock_redshift" | "mock_snowflake" | "mock" (legacy) | "redshift" | "snowflake"
+  adapter: "mock_redshift"          # "mock_redshift" | "mock_snowflake" | "redshift" | "snowflake"
 
 target:
   platform: "databricks"           # "databricks" (more targets coming)
@@ -473,7 +492,7 @@ logging:
   json_logs: true
 ```
 
-### Environment variable interpolation
+### Environment Variables
 
 Use `${VAR}` syntax for secrets:
 
@@ -501,75 +520,56 @@ source:
 
 ---
 
-## 12. Output Artifacts
-
-After a full pipeline run, the following directories and files are produced:
-
-```
-C:\dev\data-migration\
-|
-+-- mock_data\
-|   +-- source_catalog.json        # Full catalog: tables, columns, constraints, procs, UDFs, views
-|   +-- query_logs.json            # 682 synthetic query log entries (90 days)
-|
-+-- artifacts\
-|   +-- transpiled_sql\            # 28 SQL files (25 tables + 3 views)
-|   |   +-- public_customers.sql
-|   |   +-- public_orders.sql
-|   |   +-- ...
-|   +-- target_tables\             # 25 Parquet files with synthetic data
-|   |   +-- public_customers.parquet
-|   |   +-- ...
-|   +-- conversion_report.json     # Per-object classification, difficulty, diffs, rules
-|   +-- load_summary.json          # Per-table load metrics (rows, mismatches, runtime)
-|   +-- pipeline_summary.json      # Full pipeline run summary
-|   +-- fk_candidates.json         # Inferred FK relationships (from relationship_profiler)
-|   +-- fk_candidates.csv          # Same in CSV format
-|   +-- workload_summary.json      # Query workload analysis (from workload_analyzer)
-|   +-- confidence_summary.csv     # Per-object confidence scores (from confidence_calculator)
-|   +-- confidence_report.json     # Detailed confidence breakdown
-|   +-- logs\                      # Structured JSON logs
-|       +-- run_demo.log
-|       +-- mock_redshift.log
-|       +-- mock_converter.log
-|       +-- mock_loader.log
-|       +-- mock_validator.log
-|
-+-- test_results\
-    +-- validation_results.json    # Per-table validation checks with pass/fail
-    +-- confidence_scores.csv      # Confidence score per table
-    +-- test_report.xml            # JUnit XML format (252 tests)
-    +-- test_summary.html          # Styled HTML test report
-```
-
----
-
-## 13. Connecting Real Systems
+## 10. Connecting Real Systems
 
 MigData supports connecting to real source and target systems. You can provide credentials either via the **connection page** in the UI or via **environment variables**.
 
-### Real Redshift — Step by Step
+### 10.1 Real Redshift Connection
 
-**Prerequisites:** `psycopg2-binary` (already in `requirements.txt`)
+#### Prerequisites
+- `psycopg2-binary` (already in `requirements.txt`)
+- Redshift cluster endpoint
+- Database credentials with read access
 
-**Gather:** Cluster endpoint, port (default 5439), database name, IAM user, password.
+#### Gather Connection Details
+- **Host**: Cluster endpoint (e.g., `my-cluster.abc123.us-east-1.redshift.amazonaws.com`)
+- **Port**: Default 5439
+- **Database**: Database name (e.g., `analytics_dw`)
+- **User**: IAM user or database user
+- **Password**: User password
 
-**Option A — Connection page (recommended):**
+#### Option A — Connection Page (Recommended)
 
 1. On the connection page, select **Redshift** as source platform
-2. Fill in Host, Port, Database, User, Password
-3. Click **Test Source Connection** — wait for green success
-4. Optionally check **"Save connection details for next time"**
-5. Click **"Proceed to Dashboard →"**
+2. Fill in the connection details:
+   - Host: `my-cluster.abc123.us-east-1.redshift.amazonaws.com`
+   - Port: `5439`
+   - Database: `analytics_dw`
+   - User: `migration_user`
+   - Password: `your_password`
+3. Click **Test Source Connection**
+4. Wait for the green success message
+5. Optionally check **"Save connection details for next time"**
+6. Click **"Proceed to Dashboard →"**
 
-**Option B — Environment variables:**
+#### Option B — Environment Variables
 
+**Windows:**
 ```bash
 set REDSHIFT_HOST=my-cluster.abc123.us-east-1.redshift.amazonaws.com
 set REDSHIFT_PORT=5439
 set REDSHIFT_DB=analytics_dw
 set REDSHIFT_USER=migration_user
 set REDSHIFT_PASSWORD=your_password
+```
+
+**Linux/Mac:**
+```bash
+export REDSHIFT_HOST=my-cluster.abc123.us-east-1.redshift.amazonaws.com
+export REDSHIFT_PORT=5439
+export REDSHIFT_DB=analytics_dw
+export REDSHIFT_USER=migration_user
+export REDSHIFT_PASSWORD=your_password
 ```
 
 Then update `config.yaml`:
@@ -585,34 +585,64 @@ source:
     password: "${REDSHIFT_PASSWORD}"
 ```
 
-**Troubleshooting:**
+#### Troubleshooting Redshift Connection
 
-| Error symptom | Likely cause | Fix |
-|---|---|---|
-| Timeout / could not connect | Wrong host or port, or security group blocks access | Check Host and Port, ensure your IP is whitelisted |
+| Error Symptom | Likely Cause | Fix |
+|---------------|--------------|-----|
+| Timeout / could not connect | Wrong host/port or security group blocks access | Check Host and Port, ensure your IP is whitelisted |
 | Password authentication failed | Wrong user or password | Check User and Password |
 | Database does not exist | Wrong database name | Check Database name |
+| SSL/TLS error | SSL certificate validation issue | Add `sslmode: 'require'` to config |
 
-### Real Snowflake — Step by Step
+---
 
-**Prerequisites:** `pip install snowflake-connector-python>=3.6`
+### 10.2 Real Snowflake Connection
 
-**Gather:** Account identifier, warehouse, database, role, user, password.
+#### Prerequisites
+- `snowflake-connector-python>=3.6` (already in `requirements.txt`)
+- Snowflake account identifier
+- Database credentials with read access
+- Warehouse with sufficient capacity
 
-**Account identifier format:**
-- New URL format: `org-account` (e.g. `myorg-myaccount`)
-- Legacy format: `account.region.cloud` (e.g. `xy12345.us-east-1.aws`)
+#### Gather Connection Details
+- **Account**: Account identifier (e.g., `myorg-myaccount` or `xy12345.us-east-1.aws`)
+- **Warehouse**: Warehouse name (e.g., `COMPUTE_WH`)
+- **Database**: Database name (e.g., `ANALYTICS_DW`)
+- **Role**: Role name (e.g., `SYSADMIN`)
+- **User**: Snowflake user
+- **Password**: User password
 
-**Option A — Connection page (recommended):**
+#### Account Identifier Formats
+
+**New URL format** (recommended):
+```
+myorg-myaccount
+```
+
+**Legacy format**:
+```
+account.region.cloud
+# Example: xy12345.us-east-1.aws
+```
+
+#### Option A — Connection Page (Recommended)
 
 1. On the connection page, select **Snowflake** as source platform
-2. Fill in Account, Warehouse, Database, Role, User, Password
-3. Click **Test Source Connection** — wait for green success
-4. Optionally check **"Save connection details for next time"**
-5. Click **"Proceed to Dashboard →"**
+2. Fill in the connection details:
+   - Account: `myorg-myaccount`
+   - Warehouse: `COMPUTE_WH`
+   - Database: `ANALYTICS_DW`
+   - Role: `SYSADMIN`
+   - User: `migration_user`
+   - Password: `your_password`
+3. Click **Test Source Connection**
+4. Wait for the green success message
+5. Optionally check **"Save connection details for next time"**
+6. Click **"Proceed to Dashboard →"**
 
-**Option B — Environment variables:**
+#### Option B — Environment Variables
 
+**Windows:**
 ```bash
 set SNOWFLAKE_ACCOUNT=myorg-myaccount
 set SNOWFLAKE_WAREHOUSE=COMPUTE_WH
@@ -620,6 +650,16 @@ set SNOWFLAKE_DB=ANALYTICS_DW
 set SNOWFLAKE_USER=migration_user
 set SNOWFLAKE_PASSWORD=your_password
 set SNOWFLAKE_ROLE=SYSADMIN
+```
+
+**Linux/Mac:**
+```bash
+export SNOWFLAKE_ACCOUNT=myorg-myaccount
+export SNOWFLAKE_WAREHOUSE=COMPUTE_WH
+export SNOWFLAKE_DB=ANALYTICS_DW
+export SNOWFLAKE_USER=migration_user
+export SNOWFLAKE_PASSWORD=your_password
+export SNOWFLAKE_ROLE=SYSADMIN
 ```
 
 Then update `config.yaml`:
@@ -636,32 +676,73 @@ source:
     role: "${SNOWFLAKE_ROLE}"
 ```
 
-**Troubleshooting:**
+#### Troubleshooting Snowflake Connection
 
-| Error symptom | Likely cause | Fix |
-|---|---|---|
+| Error Symptom | Likely Cause | Fix |
+|---------------|--------------|-----|
 | Account not found | Wrong account identifier | Check Account identifier (format: org-account) |
 | Incorrect username or password | Wrong credentials | Check User and Password |
 | Warehouse does not exist / suspended | Wrong warehouse or it needs resuming | Check Warehouse name, ensure it is running |
+| Database does not exist | Wrong database name | Check Database name |
+| Role not authorized | User doesn't have the role | Check Role assignment or use default role |
+| Network timeout | Firewall or network issue | Check network connectivity, try from different location |
 
-**Note on query logs:** Query log extraction requires `ACCOUNTADMIN` or `MONITOR` privilege to access `SNOWFLAKE.ACCOUNT_USAGE.QUERY_HISTORY`. Without it, catalog extraction still works but query logs will be empty.
+#### Query Log Access
 
-The real adapter (`src/snowflake_adapter.py`) implements `SourceAdapter` — queries `INFORMATION_SCHEMA` for metadata. No manual setup beyond installing the connector and providing credentials.
+Query log extraction requires `ACCOUNTADMIN` or `MONITOR` privilege to access `SNOWFLAKE.ACCOUNT_USAGE.QUERY_HISTORY`. Without it, catalog extraction still works but query logs will be empty.
 
-### Connect to Databricks (Target)
+To grant privileges:
 
-**Option A — Connection page:**
+```sql
+GRANT ROLE ACCOUNTADMIN TO USER migration_user;
+-- OR
+GRANT IMPORTED PRIVILEGES ON DATABASE SNOWFLAKE TO ROLE SYSADMIN;
+```
+
+#### Performance Tips
+
+1. **Use a dedicated warehouse**: Create a small warehouse for migration tasks
+2. **Resume warehouse**: Ensure the warehouse is running before connecting
+3. **Optimize queries**: The adapter queries `INFORMATION_SCHEMA` which can be slow for large databases
+
+---
+
+### 10.3 Connect to Databricks (Target)
+
+#### Prerequisites
+- Databricks workspace
+- Personal access token
+- SQL warehouse HTTP path
+
+#### Gather Connection Details
+- **Host**: Workspace URL (e.g., `your-workspace.cloud.databricks.com`)
+- **Access Token**: Personal access token (starts with `dapi...`)
+- **HTTP Path**: SQL warehouse HTTP path (e.g., `/sql/1.0/warehouses/abc123def456`)
+
+#### Option A — Connection Page
 
 1. On the connection page, uncheck **"Skip target connection"**
-2. Fill in Host, Access Token, HTTP Path
+2. Fill in:
+   - Host: `your-workspace.cloud.databricks.com`
+   - Access Token: `dapi...`
+   - HTTP Path: `/sql/1.0/warehouses/abc123def456`
 3. Click **Test Target Connection**
+4. Wait for the success message
 
-**Option B — Environment variables:**
+#### Option B — Environment Variables
 
+**Windows:**
 ```bash
 set DATABRICKS_HOST=your-workspace.cloud.databricks.com
 set DATABRICKS_TOKEN=your_token
 set DATABRICKS_HTTP_PATH=/sql/1.0/warehouses/your_warehouse_id
+```
+
+**Linux/Mac:**
+```bash
+export DATABRICKS_HOST=your-workspace.cloud.databricks.com
+export DATABRICKS_TOKEN=your_token
+export DATABRICKS_HTTP_PATH=/sql/1.0/warehouses/your_warehouse_id
 ```
 
 Then update `config.yaml`:
@@ -679,66 +760,124 @@ loader:
 
 ---
 
-## 14. Troubleshooting
+## 11. Troubleshooting
 
-### "No data yet" on the dashboard
+### 11.1 Backend Issues
 
-Run the pipeline first:
+#### "No module named 'fastapi'"
+**Solution:** Install Python dependencies
+```bash
+pip install -r requirements.txt
+```
 
+#### "Address already in use" (Port 8000)
+**Solution:** Kill the process or use a different port
+```bash
+# Windows
+netstat -ano | findstr :8000
+taskkill /PID <process_id> /F
+
+# Use different port
+python -m uvicorn api.main:app --reload --port 8001
+```
+
+#### "No data yet" in dashboard
+**Solution:** Run the pipeline first
 ```bash
 python -m src.run_demo
 ```
 
-Or click **Run Full Demo Pipeline** in the sidebar.
+### 11.2 Frontend Issues
 
-### ModuleNotFoundError
+#### "npm: command not found"
+**Solution:** Install Node.js from https://nodejs.org/
 
-Install missing dependencies:
-
+#### "Cannot find module 'react'"
+**Solution:** Install Node dependencies
 ```bash
-pip install faker pyarrow pandas streamlit plotly pyyaml networkx
+cd web
+npm install
 ```
 
-### "Install networkx for the lineage graph"
+#### "Failed to fetch" or "Network Error"
+**Cause:** Backend not running or CORS issue
 
+**Solution:** Ensure backend is running on port 8000
 ```bash
-pip install networkx
+python -m uvicorn api.main:app --reload
 ```
 
-### Streamlit won't start
-
-Check if port 8501 is already in use:
-
+#### Frontend won't start (Port 5173 in use)
+**Solution:** Kill the process or use a different port
 ```bash
-streamlit run app.py --server.port 8502
+# Windows
+netstat -ano | findstr :5173
+taskkill /PID <process_id> /F
+
+# Or edit vite.config.ts to change port
 ```
 
-### Relationship or Lineage tabs show "No data"
+### 11.3 Database Connection Issues
 
-These tabs need the pipeline artifacts to exist. Ensure you have:
-- `mock_data/source_catalog.json` (from Step 1)
-- `artifacts/conversion_report.json` (from Step 2)
-- `mock_data/query_logs.json` (from Step 1, for lineage query heatmap)
+#### Redshift: "Connection refused"
+- Check security group allows inbound traffic on port 5439
+- Verify VPC and subnet settings
+- Check if cluster is publicly accessible
 
-For inferred FK candidates, you need either a source database connection to run `relationship_profiler.py` (currently Redshift only), or manually place an `artifacts/fk_candidates.json` file.
+#### Snowflake: "Authentication failed"
+- Verify account identifier format
+- Check username and password
+- Ensure user has necessary privileges
+- Check if MFA is required (may need OAuth flow)
 
-### Pipeline step fails with timeout
+#### Databricks: "Invalid token"
+- Generate a new personal access token
+- Check token hasn't expired
+- Verify workspace URL format (no https://)
 
-Increase the timeout in `app.py` if running from the dashboard (default 120s), or run the step from the command line where there is no timeout.
+### 11.4 Pipeline Errors
 
-### Confidence scores not appearing
-
-Ensure `test_results/confidence_scores.csv` exists. This is generated by Step 4 (mock_validator). Re-run:
-
+#### "FileNotFoundError: source_catalog.json"
+**Solution:** Run Step 1 first
 ```bash
-python -m src.mock_validator
+python -m src.mock_redshift  # or mock_snowflake
 ```
 
-### Clearing all generated data
+#### "ModuleNotFoundError: No module named 'src'"
+**Solution:** Run from project root, not from src/
+```bash
+cd C:\dev\data-migration
+python -m src.run_demo
+```
 
-To start fresh, delete the output directories and re-run:
+#### Pipeline step fails with timeout
+**Solution:** Increase timeout in pipeline runner or run step individually
 
+### 11.5 Clearing Generated Data
+
+To start fresh, delete output directories:
+
+**Windows:**
 ```bash
 rmdir /s /q mock_data artifacts test_results
 python -m src.run_demo
 ```
+
+**Linux/Mac:**
+```bash
+rm -rf mock_data artifacts test_results
+python -m src.run_demo
+```
+
+---
+
+## Need More Help?
+
+- Check the API documentation: http://localhost:8000/docs
+- Review logs in `artifacts/logs/`
+- Check `config.yaml` for configuration issues
+- Report issues at the project repository
+
+---
+
+**End of User Guide**

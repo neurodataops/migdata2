@@ -5,7 +5,7 @@
 -- Rules      : remove_cluster_by, remove_transient, remove_data_retention, number_to_bigint, variant_to_string, timestamp_ntz, varchar_to_string, autoincrement, append_using_delta
 -- Warnings   : 1
 -- SHA-256    : ce4fc6e67c3042dbad29a410a191d7d13df8fe2f1801bb7389166c806def3c33
--- Generated  : 2026-03-04T16:31:48.093072
+-- Generated  : 2026-03-08T12:18:43.205713
 -- ---
 
 CREATE TABLE staging.stg_orders_raw (

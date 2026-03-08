@@ -5,7 +5,7 @@
 -- Rules      : remove_cluster_by, remove_data_retention, number_to_bigint, variant_to_string, timestamp_ntz, varchar_to_string, autoincrement, append_using_delta
 -- Warnings   : 1
 -- SHA-256    : 85387e968f33635465e5137cc9db9d10cc94bf721ebc79a1f4c5ccff8fe12f17
--- Generated  : 2026-03-04T16:31:48.130450
+-- Generated  : 2026-03-08T12:18:43.239247
 -- ---
 
 CREATE TABLE marketing.ad_impressions (

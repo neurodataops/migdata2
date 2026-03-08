@@ -5,7 +5,7 @@
 -- Rules      : remove_cluster_by, remove_transient, remove_data_retention, number_to_bigint, variant_to_string, timestamp_ntz, varchar_to_string, append_using_delta
 -- Warnings   : 1
 -- SHA-256    : cb48fb542b1dd427dc8a7de862651aee8cec9a90654593275b4c2abf5a43d840
--- Generated  : 2026-03-04T16:31:48.102495
+-- Generated  : 2026-03-08T12:18:43.215710
 -- ---
 
 CREATE TABLE staging.stg_clickstream (

@@ -5,7 +5,7 @@
 -- Rules      : remove_cluster_by, remove_data_retention, number_to_bigint, number_to_decimal, timestamp_ntz, varchar_to_string, autoincrement, append_using_delta
 -- Warnings   : 0
 -- SHA-256    : 8a62afc65fe7d40fad1c14517facbfed990985e3b48a6be8cd3447d7b4379f03
--- Generated  : 2026-03-04T16:31:48.123441
+-- Generated  : 2026-03-08T12:18:43.234720
 -- ---
 
 CREATE TABLE marketing.campaigns (

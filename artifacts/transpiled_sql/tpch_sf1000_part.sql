@@ -5,7 +5,7 @@
 -- Rules      : remove_data_retention, append_using_delta
 -- Warnings   : 0
 -- SHA-256    : edd4d8962e81acd95c9636e9c9a339e6b8be06d29bededa5ccf15b085b8a2862
--- Generated  : 2026-03-05T17:04:00.721352
+-- Generated  : 2026-03-08T16:35:47.569838
 -- ---
 
 CREATE TABLE tpch_sf1000.part (

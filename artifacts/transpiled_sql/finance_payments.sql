@@ -5,7 +5,7 @@
 -- Rules      : remove_data_retention, number_to_bigint, number_to_decimal, timestamp_ntz, varchar_to_string, autoincrement, append_using_delta
 -- Warnings   : 0
 -- SHA-256    : 8772856b5c0ed8aef4bb29ca27d37fe5dce6503746a2fa229b6614cadde3164b
--- Generated  : 2026-03-04T16:31:48.109931
+-- Generated  : 2026-03-08T12:18:43.219707
 -- ---
 
 CREATE TABLE finance.payments (

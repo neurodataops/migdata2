@@ -5,7 +5,7 @@
 -- Rules      : remove_data_retention, append_using_delta
 -- Warnings   : 0
 -- SHA-256    : 9e7bedf949c0dca5171f1d0aad51e7ec4c9e36695c1e22b6e217e0e25ec921e4
--- Generated  : 2026-03-05T17:04:00.701352
+-- Generated  : 2026-03-08T16:35:47.503893
 -- ---
 
 CREATE TABLE tpch_sf100.lineitem (

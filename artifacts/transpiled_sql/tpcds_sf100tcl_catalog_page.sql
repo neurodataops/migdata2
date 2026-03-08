@@ -5,7 +5,7 @@
 -- Rules      : remove_data_retention, append_using_delta
 -- Warnings   : 0
 -- SHA-256    : e6a429e4746271ff09e26753d3916ad7d62eaca4dc75c354524b8fc2af695548
--- Generated  : 2026-03-05T17:04:00.564075
+-- Generated  : 2026-03-08T16:35:46.920495
 -- ---
 
 CREATE TABLE tpcds_sf100tcl.catalog_page (

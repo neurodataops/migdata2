@@ -5,7 +5,7 @@
 -- Rules      : remove_data_retention, number_to_bigint, number_to_decimal, variant_to_string, timestamp_ntz, varchar_to_string, autoincrement, append_using_delta
 -- Warnings   : 1
 -- SHA-256    : 3370c401e8f650220fbad847aabb5086e9f3c685c0e0e0737cbf51362d8f2720
--- Generated  : 2026-03-04T16:31:48.082317
+-- Generated  : 2026-03-08T12:18:43.198714
 -- ---
 
 CREATE TABLE analytics.ab_test_results (

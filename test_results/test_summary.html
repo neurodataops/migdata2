@@ -67,11 +67,11 @@
 <body>
 <h1>Migration Toolkit — Test Report</h1>
 <div class="summary">
-    <div class="card blue"><div class="value">738</div><div class="label">Total Tests</div></div>
-    <div class="card green"><div class="value">738</div><div class="label">Passed</div></div>
-    <div class="card red"><div class="value">0</div><div class="label">Failed</div></div>
+    <div class="card blue"><div class="value">681</div><div class="label">Total Tests</div></div>
+    <div class="card green"><div class="value">656</div><div class="label">Passed</div></div>
+    <div class="card red"><div class="value">25</div><div class="label">Failed</div></div>
     <div class="card green">
-        <div class="value">100.0%</div><div class="label">Pass Rate</div></div>
+        <div class="value">96.3%</div><div class="label">Pass Rate</div></div>
 </div>
 <table>
 <thead><tr><th>Status</th><th>Test Name</th><th>Duration</th><th>Message</th></tr></thead>
@@ -79,487 +79,157 @@
 
         <tr class="suite-header">
             <td colspan="4"><strong>schema_conversion</strong>
-            — 373/373 passed</td>
+            — 293/318 passed</td>
         </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf100tcl.call_center</td>
+        <tr class="fail">
+            <td class="status fail">FAIL</td>
+            <td>table_in_report_public.customers</td>
             <td>0.0000s</td>
-            <td></td>
+            <td>public.customers missing from conversion report</td>
         </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf100tcl.catalog_page</td>
+        <tr class="fail">
+            <td class="status fail">FAIL</td>
+            <td>table_in_report_public.orders</td>
             <td>0.0000s</td>
-            <td></td>
+            <td>public.orders missing from conversion report</td>
         </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf100tcl.catalog_returns</td>
+        <tr class="fail">
+            <td class="status fail">FAIL</td>
+            <td>table_in_report_public.order_items</td>
             <td>0.0000s</td>
-            <td></td>
+            <td>public.order_items missing from conversion report</td>
         </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf100tcl.catalog_sales</td>
+        <tr class="fail">
+            <td class="status fail">FAIL</td>
+            <td>table_in_report_public.products</td>
             <td>0.0000s</td>
-            <td></td>
+            <td>public.products missing from conversion report</td>
         </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf100tcl.customer</td>
+        <tr class="fail">
+            <td class="status fail">FAIL</td>
+            <td>table_in_report_public.categories</td>
             <td>0.0000s</td>
-            <td></td>
+            <td>public.categories missing from conversion report</td>
         </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf100tcl.customer_address</td>
+        <tr class="fail">
+            <td class="status fail">FAIL</td>
+            <td>table_in_report_analytics.page_views</td>
             <td>0.0000s</td>
-            <td></td>
+            <td>analytics.page_views missing from conversion report</td>
         </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf100tcl.customer_demographics</td>
+        <tr class="fail">
+            <td class="status fail">FAIL</td>
+            <td>table_in_report_analytics.sessions</td>
             <td>0.0000s</td>
-            <td></td>
+            <td>analytics.sessions missing from conversion report</td>
         </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf100tcl.date_dim</td>
+        <tr class="fail">
+            <td class="status fail">FAIL</td>
+            <td>table_in_report_analytics.user_segments</td>
             <td>0.0000s</td>
-            <td></td>
+            <td>analytics.user_segments missing from conversion report</td>
         </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf100tcl.household_demographics</td>
+        <tr class="fail">
+            <td class="status fail">FAIL</td>
+            <td>table_in_report_analytics.ab_test_results</td>
             <td>0.0000s</td>
-            <td></td>
+            <td>analytics.ab_test_results missing from conversion report</td>
         </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf100tcl.income_band</td>
+        <tr class="fail">
+            <td class="status fail">FAIL</td>
+            <td>table_in_report_analytics.funnel_events</td>
             <td>0.0000s</td>
-            <td></td>
+            <td>analytics.funnel_events missing from conversion report</td>
         </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf100tcl.inventory</td>
+        <tr class="fail">
+            <td class="status fail">FAIL</td>
+            <td>table_in_report_staging.stg_customers_raw</td>
             <td>0.0000s</td>
-            <td></td>
+            <td>staging.stg_customers_raw missing from conversion report</td>
         </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf100tcl.item</td>
+        <tr class="fail">
+            <td class="status fail">FAIL</td>
+            <td>table_in_report_staging.stg_orders_raw</td>
             <td>0.0000s</td>
-            <td></td>
+            <td>staging.stg_orders_raw missing from conversion report</td>
         </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf100tcl.promotion</td>
+        <tr class="fail">
+            <td class="status fail">FAIL</td>
+            <td>table_in_report_staging.stg_products_raw</td>
             <td>0.0000s</td>
-            <td></td>
+            <td>staging.stg_products_raw missing from conversion report</td>
         </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf100tcl.reason</td>
+        <tr class="fail">
+            <td class="status fail">FAIL</td>
+            <td>table_in_report_staging.stg_transactions_raw</td>
             <td>0.0000s</td>
-            <td></td>
+            <td>staging.stg_transactions_raw missing from conversion report</td>
         </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf100tcl.ship_mode</td>
+        <tr class="fail">
+            <td class="status fail">FAIL</td>
+            <td>table_in_report_staging.stg_clickstream</td>
             <td>0.0000s</td>
-            <td></td>
+            <td>staging.stg_clickstream missing from conversion report</td>
         </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf100tcl.store</td>
+        <tr class="fail">
+            <td class="status fail">FAIL</td>
+            <td>table_in_report_finance.invoices</td>
             <td>0.0000s</td>
-            <td></td>
+            <td>finance.invoices missing from conversion report</td>
         </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf100tcl.store_returns</td>
+        <tr class="fail">
+            <td class="status fail">FAIL</td>
+            <td>table_in_report_finance.payments</td>
             <td>0.0000s</td>
-            <td></td>
+            <td>finance.payments missing from conversion report</td>
         </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf100tcl.store_sales</td>
+        <tr class="fail">
+            <td class="status fail">FAIL</td>
+            <td>table_in_report_finance.refunds</td>
             <td>0.0000s</td>
-            <td></td>
+            <td>finance.refunds missing from conversion report</td>
         </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf100tcl.time_dim</td>
+        <tr class="fail">
+            <td class="status fail">FAIL</td>
+            <td>table_in_report_finance.ledger_entries</td>
             <td>0.0000s</td>
-            <td></td>
+            <td>finance.ledger_entries missing from conversion report</td>
         </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf100tcl.warehouse</td>
+        <tr class="fail">
+            <td class="status fail">FAIL</td>
+            <td>table_in_report_finance.exchange_rates</td>
             <td>0.0000s</td>
-            <td></td>
+            <td>finance.exchange_rates missing from conversion report</td>
         </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf100tcl.web_page</td>
+        <tr class="fail">
+            <td class="status fail">FAIL</td>
+            <td>table_in_report_marketing.campaigns</td>
             <td>0.0000s</td>
-            <td></td>
+            <td>marketing.campaigns missing from conversion report</td>
         </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf100tcl.web_returns</td>
+        <tr class="fail">
+            <td class="status fail">FAIL</td>
+            <td>table_in_report_marketing.email_sends</td>
             <td>0.0000s</td>
-            <td></td>
+            <td>marketing.email_sends missing from conversion report</td>
         </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf100tcl.web_sales</td>
+        <tr class="fail">
+            <td class="status fail">FAIL</td>
+            <td>table_in_report_marketing.ad_impressions</td>
             <td>0.0000s</td>
-            <td></td>
+            <td>marketing.ad_impressions missing from conversion report</td>
         </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf100tcl.web_site</td>
+        <tr class="fail">
+            <td class="status fail">FAIL</td>
+            <td>table_in_report_marketing.conversions</td>
             <td>0.0000s</td>
-            <td></td>
+            <td>marketing.conversions missing from conversion report</td>
         </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf10tcl.call_center</td>
+        <tr class="fail">
+            <td class="status fail">FAIL</td>
+            <td>table_in_report_marketing.attribution_touches</td>
             <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf10tcl.catalog_page</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf10tcl.catalog_returns</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf10tcl.catalog_sales</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf10tcl.customer</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf10tcl.customer_address</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf10tcl.customer_demographics</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf10tcl.date_dim</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf10tcl.household_demographics</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf10tcl.income_band</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf10tcl.inventory</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf10tcl.item</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf10tcl.promotion</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf10tcl.reason</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf10tcl.ship_mode</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf10tcl.store</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf10tcl.store_returns</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf10tcl.store_sales</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf10tcl.time_dim</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf10tcl.warehouse</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf10tcl.web_page</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf10tcl.web_returns</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf10tcl.web_sales</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpcds_sf10tcl.web_site</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf1.customer</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf1.lineitem</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf1.nation</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf1.orders</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf1.part</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf1.partsupp</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf1.region</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf1.supplier</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf10.customer</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf10.lineitem</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf10.nation</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf10.orders</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf10.part</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf10.partsupp</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf10.region</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf10.supplier</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf100.customer</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf100.lineitem</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf100.nation</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf100.orders</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf100.part</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf100.partsupp</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf100.region</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf100.supplier</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf1000.customer</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf1000.lineitem</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf1000.nation</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf1000.orders</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf1000.part</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf1000.partsupp</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf1000.region</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>table_in_report_tpch_sf1000.supplier</td>
-            <td>0.0000s</td>
-            <td></td>
+            <td>marketing.attribution_touches missing from conversion report</td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
@@ -570,7 +240,7 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>file_exists_tpcds_sf100tcl.catalog_page</td>
-            <td>0.0000s</td>
+            <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -594,7 +264,7 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>file_exists_tpcds_sf100tcl.customer_address</td>
-            <td>0.0000s</td>
+            <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -648,7 +318,7 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>file_exists_tpcds_sf100tcl.ship_mode</td>
-            <td>0.0000s</td>
+            <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -744,7 +414,7 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>file_exists_tpcds_sf10tcl.customer_demographics</td>
-            <td>0.0000s</td>
+            <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -780,7 +450,7 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>file_exists_tpcds_sf10tcl.promotion</td>
-            <td>0.0000s</td>
+            <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -810,19 +480,19 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>file_exists_tpcds_sf10tcl.store_sales</td>
-            <td>0.0000s</td>
+            <td>0.0013s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>file_exists_tpcds_sf10tcl.time_dim</td>
-            <td>0.0010s</td>
+            <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>file_exists_tpcds_sf10tcl.warehouse</td>
-            <td>0.0000s</td>
+            <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -858,7 +528,7 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>file_exists_tpch_sf1.lineitem</td>
-            <td>0.0000s</td>
+            <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -882,7 +552,7 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>file_exists_tpch_sf1.partsupp</td>
-            <td>0.0010s</td>
+            <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -894,7 +564,7 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>file_exists_tpch_sf1.supplier</td>
-            <td>0.0000s</td>
+            <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -930,7 +600,7 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>file_exists_tpch_sf10.partsupp</td>
-            <td>0.0000s</td>
+            <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -948,7 +618,7 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>file_exists_tpch_sf100.customer</td>
-            <td>0.0010s</td>
+            <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -972,7 +642,7 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>file_exists_tpch_sf100.part</td>
-            <td>0.0000s</td>
+            <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -1043,649 +713,649 @@
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_analytics_ab_test_results.sql</td>
+            <td>no_snowflake_keywords_analytics_ab_test_results.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_analytics_funnel_events.sql</td>
+            <td>no_snowflake_keywords_analytics_funnel_events.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_analytics_page_views.sql</td>
+            <td>no_snowflake_keywords_analytics_page_views.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_analytics_sessions.sql</td>
+            <td>no_snowflake_keywords_analytics_sessions.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_analytics_user_segments.sql</td>
+            <td>no_snowflake_keywords_analytics_user_segments.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_finance_exchange_rates.sql</td>
+            <td>no_snowflake_keywords_finance_exchange_rates.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_finance_invoices.sql</td>
+            <td>no_snowflake_keywords_finance_invoices.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_finance_ledger_entries.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_finance_payments.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_finance_refunds.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_marketing_ad_impressions.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_marketing_attribution_touches.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_marketing_campaigns.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_marketing_conversions.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_marketing_email_sends.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_marketing_v_campaign_performance.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_public_categories.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_public_customers.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_public_orders.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_public_order_items.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_public_products.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_public_v_active_customers.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_public_v_order_summary.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_staging_stg_clickstream.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_staging_stg_customers_raw.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_staging_stg_orders_raw.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_staging_stg_products_raw.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_staging_stg_transactions_raw.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf100tcl_call_center.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf100tcl_catalog_page.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf100tcl_catalog_returns.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf100tcl_catalog_sales.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf100tcl_customer.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf100tcl_customer_address.sql</td>
+            <td>no_snowflake_keywords_finance_ledger_entries.sql</td>
             <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf100tcl_customer_demographics.sql</td>
+            <td>no_snowflake_keywords_finance_payments.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf100tcl_date_dim.sql</td>
+            <td>no_snowflake_keywords_finance_refunds.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf100tcl_household_demographics.sql</td>
+            <td>no_snowflake_keywords_marketing_ad_impressions.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf100tcl_income_band.sql</td>
+            <td>no_snowflake_keywords_marketing_attribution_touches.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf100tcl_inventory.sql</td>
+            <td>no_snowflake_keywords_marketing_campaigns.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf100tcl_item.sql</td>
+            <td>no_snowflake_keywords_marketing_conversions.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf100tcl_promotion.sql</td>
+            <td>no_snowflake_keywords_marketing_email_sends.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf100tcl_reason.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf100tcl_ship_mode.sql</td>
+            <td>no_snowflake_keywords_marketing_v_campaign_performance.sql</td>
             <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf100tcl_store.sql</td>
+            <td>no_snowflake_keywords_public_categories.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf100tcl_store_returns.sql</td>
+            <td>no_snowflake_keywords_public_customers.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf100tcl_store_sales.sql</td>
+            <td>no_snowflake_keywords_public_orders.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf100tcl_time_dim.sql</td>
+            <td>no_snowflake_keywords_public_order_items.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf100tcl_warehouse.sql</td>
+            <td>no_snowflake_keywords_public_products.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf100tcl_web_page.sql</td>
+            <td>no_snowflake_keywords_public_v_active_customers.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf100tcl_web_returns.sql</td>
+            <td>no_snowflake_keywords_public_v_order_summary.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf100tcl_web_sales.sql</td>
+            <td>no_snowflake_keywords_staging_stg_clickstream.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_staging_stg_customers_raw.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_staging_stg_orders_raw.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_staging_stg_products_raw.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_staging_stg_transactions_raw.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpcds_sf100tcl_call_center.sql</td>
             <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf100tcl_web_site.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf100tcl_catalog_page.sql</td>
             <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf10tcl_call_center.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf100tcl_catalog_returns.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf10tcl_catalog_page.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf100tcl_catalog_sales.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf10tcl_catalog_returns.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf100tcl_customer.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf10tcl_catalog_sales.sql</td>
-            <td>0.0004s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf10tcl_customer.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf100tcl_customer_address.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf10tcl_customer_address.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf100tcl_customer_demographics.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf10tcl_customer_demographics.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf100tcl_date_dim.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpcds_sf100tcl_household_demographics.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpcds_sf100tcl_income_band.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpcds_sf100tcl_inventory.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpcds_sf100tcl_item.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpcds_sf100tcl_promotion.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpcds_sf100tcl_reason.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpcds_sf100tcl_ship_mode.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpcds_sf100tcl_store.sql</td>
             <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf10tcl_date_dim.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf100tcl_store_returns.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpcds_sf100tcl_store_sales.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpcds_sf100tcl_time_dim.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpcds_sf100tcl_warehouse.sql</td>
             <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf10tcl_household_demographics.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf10tcl_income_band.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf10tcl_inventory.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf10tcl_item.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf10tcl_promotion.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf10tcl_reason.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf10tcl_ship_mode.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf10tcl_store.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf10tcl_store_returns.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf10tcl_store_sales.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf10tcl_time_dim.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf10tcl_warehouse.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf10tcl_web_page.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf10tcl_web_returns.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf100tcl_web_page.sql</td>
             <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf10tcl_web_sales.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf100tcl_web_returns.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpcds_sf10tcl_web_site.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf1000_customer.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf1000_lineitem.sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf1000_nation.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf100tcl_web_sales.sql</td>
             <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf1000_orders.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf100tcl_web_site.sql</td>
+            <td>0.0006s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpcds_sf10tcl_call_center.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf1000_part.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf10tcl_catalog_page.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf1000_partsupp.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf10tcl_catalog_returns.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf1000_region.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf10tcl_catalog_sales.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf1000_supplier.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf10tcl_customer.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf100_customer.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf10tcl_customer_address.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf100_lineitem.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf10tcl_customer_demographics.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf100_nation.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf10tcl_date_dim.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf100_orders.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf10tcl_household_demographics.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf100_part.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf10tcl_income_band.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf100_partsupp.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf10tcl_inventory.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf100_region.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf10tcl_item.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf100_supplier.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf10tcl_promotion.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf10_customer.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf10tcl_reason.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf10_lineitem.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf10tcl_ship_mode.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf10_nation.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf10tcl_store.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf10_orders.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf10tcl_store_returns.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf10_part.sql</td>
+            <td>no_snowflake_keywords_tpcds_sf10tcl_store_sales.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpcds_sf10tcl_time_dim.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpcds_sf10tcl_warehouse.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpcds_sf10tcl_web_page.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpcds_sf10tcl_web_returns.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpcds_sf10tcl_web_sales.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpcds_sf10tcl_web_site.sql</td>
             <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf10_partsupp.sql</td>
+            <td>no_snowflake_keywords_tpch_sf1000_customer.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf10_region.sql</td>
+            <td>no_snowflake_keywords_tpch_sf1000_lineitem.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf10_supplier.sql</td>
+            <td>no_snowflake_keywords_tpch_sf1000_nation.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf1_customer.sql</td>
+            <td>no_snowflake_keywords_tpch_sf1000_orders.sql</td>
+            <td>0.0010s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpch_sf1000_part.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf1_lineitem.sql</td>
+            <td>no_snowflake_keywords_tpch_sf1000_partsupp.sql</td>
+            <td>0.0010s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpch_sf1000_region.sql</td>
+            <td>0.0010s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpch_sf1000_supplier.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf1_nation.sql</td>
+            <td>no_snowflake_keywords_tpch_sf100_customer.sql</td>
+            <td>0.0010s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpch_sf100_lineitem.sql</td>
+            <td>0.0010s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpch_sf100_nation.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf1_orders.sql</td>
+            <td>no_snowflake_keywords_tpch_sf100_orders.sql</td>
+            <td>0.0010s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpch_sf100_part.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf1_part.sql</td>
+            <td>no_snowflake_keywords_tpch_sf100_partsupp.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf1_partsupp.sql</td>
+            <td>no_snowflake_keywords_tpch_sf100_region.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf1_region.sql</td>
+            <td>no_snowflake_keywords_tpch_sf100_supplier.sql</td>
+            <td>0.0010s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpch_sf10_customer.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>no_redshift_keywords_tpch_sf1_supplier.sql</td>
+            <td>no_snowflake_keywords_tpch_sf10_lineitem.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpch_sf10_nation.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpch_sf10_orders.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpch_sf10_part.sql</td>
+            <td>0.0010s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpch_sf10_partsupp.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpch_sf10_region.sql</td>
+            <td>0.0010s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpch_sf10_supplier.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpch_sf1_customer.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpch_sf1_lineitem.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpch_sf1_nation.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpch_sf1_orders.sql</td>
+            <td>0.0010s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpch_sf1_part.sql</td>
+            <td>0.0015s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpch_sf1_partsupp.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpch_sf1_region.sql</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>no_snowflake_keywords_tpch_sf1_supplier.sql</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
@@ -2326,67 +1996,25 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>rule_nvl_to_coalesce</td>
-            <td>0.0050s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>rule_getdate_to_current_timestamp</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>rule_len_to_length</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>rule_charindex_to_locate</td>
-            <td>0.0000s</td>
+            <td>rule_iff_to_if</td>
+            <td>0.0020s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>rule_varchar_removal</td>
-            <td>0.0010s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>rule_identity_rewrite</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>rule_dateadd_rewrite</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>rule_date_part_to_extract</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>rule_random_to_rand</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>rule_numeric_to_decimal</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>rule_sysdate_rewrite</td>
-            <td>0.0000s</td>
+            <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -2397,7 +2025,49 @@
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>rule_hashtext_to_hash</td>
+            <td>rule_number_to_bigint</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>rule_number_to_decimal</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>rule_timestamp_ntz</td>
+            <td>0.0010s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>rule_autoincrement</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>rule_position_to_locate</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>rule_parse_json</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>rule_len_to_length</td>
+            <td>0.0010s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>rule_regexp_substr</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
@@ -2432,25 +2102,25 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>parquet_exists_tpcds_sf100tcl.call_center</td>
-            <td>0.0010s</td>
+            <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf100tcl.call_center</td>
-            <td>0.0060s</td>
+            <td>0.0260s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf100tcl.call_center</td>
-            <td>0.0070s</td>
+            <td>0.0120s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf100tcl.call_center</td>
-            <td>0.0090s</td>
+            <td>0.0150s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -2462,19 +2132,19 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf100tcl.catalog_page</td>
-            <td>0.0040s</td>
+            <td>0.0120s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf100tcl.catalog_page</td>
-            <td>0.0040s</td>
+            <td>0.0136s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf100tcl.catalog_page</td>
-            <td>0.0040s</td>
+            <td>0.0140s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -2486,67 +2156,67 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf100tcl.catalog_returns</td>
-            <td>0.0180s</td>
+            <td>0.0700s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf100tcl.catalog_returns</td>
-            <td>0.0180s</td>
+            <td>0.0575s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf100tcl.catalog_returns</td>
-            <td>0.0193s</td>
+            <td>0.0486s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>parquet_exists_tpcds_sf100tcl.catalog_sales</td>
-            <td>0.0000s</td>
+            <td>0.0030s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf100tcl.catalog_sales</td>
-            <td>0.0240s</td>
+            <td>0.0700s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf100tcl.catalog_sales</td>
-            <td>0.0230s</td>
+            <td>0.0596s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf100tcl.catalog_sales</td>
-            <td>0.0250s</td>
+            <td>0.0624s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>parquet_exists_tpcds_sf100tcl.customer</td>
-            <td>0.0010s</td>
+            <td>0.0009s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf100tcl.customer</td>
-            <td>0.0140s</td>
+            <td>0.0376s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf100tcl.customer</td>
-            <td>0.0142s</td>
+            <td>0.0340s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf100tcl.customer</td>
-            <td>0.0140s</td>
+            <td>0.0336s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -2558,67 +2228,67 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf100tcl.customer_address</td>
-            <td>0.0100s</td>
+            <td>0.0401s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf100tcl.customer_address</td>
-            <td>0.0100s</td>
+            <td>0.0345s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf100tcl.customer_address</td>
-            <td>0.0120s</td>
+            <td>0.0290s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>parquet_exists_tpcds_sf100tcl.customer_demographics</td>
-            <td>0.0000s</td>
+            <td>0.0020s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf100tcl.customer_demographics</td>
-            <td>0.0070s</td>
+            <td>0.0170s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf100tcl.customer_demographics</td>
-            <td>0.0080s</td>
+            <td>0.0169s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf100tcl.customer_demographics</td>
-            <td>0.0070s</td>
+            <td>0.0120s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>parquet_exists_tpcds_sf100tcl.date_dim</td>
-            <td>0.0000s</td>
+            <td>0.0020s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf100tcl.date_dim</td>
-            <td>0.0060s</td>
+            <td>0.0120s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf100tcl.date_dim</td>
-            <td>0.0060s</td>
+            <td>0.0216s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf100tcl.date_dim</td>
-            <td>0.0060s</td>
+            <td>0.0130s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -2630,43 +2300,43 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf100tcl.household_demographics</td>
-            <td>0.0065s</td>
+            <td>0.0090s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf100tcl.household_demographics</td>
-            <td>0.0030s</td>
+            <td>0.0050s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf100tcl.household_demographics</td>
-            <td>0.0033s</td>
+            <td>0.0086s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>parquet_exists_tpcds_sf100tcl.income_band</td>
-            <td>0.0000s</td>
+            <td>0.0005s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf100tcl.income_band</td>
-            <td>0.0030s</td>
+            <td>0.0060s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf100tcl.income_band</td>
-            <td>0.0030s</td>
+            <td>0.0079s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf100tcl.income_band</td>
-            <td>0.0030s</td>
+            <td>0.0060s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -2678,19 +2348,19 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf100tcl.inventory</td>
-            <td>0.0040s</td>
+            <td>0.0120s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf100tcl.inventory</td>
-            <td>0.0050s</td>
+            <td>0.0090s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf100tcl.inventory</td>
-            <td>0.0050s</td>
+            <td>0.0124s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -2702,19 +2372,19 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf100tcl.item</td>
-            <td>0.0100s</td>
+            <td>0.0210s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf100tcl.item</td>
-            <td>0.0100s</td>
+            <td>0.0220s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf100tcl.item</td>
-            <td>0.0090s</td>
+            <td>0.0223s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -2726,163 +2396,163 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf100tcl.promotion</td>
-            <td>0.0050s</td>
+            <td>0.0120s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf100tcl.promotion</td>
-            <td>0.0050s</td>
+            <td>0.0090s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf100tcl.promotion</td>
-            <td>0.0050s</td>
+            <td>0.0110s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>parquet_exists_tpcds_sf100tcl.reason</td>
-            <td>0.0000s</td>
+            <td>0.0011s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf100tcl.reason</td>
-            <td>0.0030s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>columns_present_tpcds_sf100tcl.reason</td>
-            <td>0.0030s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>not_empty_tpcds_sf100tcl.reason</td>
-            <td>0.0020s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>parquet_exists_tpcds_sf100tcl.ship_mode</td>
-            <td>0.0010s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>row_count_tpcds_sf100tcl.ship_mode</td>
-            <td>0.0030s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>columns_present_tpcds_sf100tcl.ship_mode</td>
-            <td>0.0030s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>not_empty_tpcds_sf100tcl.ship_mode</td>
-            <td>0.0040s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>parquet_exists_tpcds_sf100tcl.store</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>row_count_tpcds_sf100tcl.store</td>
-            <td>0.0060s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>columns_present_tpcds_sf100tcl.store</td>
-            <td>0.0063s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>not_empty_tpcds_sf100tcl.store</td>
-            <td>0.0070s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>parquet_exists_tpcds_sf100tcl.store_returns</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>row_count_tpcds_sf100tcl.store_returns</td>
-            <td>0.0150s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>columns_present_tpcds_sf100tcl.store_returns</td>
-            <td>0.0160s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>not_empty_tpcds_sf100tcl.store_returns</td>
-            <td>0.0160s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>parquet_exists_tpcds_sf100tcl.store_sales</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>row_count_tpcds_sf100tcl.store_sales</td>
-            <td>0.0160s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>columns_present_tpcds_sf100tcl.store_sales</td>
-            <td>0.0170s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>not_empty_tpcds_sf100tcl.store_sales</td>
-            <td>0.0172s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>parquet_exists_tpcds_sf100tcl.time_dim</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>row_count_tpcds_sf100tcl.time_dim</td>
             <td>0.0050s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
+            <td>columns_present_tpcds_sf100tcl.reason</td>
+            <td>0.0110s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>not_empty_tpcds_sf100tcl.reason</td>
+            <td>0.0160s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>parquet_exists_tpcds_sf100tcl.ship_mode</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>row_count_tpcds_sf100tcl.ship_mode</td>
+            <td>0.0176s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>columns_present_tpcds_sf100tcl.ship_mode</td>
+            <td>0.0144s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>not_empty_tpcds_sf100tcl.ship_mode</td>
+            <td>0.0070s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>parquet_exists_tpcds_sf100tcl.store</td>
+            <td>0.0020s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>row_count_tpcds_sf100tcl.store</td>
+            <td>0.0150s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>columns_present_tpcds_sf100tcl.store</td>
+            <td>0.0235s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>not_empty_tpcds_sf100tcl.store</td>
+            <td>0.0260s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>parquet_exists_tpcds_sf100tcl.store_returns</td>
+            <td>0.0010s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>row_count_tpcds_sf100tcl.store_returns</td>
+            <td>0.0422s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>columns_present_tpcds_sf100tcl.store_returns</td>
+            <td>0.0426s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>not_empty_tpcds_sf100tcl.store_returns</td>
+            <td>0.0471s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>parquet_exists_tpcds_sf100tcl.store_sales</td>
+            <td>0.0010s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>row_count_tpcds_sf100tcl.store_sales</td>
+            <td>0.0466s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>columns_present_tpcds_sf100tcl.store_sales</td>
+            <td>0.0502s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>not_empty_tpcds_sf100tcl.store_sales</td>
+            <td>0.0476s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>parquet_exists_tpcds_sf100tcl.time_dim</td>
+            <td>0.0020s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>row_count_tpcds_sf100tcl.time_dim</td>
+            <td>0.0190s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf100tcl.time_dim</td>
-            <td>0.0040s</td>
+            <td>0.0150s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf100tcl.time_dim</td>
-            <td>0.0040s</td>
+            <td>0.0164s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -2894,67 +2564,67 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf100tcl.warehouse</td>
-            <td>0.0040s</td>
+            <td>0.0160s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf100tcl.warehouse</td>
-            <td>0.0050s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>not_empty_tpcds_sf100tcl.warehouse</td>
-            <td>0.0040s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>parquet_exists_tpcds_sf100tcl.web_page</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>row_count_tpcds_sf100tcl.web_page</td>
-            <td>0.0040s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>columns_present_tpcds_sf100tcl.web_page</td>
-            <td>0.0050s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>not_empty_tpcds_sf100tcl.web_page</td>
-            <td>0.0050s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>parquet_exists_tpcds_sf100tcl.web_returns</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>row_count_tpcds_sf100tcl.web_returns</td>
-            <td>0.0160s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>columns_present_tpcds_sf100tcl.web_returns</td>
             <td>0.0170s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
+            <td>not_empty_tpcds_sf100tcl.warehouse</td>
+            <td>0.0165s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>parquet_exists_tpcds_sf100tcl.web_page</td>
+            <td>0.0010s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>row_count_tpcds_sf100tcl.web_page</td>
+            <td>0.0080s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>columns_present_tpcds_sf100tcl.web_page</td>
+            <td>0.0120s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>not_empty_tpcds_sf100tcl.web_page</td>
+            <td>0.0485s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>parquet_exists_tpcds_sf100tcl.web_returns</td>
+            <td>0.0010s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>row_count_tpcds_sf100tcl.web_returns</td>
+            <td>0.0556s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>columns_present_tpcds_sf100tcl.web_returns</td>
+            <td>0.0350s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf100tcl.web_returns</td>
-            <td>0.0160s</td>
+            <td>0.0435s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -2966,19 +2636,19 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf100tcl.web_sales</td>
-            <td>0.0233s</td>
+            <td>0.0521s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf100tcl.web_sales</td>
-            <td>0.0250s</td>
+            <td>0.0506s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf100tcl.web_sales</td>
-            <td>0.0240s</td>
+            <td>0.0475s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -2990,19 +2660,19 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf100tcl.web_site</td>
-            <td>0.0070s</td>
+            <td>0.0140s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf100tcl.web_site</td>
-            <td>0.0060s</td>
+            <td>0.0125s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf100tcl.web_site</td>
-            <td>0.0060s</td>
+            <td>0.0100s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -3014,19 +2684,19 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf10tcl.call_center</td>
-            <td>0.0070s</td>
+            <td>0.0150s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf10tcl.call_center</td>
-            <td>0.0063s</td>
+            <td>0.0140s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf10tcl.call_center</td>
-            <td>0.0080s</td>
+            <td>0.0149s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -3038,115 +2708,115 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf10tcl.catalog_page</td>
-            <td>0.0040s</td>
+            <td>0.0060s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf10tcl.catalog_page</td>
-            <td>0.0040s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>not_empty_tpcds_sf10tcl.catalog_page</td>
-            <td>0.0040s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>parquet_exists_tpcds_sf10tcl.catalog_returns</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>row_count_tpcds_sf10tcl.catalog_returns</td>
-            <td>0.0190s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>columns_present_tpcds_sf10tcl.catalog_returns</td>
-            <td>0.0180s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>not_empty_tpcds_sf10tcl.catalog_returns</td>
-            <td>0.0190s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>parquet_exists_tpcds_sf10tcl.catalog_sales</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>row_count_tpcds_sf10tcl.catalog_sales</td>
-            <td>0.0236s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>columns_present_tpcds_sf10tcl.catalog_sales</td>
-            <td>0.0240s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>not_empty_tpcds_sf10tcl.catalog_sales</td>
-            <td>0.0240s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>parquet_exists_tpcds_sf10tcl.customer</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>row_count_tpcds_sf10tcl.customer</td>
-            <td>0.0140s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>columns_present_tpcds_sf10tcl.customer</td>
-            <td>0.0130s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>not_empty_tpcds_sf10tcl.customer</td>
-            <td>0.0130s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>parquet_exists_tpcds_sf10tcl.customer_address</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>row_count_tpcds_sf10tcl.customer_address</td>
-            <td>0.0093s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>columns_present_tpcds_sf10tcl.customer_address</td>
             <td>0.0100s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
+            <td>not_empty_tpcds_sf10tcl.catalog_page</td>
+            <td>0.0060s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>parquet_exists_tpcds_sf10tcl.catalog_returns</td>
+            <td>0.0010s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>row_count_tpcds_sf10tcl.catalog_returns</td>
+            <td>0.0356s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>columns_present_tpcds_sf10tcl.catalog_returns</td>
+            <td>0.0601s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>not_empty_tpcds_sf10tcl.catalog_returns</td>
+            <td>0.0587s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>parquet_exists_tpcds_sf10tcl.catalog_sales</td>
+            <td>0.0030s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>row_count_tpcds_sf10tcl.catalog_sales</td>
+            <td>0.0666s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>columns_present_tpcds_sf10tcl.catalog_sales</td>
+            <td>0.0588s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>not_empty_tpcds_sf10tcl.catalog_sales</td>
+            <td>0.0606s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>parquet_exists_tpcds_sf10tcl.customer</td>
+            <td>0.0010s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>row_count_tpcds_sf10tcl.customer</td>
+            <td>0.0420s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>columns_present_tpcds_sf10tcl.customer</td>
+            <td>0.0382s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>not_empty_tpcds_sf10tcl.customer</td>
+            <td>0.0361s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>parquet_exists_tpcds_sf10tcl.customer_address</td>
+            <td>0.0010s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>row_count_tpcds_sf10tcl.customer_address</td>
+            <td>0.0322s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>columns_present_tpcds_sf10tcl.customer_address</td>
+            <td>0.0210s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf10tcl.customer_address</td>
-            <td>0.0090s</td>
+            <td>0.0254s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -3158,43 +2828,43 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf10tcl.customer_demographics</td>
-            <td>0.0080s</td>
+            <td>0.0170s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf10tcl.customer_demographics</td>
-            <td>0.0070s</td>
+            <td>0.0194s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf10tcl.customer_demographics</td>
-            <td>0.0070s</td>
+            <td>0.0175s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>parquet_exists_tpcds_sf10tcl.date_dim</td>
-            <td>0.0000s</td>
+            <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf10tcl.date_dim</td>
-            <td>0.0060s</td>
+            <td>0.0160s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf10tcl.date_dim</td>
-            <td>0.0060s</td>
+            <td>0.0160s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf10tcl.date_dim</td>
-            <td>0.0090s</td>
+            <td>0.0156s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -3206,19 +2876,19 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf10tcl.household_demographics</td>
-            <td>0.0030s</td>
+            <td>0.0055s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf10tcl.household_demographics</td>
-            <td>0.0030s</td>
+            <td>0.0103s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf10tcl.household_demographics</td>
-            <td>0.0030s</td>
+            <td>0.0056s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -3230,19 +2900,19 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf10tcl.income_band</td>
-            <td>0.0030s</td>
+            <td>0.0149s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf10tcl.income_band</td>
-            <td>0.0040s</td>
+            <td>0.0176s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf10tcl.income_band</td>
-            <td>0.0030s</td>
+            <td>0.0170s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -3254,19 +2924,19 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf10tcl.inventory</td>
-            <td>0.0050s</td>
+            <td>0.0150s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf10tcl.inventory</td>
-            <td>0.0050s</td>
+            <td>0.0145s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf10tcl.inventory</td>
-            <td>0.0050s</td>
+            <td>0.0120s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -3278,19 +2948,19 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf10tcl.item</td>
-            <td>0.0092s</td>
+            <td>0.0195s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf10tcl.item</td>
-            <td>0.0090s</td>
+            <td>0.0180s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf10tcl.item</td>
-            <td>0.0110s</td>
+            <td>0.0200s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -3302,19 +2972,19 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf10tcl.promotion</td>
-            <td>0.0060s</td>
+            <td>0.0110s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf10tcl.promotion</td>
-            <td>0.0050s</td>
+            <td>0.0110s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf10tcl.promotion</td>
-            <td>0.0050s</td>
+            <td>0.0090s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -3326,19 +2996,19 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf10tcl.reason</td>
-            <td>0.0030s</td>
+            <td>0.0070s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf10tcl.reason</td>
-            <td>0.0030s</td>
+            <td>0.0060s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf10tcl.reason</td>
-            <td>0.0040s</td>
+            <td>0.0050s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -3350,19 +3020,19 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf10tcl.ship_mode</td>
-            <td>0.0040s</td>
+            <td>0.0101s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf10tcl.ship_mode</td>
-            <td>0.0030s</td>
+            <td>0.0060s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf10tcl.ship_mode</td>
-            <td>0.0030s</td>
+            <td>0.0090s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -3374,67 +3044,67 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf10tcl.store</td>
-            <td>0.0060s</td>
+            <td>0.0120s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf10tcl.store</td>
-            <td>0.0060s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>not_empty_tpcds_sf10tcl.store</td>
-            <td>0.0060s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>parquet_exists_tpcds_sf10tcl.store_returns</td>
-            <td>0.0010s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>row_count_tpcds_sf10tcl.store_returns</td>
             <td>0.0130s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>columns_present_tpcds_sf10tcl.store_returns</td>
-            <td>0.0144s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>not_empty_tpcds_sf10tcl.store_returns</td>
+            <td>not_empty_tpcds_sf10tcl.store</td>
             <td>0.0140s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>parquet_exists_tpcds_sf10tcl.store_sales</td>
+            <td>parquet_exists_tpcds_sf10tcl.store_returns</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
+            <td>row_count_tpcds_sf10tcl.store_returns</td>
+            <td>0.0300s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>columns_present_tpcds_sf10tcl.store_returns</td>
+            <td>0.0385s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>not_empty_tpcds_sf10tcl.store_returns</td>
+            <td>0.0519s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>parquet_exists_tpcds_sf10tcl.store_sales</td>
+            <td>0.0030s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf10tcl.store_sales</td>
-            <td>0.0160s</td>
+            <td>0.0650s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf10tcl.store_sales</td>
-            <td>0.0160s</td>
+            <td>0.0516s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf10tcl.store_sales</td>
-            <td>0.0180s</td>
+            <td>0.0437s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -3446,43 +3116,43 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf10tcl.time_dim</td>
-            <td>0.0050s</td>
+            <td>0.0140s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf10tcl.time_dim</td>
-            <td>0.0040s</td>
+            <td>0.0150s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf10tcl.time_dim</td>
-            <td>0.0040s</td>
+            <td>0.0113s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>parquet_exists_tpcds_sf10tcl.warehouse</td>
-            <td>0.0000s</td>
+            <td>0.0034s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf10tcl.warehouse</td>
-            <td>0.0050s</td>
+            <td>0.0184s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf10tcl.warehouse</td>
-            <td>0.0040s</td>
+            <td>0.0150s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf10tcl.warehouse</td>
-            <td>0.0052s</td>
+            <td>0.0176s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -3494,19 +3164,19 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf10tcl.web_page</td>
-            <td>0.0050s</td>
+            <td>0.0180s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf10tcl.web_page</td>
-            <td>0.0040s</td>
+            <td>0.0170s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf10tcl.web_page</td>
-            <td>0.0050s</td>
+            <td>0.0156s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -3518,19 +3188,19 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf10tcl.web_returns</td>
-            <td>0.0170s</td>
+            <td>0.0451s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf10tcl.web_returns</td>
-            <td>0.0190s</td>
+            <td>0.0370s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf10tcl.web_returns</td>
-            <td>0.0180s</td>
+            <td>0.0373s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -3542,19 +3212,19 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf10tcl.web_sales</td>
-            <td>0.0247s</td>
+            <td>0.0536s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf10tcl.web_sales</td>
-            <td>0.0244s</td>
+            <td>0.0468s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf10tcl.web_sales</td>
-            <td>0.0240s</td>
+            <td>0.0466s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -3566,19 +3236,19 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpcds_sf10tcl.web_site</td>
-            <td>0.0060s</td>
+            <td>0.0140s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpcds_sf10tcl.web_site</td>
-            <td>0.0070s</td>
+            <td>0.0143s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpcds_sf10tcl.web_site</td>
-            <td>0.0060s</td>
+            <td>0.0095s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -3590,43 +3260,43 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpch_sf1.customer</td>
-            <td>0.0040s</td>
+            <td>0.0109s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf1.customer</td>
-            <td>0.0040s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>not_empty_tpch_sf1.customer</td>
-            <td>0.0040s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>parquet_exists_tpch_sf1.lineitem</td>
-            <td>0.0010s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>row_count_tpch_sf1.lineitem</td>
             <td>0.0100s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
+            <td>not_empty_tpch_sf1.customer</td>
+            <td>0.0094s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>parquet_exists_tpch_sf1.lineitem</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>row_count_tpch_sf1.lineitem</td>
+            <td>0.0256s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf1.lineitem</td>
-            <td>0.0123s</td>
+            <td>0.0210s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpch_sf1.lineitem</td>
-            <td>0.0110s</td>
+            <td>0.0196s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -3638,19 +3308,19 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpch_sf1.nation</td>
-            <td>0.0040s</td>
+            <td>0.0098s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf1.nation</td>
-            <td>0.0020s</td>
+            <td>0.0050s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpch_sf1.nation</td>
-            <td>0.0040s</td>
+            <td>0.0080s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -3662,19 +3332,19 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpch_sf1.orders</td>
-            <td>0.0070s</td>
+            <td>0.0110s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf1.orders</td>
-            <td>0.0080s</td>
+            <td>0.0155s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpch_sf1.orders</td>
-            <td>0.0080s</td>
+            <td>0.0150s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -3686,19 +3356,19 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpch_sf1.part</td>
-            <td>0.0060s</td>
+            <td>0.0100s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf1.part</td>
-            <td>0.0040s</td>
+            <td>0.0080s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpch_sf1.part</td>
-            <td>0.0040s</td>
+            <td>0.0110s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -3710,19 +3380,19 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpch_sf1.partsupp</td>
-            <td>0.0060s</td>
+            <td>0.0135s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf1.partsupp</td>
-            <td>0.0060s</td>
+            <td>0.0140s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpch_sf1.partsupp</td>
-            <td>0.0050s</td>
+            <td>0.0200s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -3734,19 +3404,19 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpch_sf1.region</td>
-            <td>0.0030s</td>
+            <td>0.0056s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf1.region</td>
-            <td>0.0030s</td>
+            <td>0.0130s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpch_sf1.region</td>
-            <td>0.0030s</td>
+            <td>0.0170s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -3758,43 +3428,43 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpch_sf1.supplier</td>
-            <td>0.0040s</td>
+            <td>0.0140s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf1.supplier</td>
-            <td>0.0030s</td>
+            <td>0.0162s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpch_sf1.supplier</td>
-            <td>0.0040s</td>
+            <td>0.0120s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>parquet_exists_tpch_sf10.customer</td>
-            <td>0.0010s</td>
+            <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpch_sf10.customer</td>
-            <td>0.0063s</td>
+            <td>0.0220s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf10.customer</td>
-            <td>0.0080s</td>
+            <td>0.0235s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpch_sf10.customer</td>
-            <td>0.0070s</td>
+            <td>0.0280s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -3806,91 +3476,91 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpch_sf10.lineitem</td>
-            <td>0.0120s</td>
+            <td>0.0424s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf10.lineitem</td>
-            <td>0.0110s</td>
+            <td>0.0346s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpch_sf10.lineitem</td>
-            <td>0.0110s</td>
+            <td>0.0361s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>parquet_exists_tpch_sf10.nation</td>
-            <td>0.0000s</td>
+            <td>0.0020s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpch_sf10.nation</td>
-            <td>0.0030s</td>
+            <td>0.0110s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf10.nation</td>
-            <td>0.0040s</td>
+            <td>0.0140s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpch_sf10.nation</td>
-            <td>0.0030s</td>
+            <td>0.0090s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>parquet_exists_tpch_sf10.orders</td>
-            <td>0.0000s</td>
+            <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpch_sf10.orders</td>
-            <td>0.0080s</td>
+            <td>0.0216s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf10.orders</td>
-            <td>0.0070s</td>
+            <td>0.0223s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpch_sf10.orders</td>
-            <td>0.0070s</td>
+            <td>0.0254s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>parquet_exists_tpch_sf10.part</td>
-            <td>0.0000s</td>
+            <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpch_sf10.part</td>
-            <td>0.0070s</td>
+            <td>0.0240s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf10.part</td>
-            <td>0.0070s</td>
+            <td>0.0185s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpch_sf10.part</td>
-            <td>0.0073s</td>
+            <td>0.0200s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -3902,67 +3572,67 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpch_sf10.partsupp</td>
-            <td>0.0060s</td>
+            <td>0.0160s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf10.partsupp</td>
-            <td>0.0050s</td>
+            <td>0.0229s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpch_sf10.partsupp</td>
-            <td>0.0060s</td>
+            <td>0.0120s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>parquet_exists_tpch_sf10.region</td>
-            <td>0.0000s</td>
+            <td>0.0030s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpch_sf10.region</td>
-            <td>0.0030s</td>
+            <td>0.0070s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf10.region</td>
-            <td>0.0040s</td>
+            <td>0.0050s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpch_sf10.region</td>
-            <td>0.0030s</td>
+            <td>0.0110s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>parquet_exists_tpch_sf10.supplier</td>
-            <td>0.0010s</td>
+            <td>0.0005s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpch_sf10.supplier</td>
-            <td>0.0030s</td>
+            <td>0.0080s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf10.supplier</td>
-            <td>0.0040s</td>
+            <td>0.0110s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpch_sf10.supplier</td>
-            <td>0.0040s</td>
+            <td>0.0100s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -3974,115 +3644,115 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpch_sf100.customer</td>
-            <td>0.0080s</td>
+            <td>0.0160s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf100.customer</td>
-            <td>0.0070s</td>
+            <td>0.0171s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpch_sf100.customer</td>
-            <td>0.0070s</td>
+            <td>0.0160s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>parquet_exists_tpch_sf100.lineitem</td>
-            <td>0.0000s</td>
+            <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpch_sf100.lineitem</td>
-            <td>0.0120s</td>
+            <td>0.0200s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf100.lineitem</td>
-            <td>0.0120s</td>
+            <td>0.0236s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpch_sf100.lineitem</td>
-            <td>0.0114s</td>
+            <td>0.0220s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>parquet_exists_tpch_sf100.nation</td>
-            <td>0.0010s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>row_count_tpch_sf100.nation</td>
-            <td>0.0030s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>columns_present_tpch_sf100.nation</td>
-            <td>0.0030s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>not_empty_tpch_sf100.nation</td>
-            <td>0.0030s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>parquet_exists_tpch_sf100.orders</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>row_count_tpch_sf100.orders</td>
+            <td>row_count_tpch_sf100.nation</td>
+            <td>0.0051s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>columns_present_tpch_sf100.nation</td>
+            <td>0.0050s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>not_empty_tpch_sf100.nation</td>
             <td>0.0080s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>columns_present_tpch_sf100.orders</td>
-            <td>0.0080s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>not_empty_tpch_sf100.orders</td>
-            <td>0.0070s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>parquet_exists_tpch_sf100.part</td>
+            <td>parquet_exists_tpch_sf100.orders</td>
             <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
+            <td>row_count_tpch_sf100.orders</td>
+            <td>0.0130s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>columns_present_tpch_sf100.orders</td>
+            <td>0.0230s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>not_empty_tpch_sf100.orders</td>
+            <td>0.0206s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>parquet_exists_tpch_sf100.part</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
             <td>row_count_tpch_sf100.part</td>
-            <td>0.0070s</td>
+            <td>0.0174s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf100.part</td>
-            <td>0.0070s</td>
+            <td>0.0175s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpch_sf100.part</td>
-            <td>0.0080s</td>
+            <td>0.0160s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -4094,19 +3764,19 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpch_sf100.partsupp</td>
-            <td>0.0050s</td>
+            <td>0.0170s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf100.partsupp</td>
-            <td>0.0060s</td>
+            <td>0.0416s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpch_sf100.partsupp</td>
-            <td>0.0060s</td>
+            <td>0.0194s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -4118,67 +3788,67 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpch_sf100.region</td>
-            <td>0.0030s</td>
+            <td>0.0346s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf100.region</td>
-            <td>0.0030s</td>
+            <td>0.0276s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpch_sf100.region</td>
-            <td>0.0030s</td>
+            <td>0.0337s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>parquet_exists_tpch_sf100.supplier</td>
-            <td>0.0000s</td>
+            <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpch_sf100.supplier</td>
-            <td>0.0070s</td>
+            <td>0.0486s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf100.supplier</td>
-            <td>0.0070s</td>
+            <td>0.0752s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpch_sf100.supplier</td>
-            <td>0.0063s</td>
+            <td>0.1181s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>parquet_exists_tpch_sf1000.customer</td>
-            <td>0.0000s</td>
+            <td>0.0020s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpch_sf1000.customer</td>
-            <td>0.0070s</td>
+            <td>0.0455s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf1000.customer</td>
-            <td>0.0070s</td>
+            <td>0.0298s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpch_sf1000.customer</td>
-            <td>0.0100s</td>
+            <td>0.0230s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -4190,43 +3860,43 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpch_sf1000.lineitem</td>
-            <td>0.0110s</td>
+            <td>0.0316s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf1000.lineitem</td>
-            <td>0.0110s</td>
+            <td>0.0353s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpch_sf1000.lineitem</td>
-            <td>0.0120s</td>
+            <td>0.0285s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>parquet_exists_tpch_sf1000.nation</td>
-            <td>0.0010s</td>
+            <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpch_sf1000.nation</td>
-            <td>0.0030s</td>
+            <td>0.0070s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf1000.nation</td>
-            <td>0.0030s</td>
+            <td>0.0100s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpch_sf1000.nation</td>
-            <td>0.0030s</td>
+            <td>0.0060s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -4238,19 +3908,19 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpch_sf1000.orders</td>
-            <td>0.0080s</td>
+            <td>0.0155s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf1000.orders</td>
-            <td>0.0070s</td>
+            <td>0.0150s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpch_sf1000.orders</td>
-            <td>0.0070s</td>
+            <td>0.0144s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -4262,67 +3932,67 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpch_sf1000.part</td>
-            <td>0.0072s</td>
+            <td>0.0165s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf1000.part</td>
-            <td>0.0080s</td>
+            <td>0.0190s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpch_sf1000.part</td>
-            <td>0.0070s</td>
+            <td>0.0200s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>parquet_exists_tpch_sf1000.partsupp</td>
-            <td>0.0010s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>row_count_tpch_sf1000.partsupp</td>
-            <td>0.0050s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>columns_present_tpch_sf1000.partsupp</td>
-            <td>0.0060s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>not_empty_tpch_sf1000.partsupp</td>
-            <td>0.0060s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>parquet_exists_tpch_sf1000.region</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
+            <td>row_count_tpch_sf1000.partsupp</td>
+            <td>0.0145s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>columns_present_tpch_sf1000.partsupp</td>
+            <td>0.0140s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>not_empty_tpch_sf1000.partsupp</td>
+            <td>0.0125s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>parquet_exists_tpch_sf1000.region</td>
+            <td>0.0010s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
             <td>row_count_tpch_sf1000.region</td>
-            <td>0.0030s</td>
+            <td>0.0050s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf1000.region</td>
-            <td>0.0030s</td>
+            <td>0.0070s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpch_sf1000.region</td>
-            <td>0.0030s</td>
+            <td>0.0050s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -4334,29 +4004,29 @@
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>row_count_tpch_sf1000.supplier</td>
-            <td>0.0070s</td>
+            <td>0.0145s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>columns_present_tpch_sf1000.supplier</td>
-            <td>0.0060s</td>
+            <td>0.0140s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>not_empty_tpch_sf1000.supplier</td>
-            <td>0.0070s</td>
+            <td>0.0120s</td>
             <td></td>
         </tr>
         <tr class="suite-header">
             <td colspan="4"><strong>edge_cases</strong>
-            — 13/13 passed</td>
+            — 11/11 passed</td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>empty_sql</td>
-            <td>0.0000s</td>
+            <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -4367,43 +4037,25 @@
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>type_alias_FLOAT4</td>
+            <td>type_alias_TIMESTAMP_NTZ</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>type_alias_FLOAT8</td>
+            <td>type_alias_TIMESTAMP_LTZ</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>type_alias_INT2</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>type_alias_INT4</td>
+            <td>type_alias_TIMESTAMP_TZ</td>
             <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>type_alias_INT8</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>type_alias_BPCHAR</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>type_alias_TIMESTAMPTZ</td>
+            <td>type_alias_VARIANT</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
@@ -4421,14 +4073,20 @@
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
+            <td>nullable_columns_parquet</td>
+            <td>0.0207s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
             <td>long_sql_200_columns</td>
-            <td>0.0040s</td>
+            <td>0.0064s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>difficulty_bounded</td>
-            <td>0.0000s</td>
+            <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="suite-header">
@@ -4443,74 +4101,74 @@
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>detects_plpgsql_function</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>detects_cursor_usage</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>detects_raise_statement</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>detects_for_loop</td>
+            <td>detects_javascript_procedure</td>
             <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>detects_loop_construct</td>
+            <td>detects_python_procedure</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>detects_if_then</td>
+            <td>detects_resultset_usage</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>detects_dynamic_sql</td>
-            <td>0.0000s</td>
-            <td></td>
-        </tr>
-        <tr class="pass">
-            <td class="status pass">PASS</td>
-            <td>detects_copy_command</td>
+            <td>detects_execute_immediate</td>
             <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>detects_unload_command</td>
+            <td>detects_javascript_api</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>detects_external_schema</td>
+            <td>detects_stream_object</td>
             <td>0.0000s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
-            <td>detects_create_library</td>
+            <td>detects_task_object</td>
+            <td>0.0010s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>detects_stage_object</td>
+            <td>0.0010s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>detects_file_format</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>detects_copy_into</td>
+            <td>0.0000s</td>
+            <td></td>
+        </tr>
+        <tr class="pass">
+            <td class="status pass">PASS</td>
+            <td>detects_qualify_clause</td>
             <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
             <td class="status pass">PASS</td>
             <td>no_false_positive_clean_sql</td>
-            <td>0.0000s</td>
+            <td>0.0010s</td>
             <td></td>
         </tr>
         <tr class="pass">
@@ -4527,6 +4185,6 @@
         </tr>
 </tbody>
 </table>
-<p class="timestamp">Generated: 2026-03-05 17:04:37</p>
+<p class="timestamp">Generated: 2026-03-08 16:37:04</p>
 </body>
 </html>

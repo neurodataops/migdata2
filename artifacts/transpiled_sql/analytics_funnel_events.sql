@@ -5,7 +5,7 @@
 -- Rules      : remove_data_retention, number_to_bigint, variant_to_string, timestamp_ntz, varchar_to_string, autoincrement, append_using_delta
 -- Warnings   : 1
 -- SHA-256    : b5a2095c2162b86a4ea0d20322a8432c9af5d3f3731ec897d8917e71c0095642
--- Generated  : 2026-03-04T16:31:48.086080
+-- Generated  : 2026-03-08T12:18:43.201711
 -- ---
 
 CREATE TABLE analytics.funnel_events (

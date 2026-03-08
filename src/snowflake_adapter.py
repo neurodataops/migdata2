@@ -21,7 +21,7 @@ from src.interfaces import SourceAdapter
 from src.config import load_config, get_path, get_seed
 from src.logger import get_logger
 
-MOCK_DATA_DIR = get_path("mock_data")
+ARTIFACTS_DIR = get_path("artifacts")
 
 
 class SnowflakeSourceAdapter(SourceAdapter):
@@ -41,6 +41,22 @@ class SnowflakeSourceAdapter(SourceAdapter):
         self.role = sf_cfg.get("role") or os.environ.get("SNOWFLAKE_ROLE", "")
 
         self.conn = None
+
+        # Load selected schemas filter if it exists
+        self.selected_schemas = self._load_selected_schemas()
+
+    def _load_selected_schemas(self) -> list[str]:
+        """Load selected schemas from filter file"""
+        import json
+        filter_file = get_path("artifacts") / "selected_schemas.json"
+        if filter_file.exists():
+            try:
+                with open(filter_file, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    return [s.upper() for s in data.get("schemas", [])]  # Snowflake uses uppercase
+            except Exception:
+                pass
+        return []  # Empty list means all schemas
 
     def _connect(self):
         if self.conn is None:
@@ -96,6 +112,12 @@ class SnowflakeSourceAdapter(SourceAdapter):
         return catalog
 
     def _extract_tables(self) -> list[dict]:
+        # Build WHERE clause for schema filter
+        schema_filter = ""
+        if self.selected_schemas:
+            schema_list = "', '".join(self.selected_schemas)
+            schema_filter = f"AND table_schema IN ('{schema_list}')"
+
         rows = self._query(f"""
             SELECT
                 table_schema,
@@ -105,6 +127,7 @@ class SnowflakeSourceAdapter(SourceAdapter):
             FROM {self.database}.INFORMATION_SCHEMA.TABLES
             WHERE table_type = 'BASE TABLE'
               AND table_schema NOT IN ('INFORMATION_SCHEMA')
+              {schema_filter}
             ORDER BY table_schema, table_name
         """)
         tables = []
@@ -123,6 +146,12 @@ class SnowflakeSourceAdapter(SourceAdapter):
         return tables
 
     def _extract_columns(self) -> list[dict]:
+        # Build WHERE clause for schema filter
+        schema_filter = ""
+        if self.selected_schemas:
+            schema_list = "', '".join(self.selected_schemas)
+            schema_filter = f"AND table_schema IN ('{schema_list}')"
+
         rows = self._query(f"""
             SELECT
                 table_schema,
@@ -134,6 +163,7 @@ class SnowflakeSourceAdapter(SourceAdapter):
                 is_identity
             FROM {self.database}.INFORMATION_SCHEMA.COLUMNS
             WHERE table_schema NOT IN ('INFORMATION_SCHEMA')
+              {schema_filter}
             ORDER BY table_schema, table_name, ordinal_position
         """)
         columns = []
@@ -150,6 +180,12 @@ class SnowflakeSourceAdapter(SourceAdapter):
         return columns
 
     def _extract_constraints(self) -> list[dict]:
+        # Build WHERE clause for schema filter
+        schema_filter = ""
+        if self.selected_schemas:
+            schema_list = "', '".join(self.selected_schemas)
+            schema_filter = f"AND tc.table_schema IN ('{schema_list}')"
+
         try:
             rows = self._query(f"""
                 SELECT
@@ -177,6 +213,7 @@ class SnowflakeSourceAdapter(SourceAdapter):
                  AND tc.table_schema = kcu.table_schema
                  AND tc.table_name = kcu.table_name
                 WHERE tc.table_schema NOT IN ('INFORMATION_SCHEMA')
+                  {schema_filter}
                 ORDER BY tc.table_schema, tc.table_name, tc.constraint_name
             """)
         except Exception:
@@ -212,6 +249,12 @@ class SnowflakeSourceAdapter(SourceAdapter):
         return constraints
 
     def _extract_procs(self) -> list[dict]:
+        # Build WHERE clause for schema filter
+        schema_filter = ""
+        if self.selected_schemas:
+            schema_list = "', '".join(self.selected_schemas)
+            schema_filter = f"AND procedure_schema IN ('{schema_list}')"
+
         try:
             rows = self._query(f"""
                 SELECT
@@ -221,6 +264,7 @@ class SnowflakeSourceAdapter(SourceAdapter):
                     procedure_language
                 FROM {self.database}.INFORMATION_SCHEMA.PROCEDURES
                 WHERE procedure_schema NOT IN ('INFORMATION_SCHEMA')
+                  {schema_filter}
                 ORDER BY procedure_schema, procedure_name
             """)
         except Exception:
@@ -239,6 +283,12 @@ class SnowflakeSourceAdapter(SourceAdapter):
         return procs
 
     def _extract_udfs(self) -> list[dict]:
+        # Build WHERE clause for schema filter
+        schema_filter = ""
+        if self.selected_schemas:
+            schema_list = "', '".join(self.selected_schemas)
+            schema_filter = f"AND function_schema IN ('{schema_list}')"
+
         try:
             rows = self._query(f"""
                 SELECT
@@ -249,6 +299,7 @@ class SnowflakeSourceAdapter(SourceAdapter):
                     data_type AS return_type
                 FROM {self.database}.INFORMATION_SCHEMA.FUNCTIONS
                 WHERE function_schema NOT IN ('INFORMATION_SCHEMA')
+                  {schema_filter}
                 ORDER BY function_schema, function_name
             """)
         except Exception:
@@ -266,6 +317,12 @@ class SnowflakeSourceAdapter(SourceAdapter):
         return udfs
 
     def _extract_views(self) -> list[dict]:
+        # Build WHERE clause for schema filter
+        schema_filter = ""
+        if self.selected_schemas:
+            schema_list = "', '".join(self.selected_schemas)
+            schema_filter = f"AND table_schema IN ('{schema_list}')"
+
         try:
             rows = self._query(f"""
                 SELECT
@@ -274,6 +331,7 @@ class SnowflakeSourceAdapter(SourceAdapter):
                     view_definition
                 FROM {self.database}.INFORMATION_SCHEMA.VIEWS
                 WHERE table_schema NOT IN ('INFORMATION_SCHEMA')
+                  {schema_filter}
                 ORDER BY table_schema, table_name
             """)
         except Exception:
@@ -349,12 +407,12 @@ class SnowflakeSourceAdapter(SourceAdapter):
 
     def save(self, catalog: dict, query_logs: list[dict]) -> dict:
         self.log.step("save", "started")
-        MOCK_DATA_DIR.mkdir(parents=True, exist_ok=True)
+        ARTIFACTS_DIR.mkdir(parents=True, exist_ok=True)
 
-        catalog_path = MOCK_DATA_DIR / "source_catalog.json"
+        catalog_path = ARTIFACTS_DIR / "source_catalog.json"
         catalog_path.write_text(json.dumps(catalog, indent=2, default=str), encoding="utf-8")
 
-        logs_path = MOCK_DATA_DIR / "query_logs.json"
+        logs_path = ARTIFACTS_DIR / "query_logs.json"
         logs_path.write_text(json.dumps(query_logs, indent=2, default=str), encoding="utf-8")
 
         self.log.step("save", "completed",

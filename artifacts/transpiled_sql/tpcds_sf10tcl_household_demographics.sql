@@ -5,7 +5,7 @@
 -- Rules      : remove_data_retention, append_using_delta
 -- Warnings   : 0
 -- SHA-256    : c956fca9efb29f4ab9d1af961e6deaab0a58058756bec485a17b76fdc3bc3d99
--- Generated  : 2026-03-05T17:04:00.633070
+-- Generated  : 2026-03-08T16:35:47.240201
 -- ---
 
 CREATE TABLE tpcds_sf10tcl.household_demographics (

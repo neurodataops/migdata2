@@ -5,7 +5,7 @@
 -- Rules      : remove_cluster_by, remove_data_retention, number_to_bigint, number_to_decimal, timestamp_ntz, varchar_to_string, autoincrement, append_using_delta
 -- Warnings   : 0
 -- SHA-256    : f1885bf32f4eeb244e80f65baeb4664fee97eb1a75d02d472b40aebdf0da33c6
--- Generated  : 2026-03-04T16:31:48.136777
+-- Generated  : 2026-03-08T12:18:43.246244
 -- ---
 
 CREATE TABLE marketing.attribution_touches (

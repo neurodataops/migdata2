@@ -11,10 +11,13 @@ Steps:
     3. Simulate data load (MockDataLoader)
     4. Execute validations (MockValidationEngine)
     5. Run test suite (test_runner)
-    6. Launch Streamlit dashboard
 
 All adapters are resolved from config.yaml, so swapping to real
 Redshift/Databricks only requires changing the adapter names.
+
+Note: The UI is now a React frontend (in /web) served by a FastAPI backend (in /api).
+Run the backend with: python -m uvicorn api.main:app --reload
+Run the frontend with: cd web && npm run dev
 """
 
 import json
@@ -86,8 +89,8 @@ def _resolve_validation_engine():
                      f"Implement a ValidationEngine subclass and register it here.")
 
 
-def run_pipeline(launch_ui: bool = True):
-    """Execute the full demo pipeline and optionally launch Streamlit."""
+def run_pipeline(launch_ui: bool = False):
+    """Execute the full demo pipeline."""
     config = load_config()
     seed = get_seed(config)
     start_time = time.time()
@@ -239,19 +242,12 @@ def run_pipeline(launch_ui: bool = True):
     print(f"  Pipeline complete in {elapsed}s")
     print(f"  Summary: {summary_path}")
     print("=" * 60)
-
-    # ── Step 6: Launch Streamlit ───────────────────────────────
-    if launch_ui:
-        print()
-        print("Launching Streamlit dashboard...")
-        print("  URL: http://localhost:8501")
-        print("  Press Ctrl+C to stop.")
-        print()
-        subprocess.run(
-            [sys.executable, "-m", "streamlit", "run", "app.py",
-             "--server.headless", "true"],
-            cwd=str(PROJECT_DIR),
-        )
+    print()
+    print("To view results:")
+    print("  1. Start the FastAPI backend: python -m uvicorn api.main:app --reload")
+    print("  2. Start the React frontend: cd web && npm run dev")
+    print("  3. Open http://localhost:5173 in your browser")
+    print()
 
     return pipeline_summary
 
@@ -259,7 +255,5 @@ def run_pipeline(launch_ui: bool = True):
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(description="Run full migration demo")
-    parser.add_argument("--no-ui", action="store_true",
-                        help="Skip launching Streamlit dashboard")
     args = parser.parse_args()
-    run_pipeline(launch_ui=not args.no_ui)
+    run_pipeline()

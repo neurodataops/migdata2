@@ -5,7 +5,7 @@
 -- Rules      : remove_cluster_by, remove_data_retention, number_to_bigint, number_to_decimal, timestamp_ntz, varchar_to_string, append_using_delta
 -- Warnings   : 0
 -- SHA-256    : 73caad46ed2d9c5358502dcb2e9459cd0f65ece7e674ddf29da34f16d42b2f34
--- Generated  : 2026-03-04T16:31:48.114494
+-- Generated  : 2026-03-08T12:18:43.222720
 -- ---
 
 CREATE TABLE finance.refunds (

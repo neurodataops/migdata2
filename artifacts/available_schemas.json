@@ -1,0 +1,10 @@
+{
+  "schemas": [
+    "tpcds_sf100tcl",
+    "tpcds_sf10tcl",
+    "tpch_sf1",
+    "tpch_sf10",
+    "tpch_sf100",
+    "tpch_sf1000"
+  ]
+}

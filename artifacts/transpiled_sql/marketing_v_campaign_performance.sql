@@ -2,7 +2,7 @@
 -- Type       : VIEW
 -- Class      : AUTO_CONVERT
 -- Difficulty : 3/10
--- Generated  : 2026-03-04T16:31:48.147770
+-- Generated  : 2026-03-08T12:18:43.253555
 -- ---
 
 CREATE OR REPLACE VIEW marketing.v_campaign_performance AS

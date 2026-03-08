@@ -5,7 +5,7 @@
 -- Rules      : remove_data_retention, append_using_delta
 -- Warnings   : 0
 -- SHA-256    : c741fea04c3c6dbf7663d97c3eecd5973b434eab0883b67cb428f6c50ff50505
--- Generated  : 2026-03-05T17:04:00.632067
+-- Generated  : 2026-03-08T16:35:47.179089
 -- ---
 
 CREATE TABLE tpcds_sf10tcl.date_dim (

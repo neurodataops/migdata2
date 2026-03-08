@@ -1,80 +1,43 @@
-# ============================================================
-# MigData Configuration
-# ============================================================
-# Switch adapters from "mock" to real implementations when ready.
-# All paths are relative to project root.
-
-project:
-  name: "MigData"
-  seed: 42
-
-# --- Directory paths (relative to project root) ---
-paths:
-  mock_data: "mock_data"
-  artifacts: "artifacts"
-  test_results: "test_results"
-  screenshots: "screenshots"
-  transpiled: "artifacts/transpiled_sql"
-  target_tables: "artifacts/target_tables"
-  logs: "artifacts/logs"
-
-# --- Source system adapter ---
-source:
-  adapter: "snowflake"  # "mock_redshift" | "mock_snowflake" | "mock" (legacy, = redshift) | "redshift" | "snowflake"
-  # Uncomment for real Redshift:
-  # redshift:
-  #   host: "${REDSHIFT_HOST}"
-  #   port: 5439
-  #   database: "${REDSHIFT_DB}"
-  #   user: "${REDSHIFT_USER}"
-  #   password: "${REDSHIFT_PASSWORD}"
-  snowflake:
-    account: "${SNOWFLAKE_ACCOUNT}"
-    warehouse: "${SNOWFLAKE_WAREHOUSE}"
-    database: "${SNOWFLAKE_DB}"
-    user: "${SNOWFLAKE_USER}"
-    password: "${SNOWFLAKE_PASSWORD}"
-    role: "${SNOWFLAKE_ROLE}"
-
-# --- Target platform ---
-target:
-  platform: "databricks"  # "databricks" (more targets coming)
-
-# --- Conversion engine ---
+agents:
+  default_llm: claude-opus-4
+  langfuse:
+    enabled: true
+    host: https://cloud.langfuse.com
 conversion:
-  engine: "mock"          # "mock" | "llm"
-  # Uncomment for LLM-assisted:
-  # llm:
-  #   model: "claude-sonnet-4-5-20250929"
-  #   api_key: "${ANTHROPIC_API_KEY}"
-
-# --- Data loader ---
+  engine: mock
 loader:
-  engine: "mock"          # "mock" | "databricks"
+  engine: mock
   max_rows: 2000
-  # Uncomment for real Databricks:
-  # databricks:
-  #   host: "${DATABRICKS_HOST}"
-  #   token: "${DATABRICKS_TOKEN}"
-  #   http_path: "${DATABRICKS_HTTP_PATH}"
-  #   s3_bucket: "my-migration-bucket"
-  #   iam_role: "arn:aws:iam::123456789012:role/DatabricksS3Access"
-
-# --- Validation engine ---
-validation:
-  engine: "mock"          # "mock" | "live"
-  weights:
-    row_count: 0.30
-    checksum: 0.25
-    null_variance: 0.20
-    schema_drift: 0.25
-  confidence_threshold: 0.6
-  # Uncomment for live validation:
-  # live:
-  #   redshift_host: "${REDSHIFT_HOST}"
-  #   databricks_host: "${DATABRICKS_HOST}"
-
-# --- Logging ---
 logging:
-  level: "INFO"
   json_logs: true
+  level: INFO
+paths:
+  artifacts: artifacts
+  logs: artifacts/logs
+  mock_data: mock_data
+  screenshots: screenshots
+  target_tables: artifacts/target_tables
+  test_results: test_results
+  transpiled: artifacts/transpiled_sql
+project:
+  name: MigData
+  seed: 42
+source:
+  adapter: snowflake
+  snowflake:
+    account: xoczern-fw82290
+    database: SNOWFLAKE_SAMPLE_DATA
+    password: PintuTiku123**
+    role: ACCOUNTADMIN
+    user: rnanavaty
+    warehouse: COMPUTE_WH
+target:
+  platform: databricks
+validation:
+  confidence_threshold: 0.6
+  engine: mock
+  weights:
+    checksum: 0.25
+    null_variance: 0.2
+    row_count: 0.3
+    schema_drift: 0.25

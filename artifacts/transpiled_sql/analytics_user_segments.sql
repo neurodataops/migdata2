@@ -5,7 +5,7 @@
 -- Rules      : remove_cluster_by, remove_data_retention, number_to_bigint, variant_to_string, timestamp_ntz, varchar_to_string, autoincrement, append_using_delta
 -- Warnings   : 1
 -- SHA-256    : fe76730bedc2133cc35ee0f98cb0aa3768cc46800d3a9c0a23355d76c7ed1c30
--- Generated  : 2026-03-04T16:31:48.078302
+-- Generated  : 2026-03-08T12:18:43.192712
 -- ---
 
 CREATE TABLE analytics.user_segments (

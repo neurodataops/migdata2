@@ -42,21 +42,35 @@ Every adapter is pluggable — swap mock adapters for real connectors when ready
                                                    test_report.xml
                                                    test_summary.html
                                                         |
-                                                     app.py
-                                                   (Streamlit UI)
+                              +-------------------------+-------------------------+
+                              |                                                   |
+                        FastAPI Backend                                   React Frontend
+                        (api/main.py)                                    (web/src/)
+                        Port 8000                                        Port 5173
+                        - REST API                                       - TypeScript
+                        - WebSocket                                      - Vite
+                        - Auth                                           - TailwindCSS
+                        - Pipeline Runner                                - Zustand
 ```
 
 ## Quick Start
 
 ```bash
-# Install dependencies
-pip install faker pyarrow pandas streamlit plotly pyyaml networkx
+# 1. Install Python dependencies
+pip install -r requirements.txt
 
-# Run everything with one command (generates data + launches dashboard)
+# 2. Run the pipeline to generate mock data
 python -m src.run_demo
 
-# Or run without launching the UI
-python -m src.run_demo --no-ui
+# 3. Start the FastAPI backend (in terminal 1)
+python -m uvicorn api.main:app --reload
+
+# 4. Start the React frontend (in terminal 2)
+cd web
+npm install  # First time only
+npm run dev
+
+# 5. Open your browser to http://localhost:5173
 ```
 
 By default the pipeline runs **Redshift → Databricks**. You can change both source
@@ -105,15 +119,35 @@ an error and blocks the app.
 ```
 data-migration/
 +-- config.yaml                        # All paths, adapters, weights -- single source of truth
-+-- app.py                             # Streamlit dashboard (10 tabs, platform-aware)
-+-- capture_demo.py                    # Playwright screenshot automation (optional)
++-- api/                               # FastAPI backend
+|   +-- main.py                        # FastAPI app entry point
+|   +-- models.py                      # Pydantic models
+|   +-- dependencies.py                # Auth dependencies
+|   +-- routes/                        # API endpoints
+|   |   +-- auth.py                    # Login/register
+|   |   +-- pipeline.py                # Pipeline execution
+|   |   +-- catalog.py                 # Metadata catalog
+|   |   +-- connection.py              # Connection testing
+|   |   +-- validation.py              # Validation results
+|   +-- services/                      # Business logic
+|       +-- pipeline_runner_v2.py      # Async pipeline orchestration
+|       +-- type_mapper.py             # SQL type mapping
++-- web/                               # React frontend
+|   +-- src/
+|   |   +-- pages/                     # LoginPage, ConnectionPage, DashboardPage
+|   |   +-- components/                # Reusable React components
+|   |   +-- api/                       # Axios client + endpoints
+|   |   +-- store/                     # Zustand state management
+|   |   +-- types/                     # TypeScript interfaces
+|   +-- package.json                   # Node dependencies
+|   +-- vite.config.ts                 # Vite configuration
 +-- src/
 |   +-- __init__.py
 |   +-- __main__.py                    # Entry: python -m src
 |   +-- interfaces.py                  # ABCs: SourceAdapter, ConversionEngine, DataLoader, ValidationEngine
 |   +-- config.py                      # YAML config loader + get_source_platform() + get_target_platform()
 |   +-- logger.py                      # Structured JSON logging
-|   +-- run_demo.py                    # Pipeline orchestrator (factory + 5 steps + UI launch)
+|   +-- run_demo.py                    # Pipeline orchestrator (factory + 5 steps)
 |   +-- mock_redshift.py               # MockSourceAdapter -- Redshift catalog + query logs
 |   +-- mock_converter.py              # MockConversionEngine -- Redshift rewrite rules
 |   +-- mock_snowflake.py              # MockSourceAdapter -- Snowflake catalog + query logs
@@ -136,7 +170,8 @@ data-migration/
 |   +-- confidence_scores.csv          # One row per table
 |   +-- test_report.xml                # JUnit XML
 |   +-- test_summary.html              # Styled HTML report
-+-- screenshots/                       # Demo screenshots (from capture_demo.py)
++-- config/                            # Configuration files
+    +-- users.json                     # User authentication data
 ```
 
 ## How Mock Replaces Real Systems
@@ -259,7 +294,10 @@ python -m src.mock_snowflake_converter  # Step 2: transpile Snowflake SQL
 python -m src.mock_loader            # Step 3: generate Parquet files
 python -m src.mock_validator         # Step 4: run validation checks
 python -m src.test_runner            # Step 5: execute test suite
-streamlit run app.py                 # Step 6: launch dashboard
+
+# Launch the application
+python -m uvicorn api.main:app --reload  # Start FastAPI backend (port 8000)
+cd web && npm run dev                     # Start React frontend (port 5173)
 ```
 
 ## Adding a New Target Platform
@@ -275,17 +313,43 @@ UI label automatically. Source ≠ target validation works for any combination.
 
 ## Dependencies
 
+### Python (Backend)
 ```
-faker>=40.0
-pyarrow>=15.0
-pandas>=2.0
-streamlit>=1.30
+psycopg2-binary>=2.9
+tqdm>=4.60
 plotly>=5.18
+databricks-sql-connector>=2.9
+pandas>=2.0
 pyyaml>=6.0
-networkx>=3.0
+reportlab>=4.0
+snowflake-connector-python>=3.6
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+python-multipart>=0.0.9
+websockets>=12.0
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
 ```
 
-Optional for screenshots:
+### JavaScript (Frontend)
 ```
-playwright>=1.40
+react>=19.2.0
+react-dom>=19.2.0
+react-router-dom>=7.13.1
+axios>=1.13.6
+zustand>=5.0.11
+plotly.js>=3.4.0
+tailwindcss>=4.2.1
+vite>=7.3.1
+typescript>=5.9.3
+```
+
+Install Python dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+Install JavaScript dependencies:
+```bash
+cd web && npm install
 ```

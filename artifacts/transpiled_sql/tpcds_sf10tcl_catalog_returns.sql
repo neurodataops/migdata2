@@ -5,7 +5,7 @@
 -- Rules      : remove_data_retention, append_using_delta
 -- Warnings   : 0
 -- SHA-256    : 0c29e4abbb864d2d4cc34e06ba446fef7e846178b6c4c27f9cf6acc1a1176896
--- Generated  : 2026-03-05T17:04:00.620069
+-- Generated  : 2026-03-08T16:35:47.136589
 -- ---
 
 CREATE TABLE tpcds_sf10tcl.catalog_returns (

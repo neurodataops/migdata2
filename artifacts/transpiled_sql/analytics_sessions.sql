@@ -5,7 +5,7 @@
 -- Rules      : remove_cluster_by, remove_data_retention, number_to_bigint, timestamp_ntz, varchar_to_string, append_using_delta
 -- Warnings   : 0
 -- SHA-256    : da989653d94c08ca7bf6962c29d47cea300f15fd9b460134d393fdbbde177e5e
--- Generated  : 2026-03-04T16:31:48.075078
+-- Generated  : 2026-03-08T12:18:43.188709
 -- ---
 
 CREATE TABLE analytics.sessions (
