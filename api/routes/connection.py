@@ -15,12 +15,21 @@ from api.models import (
     RedshiftConnectionRequest,
     SnowflakeConnectionRequest,
 )
+from src.snowflake_utils import normalize_snowflake_account as _normalize_snowflake_account
 
 router = APIRouter(prefix="/api/connection", tags=["connection"])
 
 
 def _test_connection_error_hint(err_msg: str) -> str:
     low = err_msg.lower()
+    if "250001" in err_msg or "could not connect to snowflake backend" in low:
+        return (
+            "Account identifier may be incorrect. "
+            "Use only the account locator (e.g. 'xy12345' or 'myorg-myaccount'), "
+            "without '.snowflakecomputing.com'. "
+            "Also verify that Snowflake hostnames and ports from SYSTEM$ALLOWLIST "
+            "are permitted by your firewall."
+        )
     if "timeout" in low or "could not connect" in low or "connection refused" in low:
         return "Check Host and Port."
     if "password authentication failed" in low or "incorrect username or password" in low:
@@ -28,7 +37,7 @@ def _test_connection_error_hint(err_msg: str) -> str:
     if "database" in low and ("not found" in low or "does not exist" in low):
         return "Check Database name."
     if "account" in low and ("not found" in low or "could not be" in low):
-        return "Check Account identifier (format: org-account)."
+        return "Check Account identifier (format: org-account, without .snowflakecomputing.com)."
     if "warehouse" in low and ("not found" in low or "does not exist" in low or "suspended" in low):
         return "Check Warehouse name / ensure it is running."
     return ""
@@ -52,7 +61,7 @@ def _save_snowflake_credentials(body: SnowflakeConnectionRequest):
     if 'snowflake' not in config['source']:
         config['source']['snowflake'] = {}
 
-    config['source']['snowflake']['account'] = body.account
+    config['source']['snowflake']['account'] = _normalize_snowflake_account(body.account)
     config['source']['snowflake']['warehouse'] = body.warehouse
     config['source']['snowflake']['database'] = body.database
     config['source']['snowflake']['user'] = body.user
@@ -171,7 +180,7 @@ def test_source_snowflake(body: SnowflakeConnectionRequest, _user: CurrentUser):
 
     try:
         conn = snowflake.connector.connect(
-            account=body.account,
+            account=_normalize_snowflake_account(body.account),
             user=body.user,
             password=body.password,
             warehouse=body.warehouse,
@@ -260,7 +269,7 @@ def get_available_schemas(_user: CurrentUser):
         try:
             import snowflake.connector
             conn = snowflake.connector.connect(
-                account=sf_cfg.get('account', ''),
+                account=_normalize_snowflake_account(sf_cfg.get('account', '')),
                 user=sf_cfg.get('user', ''),
                 password=sf_cfg.get('password', ''),
                 warehouse=sf_cfg.get('warehouse', ''),

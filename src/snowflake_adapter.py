@@ -20,6 +20,7 @@ import snowflake.connector
 from src.interfaces import SourceAdapter
 from src.config import load_config, get_path, get_seed
 from src.logger import get_logger
+from src.snowflake_utils import normalize_snowflake_account
 
 ARTIFACTS_DIR = get_path("artifacts")
 
@@ -61,7 +62,7 @@ class SnowflakeSourceAdapter(SourceAdapter):
     def _connect(self):
         if self.conn is None:
             self.conn = snowflake.connector.connect(
-                account=self.account,
+                account=normalize_snowflake_account(self.account),
                 user=self.user,
                 password=self.password,
                 warehouse=self.warehouse,
