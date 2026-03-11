@@ -49,6 +49,11 @@ LOGS_DIR = ARTIFACTS_DIR / "logs"
 # Detect source platform from config
 sys.path.insert(0, str(PROJECT_DIR / "src"))
 from config import clear_config_cache, get_source_adapter, get_source_platform, get_target_platform  # noqa: E402
+from snowflake_utils import (  # noqa: E402
+    normalize_snowflake_account as _normalize_snowflake_account,
+    validate_snowflake_account as _validate_snowflake_account,
+    build_snowflake_connect_kwargs as _build_snowflake_connect_kwargs,
+)
 
 SOURCE_PLATFORM = get_source_platform()
 PLATFORM_LABEL = "Snowflake" if SOURCE_PLATFORM == "snowflake" else "Redshift"
@@ -659,6 +664,14 @@ def render_login_page():
 def _test_connection_error_hint(err_msg: str) -> str:
     """Parse exception message and return a user-friendly hint."""
     low = err_msg.lower()
+    if "250001" in err_msg or "could not connect to snowflake backend" in low:
+        return (
+            "Account identifier may be incorrect. "
+            "Use only the account locator (e.g. 'xy12345' or 'myorg-myaccount'), "
+            "without '.snowflakecomputing.com'. "
+            "Also verify that Snowflake hostnames and ports from SYSTEM$ALLOWLIST "
+            "are permitted by your firewall."
+        )
     if "timeout" in low or "could not connect" in low or "connection refused" in low:
         return "Check Host and Port."
     if "password authentication failed" in low or "incorrect username or password" in low:
@@ -666,7 +679,7 @@ def _test_connection_error_hint(err_msg: str) -> str:
     if "database" in low and ("not found" in low or "does not exist" in low):
         return "Check Database name."
     if "account" in low and ("not found" in low or "could not be" in low):
-        return "Check Account identifier (format: org-account)."
+        return "Check Account identifier (format: org-account, without .snowflakecomputing.com)."
     if "warehouse" in low and ("not found" in low or "does not exist" in low or "suspended" in low):
         return "Check Warehouse name / ensure it is running."
     return ""
@@ -718,6 +731,17 @@ def render_connection_page():
                 st.success("Connected (Mock)")
                 st.session_state["source_connected"] = True
             else:
+                # Pre-connection validation for Snowflake account identifier
+                if source_platform == "Snowflake":
+                    acct_warnings = _validate_snowflake_account(sf_account)
+                    if acct_warnings:
+                        st.error(
+                            "Invalid account identifier: "
+                            + " ".join(acct_warnings)
+                            + "\n\nExpected format: 'myorg-myaccount' or 'xy12345.us-east-1.aws'."
+                        )
+                        st.session_state["source_connected"] = False
+                        st.stop()
                 try:
                     with st.spinner("Testing connection..."):
                         if source_platform == "Redshift":
@@ -730,9 +754,14 @@ def render_connection_page():
                         else:
                             import snowflake.connector
                             conn = snowflake.connector.connect(
-                                account=sf_account, user=sf_user, password=sf_pass,
-                                warehouse=sf_warehouse, database=sf_db, role=sf_role,
-                                login_timeout=15,
+                                **_build_snowflake_connect_kwargs(
+                                    account=sf_account,
+                                    user=sf_user,
+                                    password=sf_pass,
+                                    warehouse=sf_warehouse,
+                                    database=sf_db,
+                                    role=sf_role,
+                                )
                             )
                             cur = conn.cursor()
                             cur.execute("SELECT CURRENT_VERSION()")
@@ -831,7 +860,7 @@ def render_connection_page():
             cfg = yaml.safe_load(config_path.read_text(encoding="utf-8"))
             if source_platform == "Snowflake":
                 cfg.setdefault("source", {})["snowflake"] = {
-                    "account": sf_account,
+                    "account": _normalize_snowflake_account(sf_account),
                     "warehouse": sf_warehouse,
                     "database": sf_db,
                     "user": sf_user,
@@ -852,7 +881,7 @@ def render_connection_page():
         if not use_mock:
             # Set env vars for current session so adapters can pick them up
             if source_platform == "Snowflake":
-                os.environ["SNOWFLAKE_ACCOUNT"] = sf_account
+                os.environ["SNOWFLAKE_ACCOUNT"] = _normalize_snowflake_account(sf_account)
                 os.environ["SNOWFLAKE_WAREHOUSE"] = sf_warehouse
                 os.environ["SNOWFLAKE_DB"] = sf_db
                 os.environ["SNOWFLAKE_USER"] = sf_user
