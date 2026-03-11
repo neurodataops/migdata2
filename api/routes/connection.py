@@ -15,7 +15,11 @@ from api.models import (
     RedshiftConnectionRequest,
     SnowflakeConnectionRequest,
 )
-from src.snowflake_utils import normalize_snowflake_account as _normalize_snowflake_account
+from src.snowflake_utils import (
+    normalize_snowflake_account as _normalize_snowflake_account,
+    validate_snowflake_account as _validate_snowflake_account,
+    build_snowflake_connect_kwargs as _build_snowflake_connect_kwargs,
+)
 
 router = APIRouter(prefix="/api/connection", tags=["connection"])
 
@@ -178,15 +182,29 @@ def test_source_snowflake(body: SnowflakeConnectionRequest, _user: CurrentUser):
             hint="Install with: pip install snowflake-connector-python"
         )
 
+    # Validate account identifier before attempting to connect so users get
+    # an immediate, actionable message for the most common cause of error 250001.
+    account_warnings = _validate_snowflake_account(body.account)
+    if account_warnings:
+        return ConnectionTestResponse(
+            success=False,
+            message="Invalid account identifier: " + " ".join(account_warnings),
+            hint=(
+                "Use only the account locator (e.g. 'xy12345' or 'myorg-myaccount'), "
+                "without 'https://' or '.snowflakecomputing.com'."
+            ),
+        )
+
     try:
         conn = snowflake.connector.connect(
-            account=_normalize_snowflake_account(body.account),
-            user=body.user,
-            password=body.password,
-            warehouse=body.warehouse,
-            database=body.database,
-            role=body.role,
-            login_timeout=15,
+            **_build_snowflake_connect_kwargs(
+                account=body.account,
+                user=body.user,
+                password=body.password,
+                warehouse=body.warehouse,
+                database=body.database,
+                role=body.role,
+            )
         )
         cur = conn.cursor()
         cur.execute("SELECT CURRENT_VERSION()")
@@ -269,13 +287,14 @@ def get_available_schemas(_user: CurrentUser):
         try:
             import snowflake.connector
             conn = snowflake.connector.connect(
-                account=_normalize_snowflake_account(sf_cfg.get('account', '')),
-                user=sf_cfg.get('user', ''),
-                password=sf_cfg.get('password', ''),
-                warehouse=sf_cfg.get('warehouse', ''),
-                database=sf_cfg.get('database', ''),
-                role=sf_cfg.get('role', 'PUBLIC'),
-                login_timeout=15,
+                **_build_snowflake_connect_kwargs(
+                    account=sf_cfg.get('account', ''),
+                    user=sf_cfg.get('user', ''),
+                    password=sf_cfg.get('password', ''),
+                    warehouse=sf_cfg.get('warehouse', ''),
+                    database=sf_cfg.get('database', ''),
+                    role=sf_cfg.get('role', 'PUBLIC'),
+                )
             )
             cur = conn.cursor()
             cur.execute(f"SELECT SCHEMA_NAME FROM {sf_cfg['database']}.INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME NOT IN ('INFORMATION_SCHEMA') ORDER BY SCHEMA_NAME")

@@ -49,7 +49,11 @@ LOGS_DIR = ARTIFACTS_DIR / "logs"
 # Detect source platform from config
 sys.path.insert(0, str(PROJECT_DIR / "src"))
 from config import clear_config_cache, get_source_adapter, get_source_platform, get_target_platform  # noqa: E402
-from snowflake_utils import normalize_snowflake_account as _normalize_snowflake_account  # noqa: E402
+from snowflake_utils import (  # noqa: E402
+    normalize_snowflake_account as _normalize_snowflake_account,
+    validate_snowflake_account as _validate_snowflake_account,
+    build_snowflake_connect_kwargs as _build_snowflake_connect_kwargs,
+)
 
 SOURCE_PLATFORM = get_source_platform()
 PLATFORM_LABEL = "Snowflake" if SOURCE_PLATFORM == "snowflake" else "Redshift"
@@ -727,6 +731,17 @@ def render_connection_page():
                 st.success("Connected (Mock)")
                 st.session_state["source_connected"] = True
             else:
+                # Pre-connection validation for Snowflake account identifier
+                if source_platform == "Snowflake":
+                    acct_warnings = _validate_snowflake_account(sf_account)
+                    if acct_warnings:
+                        st.error(
+                            "Invalid account identifier: "
+                            + " ".join(acct_warnings)
+                            + "\n\nExpected format: 'myorg-myaccount' or 'xy12345.us-east-1.aws'."
+                        )
+                        st.session_state["source_connected"] = False
+                        st.stop()
                 try:
                     with st.spinner("Testing connection..."):
                         if source_platform == "Redshift":
@@ -739,9 +754,14 @@ def render_connection_page():
                         else:
                             import snowflake.connector
                             conn = snowflake.connector.connect(
-                                account=_normalize_snowflake_account(sf_account), user=sf_user, password=sf_pass,
-                                warehouse=sf_warehouse, database=sf_db, role=sf_role,
-                                login_timeout=15,
+                                **_build_snowflake_connect_kwargs(
+                                    account=sf_account,
+                                    user=sf_user,
+                                    password=sf_pass,
+                                    warehouse=sf_warehouse,
+                                    database=sf_db,
+                                    role=sf_role,
+                                )
                             )
                             cur = conn.cursor()
                             cur.execute("SELECT CURRENT_VERSION()")

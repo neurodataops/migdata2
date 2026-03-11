@@ -238,11 +238,81 @@ Or use the UI: on the Connection page, check **"Use Mock Data"** and proceed.
 
 ### "Connection failed: 250001 — Could not connect to Snowflake backend"
 
-- Verify your **account identifier** format. Common formats:
-  - `ORGNAME.ACCOUNT_NAME` (preferred)
-  - `ACCOUNT_LOCATOR.REGION.CLOUD` (e.g., `HX52632.ap-southeast-1.aws`)
-  - Do **not** include `https://` or `.snowflakecomputing.com`
-- Check network/firewall — Snowflake requires outbound HTTPS on port 443.
+This error means the Snowflake Python connector could not reach the Snowflake backend.
+Work through the checklist below in order:
+
+#### Step 1 — Verify the account identifier
+
+The most common cause is an incorrectly formatted account identifier.
+
+| ✗ Wrong (will fail)                              | ✓ Correct                    |
+|--------------------------------------------------|------------------------------|
+| `https://myorg.snowflakecomputing.com`           | `myorg-myaccount`            |
+| `myorg.snowflakecomputing.com`                   | `xy12345.us-east-1.aws`      |
+| `https://xy12345.us-east-1.aws.snowflakecomputing.com` | `xy12345.us-east-1.aws` |
+
+**MigData normalises the account identifier automatically** — it strips `https://`
+and `.snowflakecomputing.com` before passing it to the connector.  However, if the
+value entered is something completely different (e.g. a full URL with a path), the
+normalised form may still be invalid.
+
+To confirm your account identifier, log in to the Snowflake web UI.  The URL in
+your browser will look like:
+```
+https://<account-identifier>.snowflakecomputing.com/
+```
+Copy everything between `https://` and `.snowflakecomputing.com/`.
+
+#### Step 2 — Check network / firewall access
+
+Snowflake requires your machine to reach its backend servers over **HTTPS (port 443)**.
+Corporate VPNs and restrictive firewalls often block these connections.
+
+**Find the exact hostnames and ports you need to whitelist:**
+
+1. Connect to your Snowflake account via the Snowflake web UI (Snowsight).
+2. Open a worksheet and run:
+   ```sql
+   SELECT * FROM TABLE(FLATTEN(INPUT => PARSE_JSON(SYSTEM$ALLOWLIST())));
+   ```
+3. This returns a list of `host:port` entries.  Every entry marked `SNOWFLAKE_DEPLOYMENT`
+   or `STAGE` must be reachable from your machine.
+
+Typical entries you will see (exact values vary by account region):
+
+| Type                    | Example host                              | Port |
+|-------------------------|-------------------------------------------|------|
+| `SNOWFLAKE_DEPLOYMENT`  | `myorg-myaccount.snowflakecomputing.com`  | 443  |
+| `OCSP_CACHE`            | `ocsp.snowflakecomputing.com`             | 80   |
+| `STAGE`                 | `*.s3.amazonaws.com`                      | 443  |
+
+Forward the full list from `SYSTEM$ALLOWLIST()` to your network/firewall team and
+ask them to allow outbound connections to each listed host on the listed port.
+
+**Quick local test (without running the app):**
+
+```bash
+# Windows (PowerShell)
+Test-NetConnection -ComputerName myorg-myaccount.snowflakecomputing.com -Port 443
+
+# macOS / Linux
+nc -zv myorg-myaccount.snowflakecomputing.com 443
+```
+
+If this command hangs or returns "refused/failed", your firewall is blocking the
+connection and you need to contact your network administrator.
+
+#### Step 3 — Try from a different network
+
+If possible, temporarily disable VPN or try from a home/mobile network.  If the
+connection succeeds there, the issue is your corporate firewall.
+
+#### Step 4 — Check the Snowflake status page
+
+Visit [status.snowflake.com](https://status.snowflake.com) to confirm there are
+no active incidents on your Snowflake deployment region.
+
+---
 
 ### "Incorrect username or password"
 
@@ -292,6 +362,7 @@ Or use the UI: on the Connection page, check **"Use Mock Data"** and proceed.
 - Environment variables set via `set`/`export` are temporary and cleared when the terminal closes.
 
 ---
+
 
 ## Quick Reference
 
